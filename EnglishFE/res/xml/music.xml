@@ -1,0 +1,106 @@
+<root
+    en_title=""
+    local_title="Học tiếng anh qua bài hát" >
+
+    <music
+        en_title="Học tiếng anh qua bài hát tiếng anh bất hủ"
+        loc_title="Bài học video cơ bản" >
+        <item1
+            id="1"
+            author_name="Abba"
+            item_url=""
+            sing_name="Happy New Year"
+            sing_time="4:22"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/63.mp3" />
+        <item1
+            id="2"
+            author_name="The Eagles"
+            item_url=""
+            sing_name="Hotel California"
+            sing_time="6:29"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/60.mp3" />
+        <item1
+            id="3"
+            author_name="Celine Dion"
+            item_url=""
+            sing_name="My heart will go on"
+            sing_time="4:26"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/56.mp3" />
+        <item1
+            id="4"
+            author_name="George Benson"
+            item_url=""
+            sing_name="Nothings Gonna Change My Love For You"
+            sing_time="4:02"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/55.mp3" />
+        <item1
+            id="5"
+            author_name="Michael learns to rock"
+            item_url=""
+            sing_name="That&apos;s why you go away"
+            sing_time="4:13"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/47.mp3" />
+        <item1
+            id="6"
+            author_name="Richard Marx"
+            item_url=""
+            sing_name="Right here waiting for you"
+            sing_time="4:22"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/51.mp3" />
+        <item1
+            id="7"
+            author_name="Capenters"
+            item_url=""
+            sing_name="Yesterday one more"
+            sing_time="3:59"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/68.mp3" />
+        <item1
+            id="8"
+            author_name="Michael Learns To Rock"
+            item_url="topic8.html"
+            sing_name="25 Minutes"
+            sing_time="4:20"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/2.mp3" />
+        <item1
+            id="9"
+            author_name="WESTLIFE"
+            item_url=""
+            sing_name="I Lay My Love On You"
+            sing_time="3:29"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/23.mp3" />
+        <item1
+            id="10"
+            author_name="WESTLIFE"
+            item_url=""
+            sing_name="My Love"
+            sing_time="3:52"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/32.mp3" />
+        <item1
+            id="11"
+            author_name="Michael Learns To Rock"
+            item_url=""
+            sing_name="Take Me To Your Heart"
+            sing_time="3:56"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/43.mp3" />
+        <item1
+            id="12"
+            author_name="M2M"
+            item_url=""
+            sing_name="The day you went away"
+            sing_time="3:43"
+            thumbnail=""
+            mp3_file_url="http://anhvan123.net/datablue/tienganhquabaihat/bathu/44.mp3" />
+    </music>
+
+</root>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Xin chào!</string>
+    <string name="app_name">Tiếng Anh cho mọi người</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="hello_world">Action Bar</string>
+    <string name="btn_send_message">Gửi tin nhắn</string>
+    <string name="webview">Webview</string>
+    <string name="app_localname_example">Tiếng anh cho mọi người</string>
+
+    <!-- Activity titles -->
+    <string name="activity_location_found">Location Found</string>
+    <string name="no_internet_connection">Vui lòng kết nối internet!</string>
+     
+    <string name="YOUR_APPLICATION_ID">3jF14VDjCrBCvHya7iKEuBONu93kYoHBtyyxO8rZ</string>
+    <string name="YOUR_CLIENT_KEY">bt3KHwfIPJ6HfvmfEGMBb5IyLcyO28f4q6FF0FGH</string>
+    
+    <string name="my_email">hominhchung92@gmail.com</string>
+    
+    <string name="confirm_exit">Confirm Exit...</string>
+    <string name="are_you_sure_you_want_to_exit">Bạn có chắc chắn muốn thoát khỏi chương trình?</string>
+    <!-- Activity titles -->
+    
+    
+    <string name="no_recognition_software_installed">Chương trình hỗ trợ chưa được cài đặt trên máy của bạn.\n Tải về?</string>   
+    <string name="ops">Thiết bị của bạn không hỗ trợ chức năng này!</string>
+    <string name="url_download_voicesearch">https://play.google.com/store/apps/details?id=com.google.android.voicesearch</string>
+    <string name="tell_me_what_you_want">Tell me what you want</string>
+    <string name="operation_canceled">Thao tác bị hủy</string> 
+       
+    <string name="hint">Gợi ý</string>
+    <string name="delete_item">Xóa!</string>
+    
+    
+    
+    <string name="do_you_really_want_to_delete_this_note">Bạn có chắc chắn muốn xóa chủ đề này!</string>
+    
+    <string name="not_available">Không có hiệu lực</string>
+    <string name="yes">Đồng ý</string>
+    <string name="no">Không</string>
+    
+    <string name="url_download_tts">https://play.google.com/store/apps/details?id=com.google.android.tts</string>
+
+    <string name="speak">Speak</string>
+    <string name="save_note">Save Note</string>
+    <string name="vui_long_chon_mot_cau_tra_loi">Vui lòng chọn một câu trả lời</string>
+    
+    
+    <string name="topic">Chủ đề</string>
+    <string name="add_new">Thêm mới</string>
+    
+	<string name="question_description_pictures">Trong bài này, bạn sẽ được xem một bức tranh. Hãy miêu tả bức tranh bạn được xem.</string>
+	<string name="question_writing_description_pictures">Hãy quan sát và miêu tả bức tranh bạn được xem.</string>
+   
+	<string name="loading">Đang tải</string>
+	<string name="please_wait_for_a_moment">Vui lòng chờ trong giây lát...</string>
+    
+	<string name="title_is_required">Tiêu đề bắt buộc</string>
+    <string name="put_in_a_title_for_this_note">Nhập tiêu đề cho chủ đề này</string>
+    <string name="ok">Đồng ý</string>
+    <!-- Action Bar action items -->
+    <string name="action_search">Tìm kiếm</string>
+    <string name="action_location_found">Vị trí</string>
+    <string name="action_play">Chơi</string>
+    <string name="action_speed">Tốc độ</string>
+    <string name="action_refresh">Làm mới</string>
+    <string name="action_contacts">Liên hệ</string>
+    <string name="action_help">Trợ giúp</string>
+    <string name="action_check_updates">Kiểm tra cập nhật</string>
+    <string name="action_quit">Thoát</string>
+
+    <!-- Search -->
+    <string name="search_hint">Tìm kiếm...</string>
+
+    <!-- Module titles -->
+
+
+    <!-- Vocabulary -->
+    <string name="vocabulary">Từ Vựng</string>
+    <string name="words3500">Học 3500 Từ Vựng</string>
+    <string name="learn_more">Learn more vocabulary</string>
+    <string name="look_up_words">Tra Từ Vựng</string>
+    <string name="irregular_verbs">Động Từ Bất Quy Tắc</string>
+    <string name="qoutations">Danh ngôn</string>
+    <string name="phrases100">1000 Câu Thông Dụng</string>
+    <string name="learning_vocabulary_by_topic">Học Từ Vựng Theo Chủ Đề </string>
+    <string name="learning_vocabulary_by_video">Học Từ vựng Qua Video</string>
+    <string name="learning_vocabulary_by_pictures">Học Từ Vựng Qua Hình Ảnh</string>
+    <string name="poem">Thơ</string>
+    <string name="abbreviation">Từ viết tắt</string>
+    <string name="common_acronyms">Common Acronyms</string>
+
+    <!-- Writing -->
+    <string name="writing">Viết</string>
+    <string name="description_paintings">Miêu Tả Tranh</string>
+    <string name="topics">Chủ Đề</string>
+    <string name="view_topics">Xem Chủ Đề</string>
+    <string name="add_topics">Thêm Chủ Đề</string>
+    <string name="cv_lesson_list">Danh Sách Chủ Đề</string>
+    <string name="cv_lesson">Nội Dung</string>
+    <string name="email_lesson_list">Danh Sách Chủ Đề</string>
+    <string name="email_lesson">Nội Dung</string>
+    <string name="letter_lesson_list">Danh Sách Chủ Đề</string>
+    <string name="letter_lesson">Nội dung</string>
+    <string name="essay_list">Danh Sách Chủ Đề Văn Phạm</string>
+    <string name="essay">Văn Phạm</string>
+    <string name="chat_with_robot">Trò chuyện với người máy</string>
+    <string name="titleEdit">Tiêu Đề</string>
+    <string name="noteEdit">Ghi Chú</string>
+    <string name="YourTitle">Tiêu Đề : </string>
+    <string name="YourNotes">Ghi Chú : </string>
+
+    <!-- Menu -->
+    <string name="writing_new_topic">Thêm</string>
+    <string name="writing_info_topic">Chủ đề</string>
+    <string name="writing_save_topic">Lưu</string>
+    <string name="writing_speak_topic">Nói</string>
+    <string name="writing_edit_topic">Sửa</string>
+    <string name="writing_delete_topic">Xóa</string>
+
+    <!-- Listening -->
+    <string name="listening">Nghe</string>
+    <string name="text_to_speech">Chuyển Văn Bản Qua Giọng Nói</string>
+    <string name="music">Nghe Nhạc</string>
+    <string name="play_str">PLAY</string>
+    <string name="pause_str">PAUSE</string>
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="listening_lessons_by_topic">Học Nghe Theo Chủ Đề</string>
+    <string name="listening_lessons">Nội Dung</string>
+    <string name="learning_through_songs">Học Nghe Qua Các Bài Hát</string>
+    <string name="song_lesson">Nội Dung</string>
+
+    <!-- Speaking -->
+    <string name="speaking">Nói</string>
+    <string name="debate_lesson">Tranh Luận</string>
+    <string name="speech_to_text">Chuyển Giọng Nói Thành Văn Bản</string>
+    <string name="topics_speak_100">100 Chủ Đề Luyện Nói</string>
+    <string name="speaking_topics">Nội Dung</string>
+
+    <!-- Reading -->
+    <string name="reading">Đọc</string>
+    <string name="essay_lesson_list">Danh Sách Văn Phạm Mẫu</string>
+    <string name="essay_lesson">Nội Dung</string>
+    <string name="story_list">Danh Sách Truyện Ngắn</string>
+    <string name="story_lesson">Nội Dung</string>
+    <string name="comic_list">Danh Sách Truyện Cười</string>
+    <string name="comic_lesson">Nội Dung</string>
+
+    <!-- Pronunciation -->
+    <string name="pronunciation">Phát Âm</string>
+    <string name="irregular_verbs_200">200 Động Từ Bất Quy Tắc</string>
+    <string name="learn_to_pronounce">Học Cách Phát Âm</string>
+    <string name="pronunciation_rules_list">Pronunciation rules list</string>
+    <string name="pronunciation_rules">Nội Dung</string>
+
+    <!-- Grammar -->
+    <string name="grammar">Ngữ Pháp</string>
+    <string name="learning_grammar_by_topic">Học Ngữ Pháp Theo Chủ Đề</string>
+    <string name="learning_grammar_through_video">Học Ngữ Pháp Qua Video</string>
+
+    <!-- Experiences -->
+    <string name="experiences">Kinh Nghiệm</string>
+    <string name="experience_list">Kinh Nghiệm Học Tiếng Anh</string>
+    <string name="experience_lesson">Nội Dung</string>
+    <string name="experience_through_video">Kinh Nghiệm Học Tiếng Anh qua Video</string>
+
+    <!-- Testing -->
+    <string name="testing">Kiểm Tra</string>
+    <string name="testing_level_a">Trình Độ A</string>
+    <string name="testing_level_b">Trình Độ B</string>
+    <string name="testing_level_c">Trình Độ C</string>
+    <string name="testing_level_basic">Trình Độ Cơ Bản</string>
+    <string name="testing_level_intermediate">Trình Độ Trung Bìn</string>
+    <string name="testing_level_advanced">Trình Độ Nâng Cao</string>
+    <string name="guess_the_word">Đoán Từ Vựng</string>
+
+    <!-- Notes -->
+    <string name="notes">Ghi chú</string>
+    <string name="about">Thông tin</string>
+    <string name="title">Tiêu đề : </string>
+    <string name="menu_delete">Xóa</string>
+    <string name="no_title">Không tiêu đề</string>
+    <string name="edit_note">Sửa ghi chú</string>
+    <string name="save_menu_noteedit">Lưu</string>
+    <string name="delete_menu_noteedit">Xóa</string>
+    
+    <string name="registration">Đăng Ký</string>
+    <string name="Username">Tài Khoản</string>
+    <string name="Password">Mật Khẩu</string>
+    <string name="LoginBtn">Đăng Nhập</string>
+    <string name="SignupBtn">Đăng Xuất</string>
+    <string name="LogoutBtn">Thoát</string>
+    <string name="Welcome">Welcome!</string>
+    <!-- Kids -->
+    <string name="kids">Trẻ Em</string>
+    <!-- Online -->
+    <string name="online">Online</string>
+
+    <string-array name="title_section">
+        <item>Bài Hát</item>
+        <item>Ngữ Pháp</item>
+        <item>Học</item>
+        <item>Truyện</item>
+        <item>Thơ</item>
+    </string-array>
+
+    <string name="ranklabel">"Rank : "</string>
+    <string name="countrylabel">"Country : "</string>
+    <string name="populationlabel">"Population : "</string>
+    <string name="games">Trò chơi</string>
+    <string name="videos">Videos</string>
+    <string name="essays">Essays</string>
+    <string name="story">Truyện</string>
+    <string name="phrases">Câu</string>
+    <string name="exercise">Bài tập</string>
+    <string name="description">Mô tả</string>
+
+</resources>

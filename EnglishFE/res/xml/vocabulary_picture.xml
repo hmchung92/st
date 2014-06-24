@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <lesson id="1" title="Clothes" >
+      <item1 id="1" en_title="coat" local_title="áo" local_read="/koʊt/" />
+      <item1 id="2" en_title="dress" local_title="đầm" local_read="/dres/" />
+      <item1 id="3" en_title="gloves" local_title="găng tay" local_read="/glʌvz/" />
+      <item1 id="4" en_title="jacket" local_title="áo khoác" local_read="/'dʤækit/ " />
+      <item1 id="5" en_title="jeans" local_title="quần jean" local_read="/jeans/" />
+      <item1 id="6" en_title="jumper" local_title="áo va rơi" local_read="/'ʤʌmpə/" />
+      <item1 id="7" en_title="pajamas" local_title="áo ngủ" local_read="/pə'ʤɑ:məz/" />
+      <item1 id="8" en_title="shirt" local_title="áo sơ mi" local_read="/ʃɜːt/" />
+      <item1 id="9" en_title="shoes" local_title="giày" local_read="/ʃu:/" />
+      <item1 id="10" en_title="skirt" local_title="váy" local_read="/skɜːrt/" />
+      <item1 id="11" en_title="slacks" local_title="quần" local_read="/slæk/ " />
+      <item1 id="12" en_title="uniform" local_title="quân phục" local_read="/ˈjunəˌfɔrm/ " />
+    </lesson>
+    <lesson id="2" title="Categories">
+      <item2 id="1" en_title="coat" local_title="áo" local_read="/koʊt/" />
+      <item2 id="2" en_title="dress" local_title="đầm" local_read="/dres/" />
+      <item2 id="3" en_title="gloves" local_title="găng tay" local_read="/glʌvz/" />
+      <item2 id="4" en_title="jacket" local_title="áo khoác" local_read="/'dʤækit/ " />
+      <item2 id="5" en_title="jeans" local_title="quần jean" local_read="/jeans/" />
+      <item2 id="6" en_title="jumper" local_title="áo va rơi" local_read="/'ʤʌmpə/" />
+      <item2 id="7" en_title="pajamas" local_title="áo ngủ" local_read="/pə'ʤɑ:məz/" />
+      <item2 id="8" en_title="shirt" local_title="áo sơ mi" local_read="/ʃɜːt/" />
+      <item2 id="9" en_title="shoes" local_title="giày" local_read="/ʃu:/" />
+      <item2 id="10" en_title="skirt" local_title="váy" local_read="/skɜːrt/" />
+      <item2 id="11" en_title="slacks" local_title="quần" local_read="/slæk/ " />
+      <item2 id="12" en_title="uniform" local_title="quân phục" local_read="/ˈjunəˌfɔrm/ " />
+    </lesson>
+    <lesson id="3" title="Nokia">
+      <item id_title="1" en_title_title="text5" />
+      <item id_title="2" en_title_title="text6" />
+    </lesson>
+  </root>

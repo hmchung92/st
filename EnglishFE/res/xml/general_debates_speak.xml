@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <lesson
+        id="1"
+        en_hint="All of us eat to live, in a biological sense. We don’t want to die due to lack of food and water, so we eat to stay alive........................... "
+        en_topic="General Debates"
+        local_question="Hãy suy nghĩ về chủ đề được đưa ra và nêu ra quan điểm của mình về vấn đề này." >
+    </lesson>
+    <lesson
+        id="2"
+        en_hint="I believe that Social Media has made us less social. For an example, us using Facebook, posting statuses and pictures do not allow us to be closer to people. They make us seem far away from many, or make us feel that we do not have many friends, posting statuses on Facebook............... "
+        en_topic="The Social Media"
+        local_question="Các mạng xã hội có làm chúng ta ít có giao tiếp đối với xã hội thực. Bạn có đồng ý hay không. Hãy nói về quan điểm của cá nhân bạn." >
+    </lesson>
+    <lesson
+        id="3"
+        en_hint="If I had the choice between an online course and a course at a college or university, I would choose the classroom setting. I believe it takes a lot of discipline to study at home, and I am a person who is easily distracted....... "
+        en_topic="Education"
+        local_question="Trong chủ đề tranh luận về bạn thích học ở lớp hay là học trực tuyến. Bạn hãy đưa ra quan điểm của bản thân mình về chủ đề đó." >
+    </lesson>
+    <lesson
+        id="4"
+        en_hint=" Nowadays people want to live in a city because they think that life there is better than country life. I agree with that opinion and I will try to show some reasons of that phenomenon. There is no denying that in the city there is a greater access to entertainment. Another thing is that, in the city people have better choices of schools and a higher quality of education than do people from the country. It is also true that, in town you have better job opportunities because labor market is bigger. "
+        en_topic="City life and village life"
+        local_question="Câu hỏi thảo luận là về bạn có nghĩ rằng cuộc sống ở thành phố tốt hơn ở nông thôn không? Hãy nêu ra quan điểm của bạn về vấn đề này." >
+    </lesson>
+    <lesson
+        id="5"
+        en_hint="Pros of a School Uniform
+Yes. Because among the reasons why school uniforms are a good idea, the most strongly stated one is that they promote equality. Distinctions made on the basis of economic status are reduced. With everyone dressed alike, there is a hope that kids will judge others based on character instead of the clothes they wear.
+Pros of a School Uniform
+Contrary to popular belief, even with uniforms on, certain children will get picked on by others. Cliques will still be formed and students will find ways (such as weight, complexion, financial status) to pass judgment upon their peers. "
+        en_topic="Uniform in High School"
+        local_question="Trong bài học này, chúng ta sẽ tranh luận về vấn đề học sinh nên hay không nên mặc đồng phục. Bạn hãy đưa ra ý kiến riêng của mình về vấn đề này." >
+    </lesson>
+    <lesson
+        id="6"
+        en_hint="Yes because...
+Junk food is unhealthy
+Junk food is highly unhealthy and can transform fit, healthy human beings into obese, lazy people. Is this what we want Earth to become for the future generations? I should think not. Eating too much junk food can cause your life to be shortened, and this is terrible. This is why I believe that junk food should be banned.
+No because...
+Banning &apos;junk food&apos; would be nearly impossible.
+To ban junk food would be a complete failure. It would also leave people feeling that their freedom of choice was taken. A better way to handle junk food is to make laws more strict about ingredient labels. Perhaps require foods with little nutritional value to have their nutrition facts be bolder and in a bright colour.
+        "
+        en_topic="Junk Food"
+        local_question="Trong bài này, chúng ta sẽ bàn về vấn đề có nên cấm đồ ăn vặt. Bạn hãy đưa ra ý kiến riêng về vấn đề này." >
+    </lesson>
+    <lesson
+        id="7"
+        en_hint="Challenged students perform better. If a student is stuck in a class with people below his or her ability, their intelligence will stagnate. They won&apos;t use their entire potential. Likewise, if a student is stuck in a class with people above his or her ability, they will be lost and confused, and likely fall even further behind. "
+        en_topic="Grouping Students"
+        local_question="Trong bài học này, chúng ta sẽ tranh luận về vấn đề chia nhóm học sinh theo khả năng của các em. Bạn hãy đưa ra ý kiến riêng của mình về vấn đề này." >
+    </lesson>
+    <lesson
+        id="8"
+        en_hint="A lot of people, especially young people, go though the day without having breakfast. Many people believe that it is not necessary, or they say that they don’t have time for that, and begin their day with no meal. I believe that everyone should eat breakfast before going to their activities...................... "
+        en_topic="Eating Breakfast Every Day"
+        local_question="Trong bài học này, chúng ta sẽ tranh luận về vấn đề các em học sinh có nên hay không nên ăn sáng mỗi ngày. Bạn hãy đưa ra ý kiến riêng của mình về vấn đề này." >
+    </lesson>
+    <lesson
+        id="9"
+        en_hint="Motorists would have to pay a higher rate of road tax for the right to drive on motorways, ........... "
+        en_topic="The Environment topic"
+        local_question="Trong chủ đề này, chúng ta sẽ thảo luận về vấn đề người lái xe có nên phải trả phí cầu đường, xăng, phí đỗ xe, phí xa lộ cao hơn không?" >
+    </lesson>
+    <lesson
+        id="10"
+        en_hint="Volunteering work has many benefits including gaining new skills you are likely to need later in life. It&apos;s also a great way to meet people, find new friends and get into varied work which could lead into a career. School students are already used to volunteering, in the schools&apos; curriculum, pupils already spend an average of two weeks in a unpaid work placement. "
+        en_topic="Voluntary work"
+        local_question="Trong bài học này, chúng ta sẽ cùng thảo luận về vấn đề chúng ta có nên bị ép buộc làm công việc tình nguyện?" >
+    </lesson>
+
+</root>

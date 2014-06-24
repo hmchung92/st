@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World!</string>
+    <string name="app_name">English for everyone</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Action Bar</string>
+    <string name="btn_send_message">Send Message</string>
+	<string name="webview">Webview</string>
+    <string name="app_engname_example">English For Everyone</string>
+    <string name="app_localname_example">Tiếng anh cho mọi người</string>
+    
+    <string name="YOUR_APPLICATION_ID">3jF14VDjCrBCvHya7iKEuBONu93kYoHBtyyxO8rZ</string>
+    <string name="YOUR_CLIENT_KEY">bt3KHwfIPJ6HfvmfEGMBb5IyLcyO28f4q6FF0FGH</string>
+    
+    <string name="my_email">hominhchung92@gmail.com</string>
+    
+    <string name="confirm_exit">Confirm Exit...</string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure you want to exit?</string>
+    <!-- Activity titles -->
+    <string name="activity_location_found">Location Found</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="title_is_required">Title is required</string>
+    <string name="put_in_a_title_for_this_note">Put in a title for this note</string>
+    <string name="ok">OK</string>
+    
+    <string name="no_recognition_software_installed">No recognition software installed.\n Download?</string>   
+    <string name="ops">Ops! Your device doesnt support Speech to Text</string>
+    <string name="url_download_voicesearch">https://play.google.com/store/apps/details?id=com.google.android.voicesearch</string>
+    <string name="tell_me_what_you_want">Tell me what you want</string>
+    <string name="operation_canceled">Operation Canceled</string> 
+       
+    <string name="hint">Hint</string>
+    <string name="delete_item">Delete Item!</string>
+    
+    <string name="do_you_really_want_to_delete_this_note">Do you really want to delete this note?</string>
+    
+    <string name="not_available">Not Available</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <string name="url_download_tts">https://play.google.com/store/apps/details?id=com.google.android.tts</string>
+
+    <string name="speak">Speak</string>
+    <string name="save_note">Save Note</string>
+    <string name="vui_long_chon_mot_cau_tra_loi">Vui lòng chọn một câu trả lời</string>
+    
+    
+    <string name="topic">Topic</string>
+    <string name="add_new">Add New</string>
+    <string name="bai_mau">Bài mẫu</string>
+    <string name="bai_dich">Bài dịch</string>
+    
+	<string name="loading">Loading</string>
+	<string name="please_wait_for_a_moment">Please wait for a moment...</string>
+       
+    <!-- Action Bar action items -->
+    <string name="action_search">Search</string>
+    <string name="action_location_found">Location Found</string>
+    <string name="action_play">Play</string>
+    <string name="action_speed">Speech</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_help">Help</string>
+    <string name="action_check_updates">Check for Updates</string>
+    <string name="action_quit">Exit</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search word..</string>
+
+    <!-- Module titles -->
+    <string name="home">Home</string>
+
+    <!-- Vocabulary -->
+    <string name="vocabulary">Vocabulary</string>
+    <string name="words3500">3500 words</string>
+    <string name="learn_more">Learn more vocabulary</string>
+    <string name="look_up_words">Look up words</string>
+    <string name="irregular_verbs">Irregular Verbs</string>
+    <string name="qoutations">Qoutations</string>
+    <string name="phrases100">1000 Common Phrases</string>
+    <string name="learning_vocabulary_by_topic">Learning vocabulary by topic </string>
+    <string name="learning_vocabulary_by_video">Learning vocabulary through video</string>
+    <string name="learning_vocabulary_by_pictures">Learning vocabulary through pictures</string>
+    <string name="poem">Poem</string>
+    <string name="abbreviation">Abbreviation</string>
+    <string name="common_acronyms">Common Acronyms</string>
+    
+    
+    <!-- Writing -->
+    <string name="writing">Writing</string>
+    <string name="description_paintings">Description paintings lesson</string>
+    <string name="topics">Topics</string>
+    <string name="view_topics">View topics</string>
+    <string name="add_topics">Add topics</string>
+    <string name="cv_lesson_list">CV lesson list</string>
+    <string name="cv_lesson">CV lesson</string>
+    <string name="email_lesson_list">Email lesson list</string>
+    <string name="email_lesson">Email lesson</string>
+    <string name="letter_lesson_list">Letter lesson list</string>
+    <string name="letter_lesson">Letter lesson</string>
+    <string name="essay_list">Essay List</string>
+    <string name="essay">Essay</string>
+    <string name="chat_with_robot">Chat with robot</string>
+    <string name="titleEdit">Title</string>
+    <string name="noteEdit">Notes</string>
+    <string name="YourTitle">Title : </string>
+    <string name="YourNotes">Notes : </string>
+    <!-- Menu -->
+    <string name="writing_new_topic">New</string>
+    <string name="writing_info_topic">Topic</string>
+    <string name="writing_save_topic">Save</string>
+    <string name="writing_speak_topic">Speak</string>
+    <string name="writing_edit_topic">Edit</string>
+    <string name="writing_delete_topic">Delete</string>
+    <!-- Listening -->
+    <string name="listening">Listening</string>
+    <string name="text_to_speech">Text To Speech</string>
+    <string name="music">Music</string>
+    <string name="play_str">PLAY</string>
+    <string name="pause_str">PAUSE</string>
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="listening_lessons_by_topic">Listening lessons by topic</string>
+    <string name="listening_lessons">Listening lessons </string>
+    <string name="learning_through_songs">Learning through songs</string>
+    <string name="song_lesson">Song lesson</string>
+
+    <!-- Speaking -->
+    <string name="speaking">Speaking</string>
+    <string name="debate_lesson">Debate lesson</string>
+    <string name="speech_to_text">Speech To Text</string>
+    <string name="topics_speak_100">100 topics to speak</string>
+    <string name="speaking_topics">Speaking topics</string>
+
+    <!-- Reading -->
+    <string name="reading">Reading</string>
+    <string name="essay_lesson_list">Essay lesson list</string>
+    <string name="essay_lesson">Essay lesson</string>
+    <string name="story_list">Story list</string>
+    <string name="story_lesson">Story lesson</string>
+    <string name="comic_list">Comic list</string>
+    <string name="comic_lesson">Comic lesson</string>
+
+    <!-- Pronunciation -->
+    <string name="pronunciation">Pronunciation</string>
+    <string name="irregular_verbs_200">200 irregular verbs</string>
+    <string name="learn_to_pronounce">Learn to pronounce</string>
+    <string name="pronunciation_rules_list">Pronunciation rules list</string>
+    <string name="pronunciation_rules">Pronunciation rules</string>
+
+    <!-- Grammar -->
+    <string name="grammar">Grammar</string>
+    <string name="learning_grammar_by_topic">Learning grammar by topic</string>
+    <string name="learning_grammar_through_video">Learning grammar through Video</string>
+
+    <!-- Experiences -->
+    <string name="experiences">Experiences</string>
+    <string name="experience_list">Experience list</string>
+    <string name="experience_lesson">Experience lesson</string>
+    <string name="experience_through_video">Experience through Video</string>
+
+    <!-- Testing -->
+    <string name="testing">Testing</string>
+    <string name="testing_level_a">Testing English Level A</string>
+    <string name="testing_level_b">Testing English Level B</string>
+    <string name="testing_level_c">Testing English Level C</string>
+    <string name="testing_level_basic">Testing level basic</string>
+    <string name="testing_level_intermediate">Testing level intermediate</string>
+    <string name="testing_level_advanced">Testing level advancede</string>
+    <string name="guess_the_word">Guess the word</string>
+
+    <!-- Notes -->
+    <string name="notes">Notes</string>
+    <string name="about">About</string>
+    <string name="title">Title : </string>
+    <string name="menu_delete">Delete Item</string>
+    <string name="no_title">No Title</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="save_menu_noteedit">Save</string>
+    <string name="delete_menu_noteedit">Delete</string>
+    <string name="registration">Registration</string>
+    <string name="Username">Username</string>
+    <string name="Password">Password</string>
+    <string name="LoginBtn">Login</string>
+    <string name="SignupBtn">Sign Up</string>
+    <string name="LogoutBtn">Log Out</string>
+    <string name="Welcome">Welcome!</string>
+    <!-- Kids -->
+    <string name="kids">Kids</string>
+    <!-- Online -->
+    <string name="online">Online</string>
+
+    <string-array name="title_section">
+        <item>Sing</item>
+        <item>Grammar</item>
+        <item>Learning</item>
+        <item>Stories</item>
+        <item>Poems</item>
+    </string-array>
+
+    <string name="ranklabel">"Rank : "</string>
+    <string name="countrylabel">"Country : "</string>
+    <string name="populationlabel">"Population : "</string>
+
+</resources>

@@ -1,0 +1,95 @@
+<com.hominhchung.dashboard.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="@drawable/background1"  >
+    
+    <!--  Vocabulary Button -->
+    <Button
+        android:id="@+id/btn_vocabulary"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__vocabulary"
+        android:text="@string/vocabulary" />
+    
+    <!--  Listening Button -->
+    <Button
+        android:id="@+id/btn_listening"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__listening"
+        android:text="@string/listening" />
+    
+    <!--  Speaking Button -->
+    <Button
+        android:id="@+id/btn_speaking"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__speaking"
+        android:text="@string/speaking" />
+    
+    <!--  Reading Button -->
+    <Button
+        android:id="@+id/btn_reading"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__reading"
+        android:text="@string/reading" />
+    
+    <!--  Writing Button -->
+    <Button
+        android:id="@+id/btn_writing"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__writing"
+        android:text="@string/writing" />
+    
+    <!--  Grammar Button -->
+    <Button
+        android:id="@+id/btn_grammar"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__grammar"
+        android:text="@string/grammar" />
+    
+    <!--  Pronunciation Button -->
+    <Button
+        android:id="@+id/btn_pronunciation"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__pronunciation"
+        android:text="@string/pronunciation" />
+    
+    <!--  Experiences Button -->
+    <Button
+        android:id="@+id/btn_experiences"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__experiences"
+        android:text="@string/experiences" />
+
+    <!--  Note Button -->
+    <Button
+        android:id="@+id/btn_note"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__notes"
+        android:text="@string/notes" />
+    
+    <!--  Events Button -->
+    <Button
+        android:id="@+id/btn_testing"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__testing"
+        android:text="@string/testing" />
+
+    
+    <!--  Music Button -->
+    <Button
+        android:id="@+id/btn_kid"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__kid"
+        android:text="@string/kids" />
+    
+    <!--  phrases Button -->
+    <Button
+        android:id="@+id/btn_registration"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/dashboarde__world"
+        android:text="@string/online" />
+    
+    
+
+</com.hominhchung.dashboard.DashboardLayout>

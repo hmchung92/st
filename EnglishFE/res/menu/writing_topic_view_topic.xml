@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/action_search"
+          android:icon="@drawable/ic_menu_search"
+          android:title="@string/action_search"
+          android:showAsAction="ifRoom"
+          android:actionViewClass="android.widget.SearchView"/>
+    
+    <!-- Sửa chủ đề -->
+    <item android:id="@+id/writing_edit_topic"
+          android:icon="@android:drawable/ic_menu_edit"
+          android:title="@string/writing_edit_topic"
+          android:showAsAction="ifRoom" />
+    <!-- Xóa chủ đề -->
+    <item android:id="@+id/writing_delete_topic"
+          android:icon="@android:drawable/ic_menu_delete"
+          android:title="@string/writing_delete_topic"
+          android:showAsAction="ifRoom" />
+    <!-- Location Found -->
+    <item android:id="@+id/writing_info_topic"
+          android:icon="@android:drawable/ic_menu_more"
+          android:title="@string/writing_info_topic"
+          android:showAsAction="always" /> 
+
+</menu>

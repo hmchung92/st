@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <!-- Vocabulary -->
+    <module1 id="1" en_title="Look up words" local_title="Tra từ vựng">
+   	</module1>
+    <module1 id="2" en_title="Learning 3500 vocabulary" local_title="Học nhanh 3500 từ vựng">
+    </module1>
+    <module1 id="3" en_title="Irregular Verbs" local_title="Động từ bất quy tắc">
+    </module1>
+    <module1 id="4" en_title="Quotations" local_title="Danh ngôn">
+    </module1>
+    <module1 id="5" en_title="Common Abbreviations" local_title="Từ viết tắt thông dụng">
+    </module1>
+    <module1 id="6" en_title="1000 Regular expressions" local_title="1000 Cụm từ thông dụng">
+    </module1>
+    <module1 id="7" en_title="Learning 3000 English vocabulary by poetry" local_title="Học 3000 từ vựng Tiếng Anh bằng thơ">
+    </module1>
+    <module1 id="8" en_title="English dictionary with pictures" local_title="Từ điển tiếng Anh bằng hình ảnh">
+    </module1>
+    <module1 id="9" en_title="English Vocabulary through video" local_title="Từ vựng tiếng Anh qua video">
+    </module1>
+    <module1 id="10" en_title="Learning vocabulary by topic" local_title="Học từ vựng theo chủ đề">
+    </module1>
+    <vocabulary>
+    		<!-- Học từ vựng theo chủ đề(Learning vocabulary by topic) -->
+    		<module11 id="1" en_title="Clothing" local_title="Quần áo" data_text="Clothing.html">
+    		</module11>
+	    	<module11 id="2" en_title="Categories" local_title="Ngành nghề" data_text="Categories.html">
+		    </module11>
+		    <module11 id="3" en_title="Warning signs" local_title="Biển báo" data_text="Warning signs.html">
+		    </module11>
+		    <module11 id="4" en_title="Personality" local_title="Tính cách con người" data_text="Personality.html">
+		    </module11>
+		    <module11 id="5" en_title="Family" local_title="Gia đình" data_text="Family.html">
+		    </module11>
+		    <module11 id="6" en_title="Work" local_title="Công việc" data_text="Work.html">
+		    </module11>
+		    <module11 id="7" en_title="Animals" local_title="Loài vật" data_text="Animals.html">
+		    </module11>
+		    <module11 id="8" en_title="Street" local_title="Đường phố" data_text="Street.html">
+		    </module11>
+		    <module11 id="9" en_title="Food" local_title="Món ăn" data_text="Food.html">
+		    </module11>
+		    <module11 id="10" en_title="Love" local_title="Tình Yêu" data_text="Love.html">
+		    </module11>
+		    <module11 id="11" en_title="Weather" local_title="Thời tiết" data_text="Weather.html">
+		    </module11>
+		    <module11 id="12" en_title="Fruits" local_title="Hoa quả" data_text="Fruits.html">
+		   	</module11>
+		    
+		    
+    </vocabulary>
+    <!-- Writing -->
+    <module2 id="1" en_title="Writing through paintings" local_title="Viết qua tranh">
+    </module2>
+    <module2 id="2" en_title="Essay writing" local_title="30 chủ đề văn phạm mẫu hay">
+    </module2>
+    <module2 id="3" en_title="Learning to write English letter" local_title="Học viết thư tiếng anh">
+    </module2>
+    <module2 id="4" en_title="Learning writing English e-mail" local_title="Học viết thư điện tử tiếng anh">
+    </module2>
+    <module2 id="5" en_title="Learning English CV" local_title="Học viết CV tiếng Anh">
+    </module2>
+    <module2 id="6" en_title="Chat with Robot" local_title="Trò chuyện với Robot">
+    </module2>
+    		<!-- Học viết CV tiếng Anh -->
+		    <module21 id="1" en_title="Lesson 1 - Curriculum Vitae's introduction" local_title="Bài 1 - Giới thiệu về bản lý lịch">
+		    </module21>
+		    <module21 id="2" en_title="Lesson 2 - Dentifying competencies and skills" local_title="Bài 2 - Nhận định khả năng và kỹ năng">
+		    </module21> 
+		    <module21 id="3" en_title="Lesson 3 - Preparing your curriculum - phần 1" local_title="Bai 3 - Chuẩn bị cho bản lý lịch của bạn">
+		    </module21>
+		    <module21 id="4" en_title="Lesson 4 - Preparing your curriculum - phần 2" local_title="Bài 4 - Chuẩn bị cho bản lý lịch của bạn">
+		    </module21>
+		    <module21 id="5" en_title="Lesson 5 - Polishing your CV and sample CV" local_title="Bài 5 - Đánh bóng bản lý lịch của bạn và một số CV mẫu">
+		    </module21>
+		    <module21 id="6" en_title="Lesson 6 - Corresponce for the application process and the job search" local_title="Bài 6 - Thư từ trao đổi trong quá trình ứng tuyển và tìm việc">
+		    </module21>
+		    <module21 id="7" en_title="Lesson 7 - Marketing and Distributing your CV" local_title="Bài 7 - Tiếp thị và gửi CV của bản">
+		    </module21>
+		   	<module21 id="8" en_title="Lesson 8 - CV mẫu của Sinh viên và người đã đi làm" local_title="Bài 8 - CV mẫu của Sinh viên và người đã đi làm">
+		    </module21>
+    
+    		<!-- Học viết thư điện tử tiếng anh -->
+		    <module22 id="1" en_title="Introduction about email and its context" local_title="Bài 1 - Giới thiệu về email và phạm vi của email">
+		    </module22>
+		    <module22 id="2" en_title="Format, page layout and intonation of e-mails" local_title="Bài 2 - Định dạng, cách trình bày trang và ngữ điệu của e-mail">
+		    </module22>
+		    <module22 id="3" en_title="Gestures in email and status through email" local_title="Bài 3 - Hình biểu thị trong email và trạng thái tình cảm qua email">
+		    </module22>
+		    <module22 id="4" en_title="Greetings and signatures in email" local_title="Bài 4 - Phần chào hỏi và chữ ký trong emailLối nói bao hàm (inclusive)">
+		    </module22>
+		    <module22 id="5" en_title="Acronyms, jargon and domain names in email" local_title="Bài 5 - Từ viết tắt, biệt ngữ và tên miền trong email">
+		    </module22>
+		    <module22 id="6" en_title="Informal email" local_title="Bài 6 - email khong trang trọng">
+		    </module22>
+    		
+    		<!-- Học viết thư tiếng anh -->
+		    <module23 id="1" en_title="The parts of a letter" local_title="Bài 1 - Thành phần của một bức thư">
+		    </module23>
+		    <module23 id="2" en_title="General direction and formal invitations" local_title="Bài 2 - Hướng dẫn chung và thư mời trang trọngc">
+		    </module23>
+		    <module23 id="3" en_title="Informal invitations" local_title="Bài 3 - Thư mời không trang trọng">
+		    </module23>
+		    <module23 id="4" en_title="The letter of condolence and letters of sympathy" local_title="Bài 4 - Thư chia buồn và thư bày tỏ thái độ thông cảm">
+		    </module23>
+		    <module23 id="5" en_title="Letters of congratulation and letters of introduction" local_title="Bài 5 - Thư chúc mừng và thư giới thiệu">
+		    </module23>
+		    <module23 id="6" en_title="Letters of thanks" local_title="Bài 6 - Thư cảm ơn">
+		    </module23>
+	
+	<!-- Reading -->	    	    
+    <module3 id="1" en_title="Reading comprehension - TOEFL" local_title="Đọc hiểu- TOEFL">
+    </module3>
+    <!-- <module3 id="2" en_title="Beginner" local_title="Đọc tiếng Anh trình độ dễ">
+    </module3>
+    <module3 id="3" en_title="Intermediate" local_title="Đọc tiếng Anh trình độ trung bình">
+    </module3> -->
+    <module3 id="4" en_title="Comics" local_title="Truyện cười">
+    </module3>
+    <module3 id="5" en_title="Novel" local_title="Truyện ngắn">
+    </module3>
+    
+    <!-- Speaking -->	
+    <module4 id="1" en_title="100 topics for practising spoken english" local_title="100 chủ đề luyện nói tiếng Anh">
+    </module4>
+    <module4 id="2" en_title="Describe the paintings through speech" local_title="Miêu tả tranh qua giọng nói">
+    </module4>  
+    <module4 id="3" en_title="Debates" local_title="Tranh luận">
+    </module4>  
+   <!--  <module4 id="4" en_title="Listen and Repeat" local_title="Nghe và đọc lại">
+    </module4>
+    <module4 id="5" en_title="English for Office" local_title="Tiếng Anh Văn Phòng ">
+    </module4>  --> 
+    <module4 id="4" en_title="Speech to text" local_title="Thoại thành văn bản">
+    </module4> 
+    
+    <!-- Listening -->	    	
+    <module5 id="1" en_title="100 topics to practice listening to English" local_title="100 chủ đề luyện nghe">
+    </module5>    
+    <module5 id="2" en_title="Learning English online through youtube" local_title="Học tiếng anh qua Youtube">
+    </module5>
+    <module5 id="3" en_title="Learning English through songs" local_title="Học tiếng anh qua bài hát">
+    </module5>
+    <module5 id="4" en_title="Text to speech" local_title="Văn bản thành thoại">
+    </module5>  
+    
+    
+    <!-- Pronunciation -->	    	
+    <module6 id="1" en_title="English - America pronunciation dictionary " local_title="American English Pronunciation Dictionary ">
+    </module6>    
+    <module6 id="2" en_title="10 video learn how to pronounce" local_title="10 bài video học cách phát âm">
+    </module6>
+    <module6 id="3" en_title="200 irregular verbs" local_title="200 động từ bất quy tắc">
+    </module6>
+    <module6 id="4" en_title="Pronunciation rules" local_title="Quy tắc phát âm">
+    </module6> 
+    	
+    		<!--(Quy tắc phát âm) Pronunciation -->	    	
+		    <module61 id="1" en_title="Quy tắc phát âm đầu tiên" local_title="Quy tắc phát âm đầu tiên">
+		    </module61>    
+		    <module61 id="2" en_title="Quy tắc phát âm thứ hai" local_title="Quy tắc phát âm thứ hai">
+		    </module61>
+		    <module61 id="3" en_title="Quy tắc phát âm thứ ba" local_title="Quy tắc phát âm thứ ba">
+		    </module61>
+		    <module61 id="4" en_title="Quy tắc phát âm thứ tư" local_title="Quy tắc phát âm thứ tư">
+		    </module61>  
+		    <module61 id="5" en_title="Quy tắc phát âm thứ năm" local_title="Quy tắc phát âm thứ năm">
+		    </module61> 
+    	
+    <!-- Experience -->	    	
+    <module7 id="1" en_title="English learning experience" local_title="Kinh nghiệm học anh văn">
+    </module7>    
+    <module7 id="2" en_title="English learning experience through Video" local_title="Kinh nghiệm học anh văn qua Video">
+    </module7>
+    
+    <!-- Grammar -->	    	
+    <module8 id="1" en_title="Learning grammar" local_title="47 chủ đề học ngữ pháp">
+    </module8>    
+    <module8 id="2" en_title="Learning grammar through Video" local_title="Học ngữ pháp qua Video">
+    </module8>
+    
+    <!-- Testing -->	    	
+    <module9 id="1" en_title="Testing English Level A" local_title="Kiểm tra trình độ A">
+    </module9>    
+    <module9 id="2" en_title="Testing English Level B" local_title="Kiểm tra trình độ B">
+    </module9> 
+    <module9 id="3" en_title="Testing English Level C" local_title="Kiểm tra trình độ C">
+    </module9> 
+    <module9 id="4" en_title="The Basic Level" local_title="Trình độ cơ bản">
+    </module9>
+    <module9 id="5" en_title="The Intermediate Level" local_title="Trình độ cơ bản">
+    </module9>
+    <module9 id="6" en_title="The Advanced Level" local_title="Trình độ cao cấp">
+    </module9>
+    <module9 id="7" en_title="Guess The Word" local_title="Đoán từ vựng">
+    </module9>
+    <module9 id="8" en_title="Grammar Easy" local_title="Kiểm tra trình độ A">
+    </module9>    
+    <module9 id="9" en_title="Toeic Test Vocabulary" local_title="Toeic Test Vocabulary">
+    </module9> 
+    <module9 id="10" en_title="TOEFL" local_title="Trình độ TOEFL">
+    </module9> 
+    <module9 id="11" en_title="Incorrect word TOEFL" local_title="Tìm từ sai-TOEFL">
+    </module9>
+    <module9 id="12" en_title="Synonym TOEFL" local_title="Từ đồng nghĩa">
+    </module9>
+    
+    <!-- online -->
+    <module10 id="1" en_title="Mỗi ngày 3 từ vựng" local_title="Mỗi ngày 3 từ vựng">
+    </module10>
+    <module10 id="2" en_title="Miêu tả tranh" local_title="Miêu tả tranh"/>
+    <module10 id="3" en_title="Từ vựng theo chủ đề" local_title="Từ vựng theo chủ đề"/>
+    <module10 id="4" en_title="Ghi chú" local_title="Ghi chú"/>
+    <module10 id="5" en_title="Chat" local_title="Chat"/>    
+</root>

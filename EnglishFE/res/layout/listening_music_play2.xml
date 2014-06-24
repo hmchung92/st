@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/musician"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/liner_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_shown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/abs__ab_transparent_dark_holo"
+            android:text="PAUSING"
+            android:textColor="#fff"
+            android:textSize="42px"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="74.0dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/imageButtonPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7.0dip"
+            android:contentDescription="@string/mediacontroller_play_pause"
+            android:gravity="center"
+            android:src="@drawable/mediacontroller_play_button" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2.0dip"
+            android:layout_marginLeft="7.0dip"
+            android:layout_marginRight="7.0dip"
+            android:layout_marginTop="2.0dip"
+            android:layout_toRightOf="@+id/imageButtonPlay" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/text_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="chung"
+                    android:textColor="#fff"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:focusable="true"
+                android:max="1000" />
+
+            <TextView
+                android:id="@+id/text_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="file_name"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/liner_0"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="HAPPY NEW YEAR"
+        android:textColor="#fff"
+        android:textSize="22px"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_title"
+        android:layout_centerHorizontal="true"
+        android:text="author"
+        android:textColor="#fff"
+        android:textSize="14dp" />
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/liner_0"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/download"
+        android:gravity="center" />
+
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView 
+        android:textSize="14.0dip" 
+        android:textStyle="bold" 
+        android:id="@+id/tv_name" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="5.0dip" 
+        android:text="name" />
+    <TextView 
+        android:textSize="12.0dip" 
+        android:textColor="#ff0000ff" 
+        android:id="@+id/tv_category" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="5.0dip" 
+        android:text="category" 
+        android:layout_below="@+id/tv_name" />
+    <TextView 
+        android:textSize="12.0dip" 
+        android:id="@+id/tv_read" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="5.0dip" 
+        android:text="read" 
+        android:layout_toRightOf="@+id/tv_category" 
+        android:layout_below="@+id/tv_name" />
+    
+    
+    
+    <Button 
+        android:id="@+id/btn_close" 
+        android:background="@drawable/btn_close" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="10.0dip" 
+        android:layout_alignParentRight="true" 
+        android:layout_centerVertical="true" />
+    <Button 
+        android:id="@+id/btn_sound" 
+        android:background="@drawable/btn_sound" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_toLeftOf="@+id/btn_close" android:layout_centerVertical="true" />
+    <TextView 
+        android:textSize="12.0dip" 
+        android:gravity="left" 
+        android:id="@+id/tv_content" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="5.0dip" 
+        android:text="content" 
+        android:lines="2" 
+        android:layout_toLeftOf="@+id/btn_sound" android:layout_below="@+id/tv_category" />
+</RelativeLayout> -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/line"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/tv_entitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/irregular_verbs"
+        android:textColor="#990000"
+        android:typeface="sans" 
+        android:textSize="17dip"
+        android:paddingRight="20dp"
+        android:textStyle="bold"/>
+
+	<LinearLayout 
+        android:id="@+id/line2" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/tv_entitle"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp" >
+        
+	     <TextView
+	        android:id="@+id/tv_category"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tv_entitle"
+	        android:textColor="#0191C8"
+	        android:textSize="15dip"
+	        android:text="(adj)" />
+	     
+	     <TextView
+	        android:id="@+id/tv_read"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tv_entitle"
+	        android:textColor="#1a1a1a"
+	        android:textSize="15dip"
+	        android:layout_marginLeft="5dp"
+	        android:text="@string/irregular_verbs" />
+	</LinearLayout> 
+	
+	<TextView
+	        android:id="@+id/tv_vicontent"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/line2"
+	        android:textColor="#1a1a1a"
+	        android:textSize="15dip"
+	        android:lines="2"
+	        android:layout_marginTop="1dip"
+	        android:text="@string/irregular_verbs" />
+
+
+
+        <ImageButton 
+	        android:id="@+id/btn_close" 
+	        android:background="@drawable/btn_close" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:layout_margin="10.0dip" 
+	        android:layout_alignParentRight="true" 
+	        android:layout_centerVertical="true" />
+
+        <ImageButton 
+	        android:id="@+id/btn_sound" 
+	        android:background="@drawable/btn_sound" 
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:layout_toLeftOf="@+id/btn_close" 
+	        android:layout_centerVertical="true" />
+
+
+</RelativeLayout>

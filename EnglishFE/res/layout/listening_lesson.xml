@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+		<LinearLayout 
+		    android:gravity="center" 
+		    android:orientation="horizontal" 
+		    android:id="@+id/ll_speed" 
+		    android:background="#ff4b4b4b" 
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content" 
+		    android:layout_alignParentBottom="true">
+	        <CheckBox 
+	            android:id="@+id/btn_play" 
+	            android:background="@drawable/play_bg" 
+	            android:layout_width="wrap_content" 
+	            android:layout_height="wrap_content" 
+	            android:layout_margin="5.0dip" 
+	            android:button="@drawable/cb_play" />
+	        <SeekBar 
+	            android:id="@+id/SeekBar01" 
+	            android:layout_width="fill_parent" 
+	            android:layout_height="wrap_content" 
+	            android:layout_margin="5.0dip" />
+	    </LinearLayout>
+		 <!-- <LinearLayout
+		    android:id="@+id/widget31"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:background="#990000" >
+		
+			  <Button
+		        android:text="@string/play_str"
+		        android:textStyle="bold"
+		        android:id="@+id/ButtonPlayStop"
+		        android:layout_width="wrap_content"
+		        android:visibility="invisible"
+		        android:layout_height="wrap_content"/>
+		         
+		    <SeekBar
+		        android:id="@+id/SeekBar01"
+		        android:layout_height="wrap_content"
+		        android:layout_width="fill_parent"
+		        android:layout_weight="8"
+		        
+		        android:layout_gravity="center"
+		         />
+		</LinearLayout>  -->
+		<ListView
+		    android:id="@+id/list_view"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@id/ll_speed"
+		    android:scrollbarThumbVertical="@drawable/thumbscrollbar" >
+		</ListView>
+    
+</RelativeLayout>

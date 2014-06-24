@@ -1,0 +1,40 @@
+﻿/*
+Ho Minh Chung
+1101718
+*/
+*{
+	margin: 2px;
+	padding:2px;
+}
+/*CSS FOR BODY*/
+body{
+	display:block;
+	font-size:15px;
+	font-family: Helvetica,sans-serif;
+	line-height: 150%;
+}
+/*CSS FOR MENU*/
+h2{
+    color: #29549f;
+	text-align: center;
+	padding-bottom: 10px;
+	line-height: 150%;
+	//text-transform:uppercase;
+}
+h3{
+	text-align: left;
+	color: #29549f;
+}
+h4{
+	text-align: left;
+	color: #29549f;
+}
+p {
+    text-align: justify;
+    text-decoration: none;
+    text-transform: none;
+}
+strong{
+	margin: 20px;
+	color: #29549f;
+}

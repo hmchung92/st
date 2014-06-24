@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f8f9fe" >
+
+    <!-- Editext for Search -->
+    <!-- android:background="#f4f4f4" -->
+    <!-- List View -->
+
+    <RelativeLayout
+        android:id="@+id/relative_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/abs__ab_transparent_dark_holo"
+        >
+
+        <TextView
+            android:id="@+id/txtwelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Welcome"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/txtuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtwelcome"
+            android:text="Username" />
+
+        <TextView
+            android:id="@+id/txtemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtuser"
+            android:text="Email" />
+
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/LogoutBtn" 
+            android:textColor="#ffffff"
+            android:background="@drawable/btn_registry"/>
+    </RelativeLayout>
+
+    <com.google.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="a15351678b9a986"
+        ads:loadAdOnCreate="true" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/adView"
+        android:layout_below="@+id/relative_1"
+        android:background="@drawable/list"
+        android:padding="5dp"
+        android:scrollbarThumbVertical="@drawable/thumbscrollbar" />
+
+</RelativeLayout>

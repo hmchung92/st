@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/jquery.mobile-1.2.0.min.css" />
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/jquery.mobile-1.2.0.min.js"></script>
+<title>English Conversation</title>
+<script type="text/javascript" charset="utf-8"
+	src="./js/cordova-2.2.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/revmob.js"></script>
+<script type="text/javascript" src="./js/jquery.puzzle.js"></script>
+<script type="text/javascript">
+	var revmob = null;
+	function onDeviceReady() {
+		revmob = new RevMob('51459fcd45b4560e00000032');
+		revmob.setTestingMode(false, null, null);
+		revmob.showFullscreen(null, null);
+	}
+	function onBodyLoad() {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	function defaultSuccessCallback(params) {
+	}
+	function defaultErrorCallback(params) {
+	}
+	jQuery(document)
+			.ready(
+					function() { /* if(puzzleApp){ */
+						$("#level")
+								.bind(
+										"change",
+										function(event, ui) {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index'));
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+											$("div.puzzle, p").puzzle(size);
+										});
+						$(function() {
+							$("#puzzleContainer").attr('index', '1');
+							$("div.puzzle, p").puzzle(100);
+						});
+						$('#next')
+								.live(
+										"click",
+										function() {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index')); /* console.log('./'+imgnum+'.jpg'); */
+											var image = $('<img src="./'
+													+ (imgnum + 1) + '.jpg" />'); /* console.log(image[0]['width']); */
+											if (image[0]['width'] > 0) {
+												imgnum = imgnum + 1;
+											} else {
+												imgnum = 1;
+											} /* if (ImageExist('./'+(imgnum+1)+'.jpg')){imgnum = 1;}else{imgnum = imgnum + 1;} */
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+										}); /* // }else{ // $("puzzle-button").remove() // } */
+						$("#nointernet").bind({
+							popupafterclose : function(event, ui) {
+								youTubeAjaxCall();
+							}
+						});
+						$('.video')
+								.live(
+										"click",
+										function(event) {
+											event.preventDefault();
+											vidID = $(this).attr('vidID');
+											var cat = $(this)
+													.attr('categoryID');
+											jQuery('#player' + cat)
+													.html(
+															'<iframe src="http://www.youtube.com/embed/'
+																	+ vidID
+																	+ '?autoplay=1" width="160" height="90" ></iframe><br><br>');
+											iframeAutoSize();
+											$("html, body").animate({
+												scrollTop : 0
+											}, "slow");
+										});
+						$(document).on("pagebeforecreate",
+								function(event, data) { /* // Let the framework know we're going to handle the load. // event.preventDefault(); */
+									iframeAutoSize(); /* // themeRefresh(theme); */
+								});
+						$(document).on("pagechange", function(event, data) { /* // Let the framework know we're going to handle the load. // revmob.showPopup(null, null); */
+							jQuery('.player').html('');
+						});
+						function iframeAutoSize() { /* // Find all YouTube videos */
+							var $allVideos = jQuery("iframe"), /* // The element that is fluid width */$fluidEl = jQuery("[data-role='page']"); /* // Figure out and save aspect ratio for each video */
+							$allVideos
+									.each(function() {
+										jQuery(this)
+												.data(
+														'aspectRatio',
+														this.height
+																/ this.width)
+												/* // and remove the hard coded width/height */.removeAttr(
+														'height').removeAttr(
+														'width');
+									}); /* // When the window is resized */
+							jQuery(window).resize(
+									function() {
+										var newWidth = $fluidEl.width(); /* // Resize all videos according to their own aspect ratio */
+										$allVideos.each(function() {
+											var $el = jQuery(this);
+											$el.height(newWidth
+													* $el.data('aspectRatio'));
+											$el.width(newWidth);
+										}); /* // Kick off one resize to fix all videos on page load */
+									}).resize();
+						}
+					});
+</script>
+</head>
+<body onLoad="onBodyLoad()">
+	<div data-role="page" id="categories">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1 id="title"></h1>
+		</div>
+		<div data-role="content" class="content">
+			<center>
+				<h1>Learn english speaking</h1>
+			</center>
+			<br>
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a href="#Basic English Lesson"><h2>Basic English Lesson</h2></a></li> 
+				<li><a href="#Learn english speaking 1"><h2>Learn english speaking 1</h2></a></li>
+				<li><a href="#Learn english speaking 2"><h2>Learn english speaking 2</h2></a></li>
+				<li><a href="#Learning English With Mr Duncan"><h2>Learning English With Mr Duncan</h2></a></li>
+				<li><a href="#Learning English with Steve Ford"><h2>Learning English with Steve Ford</h2></a></li>
+				
+			</ul>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+	<div data-role="page" id="Basic English Lesson">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-rel="back">Back</a>
+			<h1 id="title">Basic English Lesson</h1>
+		</div>
+		<div class="player" id="player0"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="0"
+					vidID="anidfey4q-Q"> <img
+						src="http://i.ytimg.com/vi/anidfey4q-Q/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 01</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="2PAM1AP-6Gs"> <img
+						src="http://i.ytimg.com/vi/2PAM1AP-6Gs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 02</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="7bwyq-0h6bc"> <img
+						src="http://i.ytimg.com/vi/7bwyq-0h6bc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 03</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="S_7QskJ_hHU"> <img
+						src="http://i.ytimg.com/vi/S_7QskJ_hHU/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 04</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="VAycVXSg7VE"> <img
+						src="http://i.ytimg.com/vi/VAycVXSg7VE/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 05</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="QHdR5SC8Cfg"> <img
+						src="http://i.ytimg.com/vi/QHdR5SC8Cfg/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 06</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="0qt2IaySZsM"> <img
+						src="http://i.ytimg.com/vi/0qt2IaySZsM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 07</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="4p0TkhgN1OY"> <img
+						src="http://i.ytimg.com/vi/4p0TkhgN1OY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 08</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="Bb0Vb7mkac4"> <img
+						src="http://i.ytimg.com/vi/Bb0Vb7mkac4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 09</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="3REltg0aInQ"> <img
+						src="http://i.ytimg.com/vi/3REltg0aInQ/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 10</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="2guVvBjN_hs"> <img
+						src="http://i.ytimg.com/vi/2guVvBjN_hs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 11</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="2pkwo4eX7bA"> <img
+						src="http://i.ytimg.com/vi/2pkwo4eX7bA/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Conversation 1 12</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+			</ul>
+			<div data-role="popup" id="nointernet">
+				<p>No Internet Connection!</p>
+			</div>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+	<div data-role="page" id="Learn english speaking 1">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-rel="back">Back</a>
+			<h1 id="title">Learn english speaking 1</h1>
+		</div>
+		<div class="player" id="player1"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="1"
+					vidID="TdquzGEDzYo"> <img
+						src="http://i.ytimg.com/vi/TdquzGEDzYo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 1: Where do you come from ?</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="rDLu9iAPje0"> <img
+						src="http://i.ytimg.com/vi/rDLu9iAPje0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 2: How was your vacation ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="hwYX5XpKuOE"> <img
+						src="http://i.ytimg.com/vi/hwYX5XpKuOE/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 3: Do you remember me ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="hcLn4TXsFnU"> <img
+						src="http://i.ytimg.com/vi/hcLn4TXsFnU/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 4: I like your style </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="BSk2A2nVr6A"> <img
+						src="http://i.ytimg.com/vi/BSk2A2nVr6A/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 5: Family </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="kNgWV0lAYS8"> <img
+						src="http://i.ytimg.com/vi/kNgWV0lAYS8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 6: returning a shirt to the store </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="esayvr69YWk"> <img
+						src="http://i.ytimg.com/vi/esayvr69YWk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 7: Do you have a pet ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="i1_i2XkAADI"> <img
+						src="http://i.ytimg.com/vi/i1_i2XkAADI/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 8: What kind of food do you like ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="QV2F_zaxeWo"> <img
+						src="http://i.ytimg.com/vi/QV2F_zaxeWo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 9: What do you want to do after your gaduate ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="geDdDePJU8s"> <img
+						src="http://i.ytimg.com/vi/geDdDePJU8s/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 10: Planning a trip </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="r7F8_17Oqnk"> <img
+						src="http://i.ytimg.com/vi/r7F8_17Oqnk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 11: Hobbies </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="FMy7uzfvguc"> <img
+						src="http://i.ytimg.com/vi/FMy7uzfvguc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 12: The First time to meet </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="gSPXqCIp1-k"> <img
+						src="http://i.ytimg.com/vi/gSPXqCIp1-k/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 13: What would you like to do ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="8VQOpZbHKZc"> <img
+						src="http://i.ytimg.com/vi/8VQOpZbHKZc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 14: Coffee or tea ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="Nj0AEIzdz_E"> <img
+						src="http://i.ytimg.com/vi/Nj0AEIzdz_E/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 15: Have you ever traveled abroad ?</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="OqOcmFX9O3I"> <img
+						src="http://i.ytimg.com/vi/OqOcmFX9O3I/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 16: Shopping </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="v-7nX55jqOk"> <img
+						src="http://i.ytimg.com/vi/v-7nX55jqOk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 17: My house was robbed ! </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="Mf805xv1_Zs"> <img
+						src="http://i.ytimg.com/vi/Mf805xv1_Zs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 18: Asking infomation on the Phone </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="1"
+					vidID="3nKXIy-F2hw"> <img
+						src="http://i.ytimg.com/vi/3nKXIy-F2hw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 19: Why do you have a headache ? </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+				
+			</ul>
+			<div data-role="popup" id="nointernet">
+				<p>No Internet Connection!</p>
+			</div>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+	<div data-role="page" id="Learn english speaking 2">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-rel="back">Back</a>
+			<h1 id="title">Learn english speaking 2</h1>
+		</div>
+		<div class="player" id="player2"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="2"
+					vidID="B7lDjhLbmBc"> <img
+						src="http://i.ytimg.com/vi/B7lDjhLbmBc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 1: At the travel agent </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="SwBmEuZlcw8"> <img
+						src="http://i.ytimg.com/vi/SwBmEuZlcw8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 2: At the Airport </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="igKUwDDqIUQ"> <img
+						src="http://i.ytimg.com/vi/igKUwDDqIUQ/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 3: Asking for Assistance </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="X1fz3Cx5m8Y"> <img
+						src="http://i.ytimg.com/vi/X1fz3Cx5m8Y/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 4: At the Hotel </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="Vi9NKOrFOdc"> <img
+						src="http://i.ytimg.com/vi/Vi9NKOrFOdc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 5: At the Restaurant </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="kLdBDJKBrY8"> <img
+						src="http://i.ytimg.com/vi/kLdBDJKBrY8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 6: At the Bar </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="E5tNxU1GiWQ"> <img
+						src="http://i.ytimg.com/vi/E5tNxU1GiWQ/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 7: Using different kind of services </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="b6uRaq-Prdw"> <img
+						src="http://i.ytimg.com/vi/b6uRaq-Prdw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 8: Concierge </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="2"
+					vidID="Xh7aL5-2pQk"> <img
+						src="http://i.ytimg.com/vi/Xh7aL5-2pQk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Unit 9: Sight seeing </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+			</ul>
+			<div data-role="popup" id="nointernet">
+				<p>No Internet Connection!</p>
+			</div>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+	<div data-role="page" id="Learning English With Mr Duncan">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-rel="back">Back</a>
+			<h1 id="title">Learning English With Mr Duncan</h1>
+		</div>
+		<div class="player" id="player3"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="3"
+					vidID="ohJCdihPWqc"> <img
+						src="http://i.ytimg.com/vi/ohJCdihPWqc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Introduction</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="6f_FtzgL9y4"> <img
+						src="http://i.ytimg.com/vi/6f_FtzgL9y4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Hello/Goodbye</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="K6m8_MRgfrs"> <img
+						src="http://i.ytimg.com/vi/K6m8_MRgfrs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Please/Thank You<h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="pB9d0vm_t1Y"> <img
+						src="http://i.ytimg.com/vi/pB9d0vm_t1Y/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Response to 'Please'/'Thank You'</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="v-elMi_t4Hc"> <img
+						src="http://i.ytimg.com/vi/v-elMi_t4Hc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Good/Bad</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="gwHIql9oql0"> <img
+						src="http://i.ytimg.com/vi/gwHIql9oql0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Happy/Sad</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="7v4Vbhtx6TM"> <img
+						src="http://i.ytimg.com/vi/7v4Vbhtx6TM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Health/Exercise</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="-sZOc-jB2cw"> <img
+						src="http://i.ytimg.com/vi/-sZOc-jB2cw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Stress/Worry</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="YXyH6_coLSs"> <img
+						src="http://i.ytimg.com/vi/YXyH6_coLSs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>F A M E</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="u_BtrCuSOeE"> <img
+						src="http://i.ytimg.com/vi/u_BtrCuSOeE/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Saying Sorry</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="_roCWpvbhbg"> <img
+						src="http://i.ytimg.com/vi/_roCWpvbhbg/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Irony and Coincidence</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="ijV_XvdQqo0"> <img
+						src="http://i.ytimg.com/vi/ijV_XvdQqo0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>All about you!</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="OKq32VETOkc"> <img
+						src="http://i.ytimg.com/vi/OKq32VETOkc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Grammar!</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="FAB9RrC9x54"> <img
+						src="http://i.ytimg.com/vi/FAB9RrC9x54/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Body Language</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="CjvN6FTtB60"> <img
+						src="http://i.ytimg.com/vi/CjvN6FTtB60/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>SLANG</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="QQKbUX4Cfe0"> <img
+						src="http://i.ytimg.com/vi/QQKbUX4Cfe0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Technology</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="EdmSTcehRZM"> <img
+						src="http://i.ytimg.com/vi/EdmSTcehRZM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Time</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="Ght_qKdF2PY"> <img
+						src="http://i.ytimg.com/vi/Ght_qKdF2PY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Small Talk</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="aUwJbMKdeZM"> <img
+						src="http://i.ytimg.com/vi/aUwJbMKdeZM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>RULES !!</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="3"
+					vidID="4kxxi9P7iW0"> <img
+						src="http://i.ytimg.com/vi/4kxxi9P7iW0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>More Slang</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+			</ul>
+			<div data-role="popup" id="nointernet">
+				<p>No Internet Connection!</p>
+			</div>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	<div data-role="popup" id="nointernet">
+				<p>No Internet Connection!</p>
+			</div>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+	<div data-role="page" id="Learning English with Steve Ford">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<a href="#" data-rel="back">Back</a>
+			<h1 id="title">Learning English with Steve Ford</h1>
+		</div>
+		<div class="player" id="player4"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="4"
+					vidID="HTCl92hHwvU"> <img
+						src="http://i.ytimg.com/vi/HTCl92hHwvU/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 1-Idioms</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="Yd4Gtmy8e8s"> <img
+						src="http://i.ytimg.com/vi/Yd4Gtmy8e8s/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 2-Mouth idioms</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="vcV15SX9kt0"> <img
+						src="http://i.ytimg.com/vi/vcV15SX9kt0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 3-Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="0OKTl0ad8Tk"> <img
+						src="http://i.ytimg.com/vi/0OKTl0ad8Tk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 4-Tongue Idioms-Phrasal Verbs</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="um_bRgJwRl8"> <img
+						src="http://i.ytimg.com/vi/um_bRgJwRl8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 5-Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="0xDBeSLseMQ"> <img
+						src="http://i.ytimg.com/vi/0xDBeSLseMQ/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 6-Advanced English Grammar Lesson</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="BX6uvig0lII"> <img
+						src="http://i.ytimg.com/vi/BX6uvig0lII/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 7-Advanced English Grammar Lesson</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="ZvWyv6oTKWE"> <img
+						src="http://i.ytimg.com/vi/ZvWyv6oTKWE/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lesson 8-Advanced Grammar - Vocabulary</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="ZPON92EnFFw"> <img
+						src="http://i.ytimg.com/vi/ZPON92EnFFw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Learning English TV9 - Snow</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="PB5xWuv57J0"> <img
+						src="http://i.ytimg.com/vi/PB5xWuv57J0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Parallel 1-Serena - The Woman in the Mirror</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="reXIS5prhdI"> <img
+						src="http://i.ytimg.com/vi/reXIS5prhdI/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Parallel 1-Vocabulary</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="3QTcmEtebeo"> <img
+						src="http://i.ytimg.com/vi/3QTcmEtebeo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Upper-Intermediate - Lesson #1 - Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="JVuNCITBq7k"> <img
+						src="http://i.ytimg.com/vi/JVuNCITBq7k/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Intermediate-Lesson # 1 – Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="Npez57FZ_b4"> <img
+						src="http://i.ytimg.com/vi/Npez57FZ_b4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Pre-intermediate-Lesson 1 - Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="XVJOBEmiJUk"> <img
+						src="http://i.ytimg.com/vi/XVJOBEmiJUk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Basic-Lesson # 1-Alphabet - Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="NytAHLuN_WM"> <img
+						src="http://i.ytimg.com/vi/NytAHLuN_WM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Basic-Articles - Parallel 1</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="vcV15SX9kt0"> <img
+						src="http://i.ytimg.com/vi/vcV15SX9kt0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Basic-Lesson 3 - Grammar</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="s1bw_manHJw"> <img
+						src="http://i.ytimg.com/vi/s1bw_manHJw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Steve in Brazil Part 1 - Run Phrasal Verbs</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="0Qzd7zNt-qA"> <img
+						src="http://i.ytimg.com/vi/0Qzd7zNt-qA/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Steve in Paris Part 2 - Get Phrasal Verbs</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="4"
+					vidID="E7kftdmgvBY"> <img
+						src="http://i.ytimg.com/vi/E7kftdmgvBY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Steve in Paris Part 3 - Get Phrasal Verbs</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+			</ul>
+			<div data-role="popup" id="nointernet">
+				<p>No Internet Connection!</p>
+			</div>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	</div>
+	
+	
+	<div data-role="footer" class="footer" data-position="fixed"
+			role="contentinfo" data-theme="b">
+			<div data-role="navbar" class="nav">
+				<ul>
+					<li id="videos-button"><a href="#categories" data-icon="home">Categories</a></li>
+				</ul>
+			</div>
+			<!-- /navbar -->
+		</div>
+		<!-- /footer -->
+	
+	<!-- /page -->
+	<!-- /page -->
+</body>
+</html>

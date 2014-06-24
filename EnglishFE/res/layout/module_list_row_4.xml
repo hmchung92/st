@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <!-- Single ListItem -->
+    
+    <!-- Start icon -->
+    
+    <ImageView 
+        android:id="@+id/btn_start" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="5.0dip" 
+        android:layout_centerVertical="true" />
+    
+    <!-- arrow icon --> 
+    <ImageView 
+        android:id="@+id/btn_sound" 
+        android:background="@drawable/arrow" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_margin="5.0dip" 
+        android:layout_alignParentRight="true" 
+        android:layout_centerVertical="true" />
+    
+    <!-- Title -->
+    <TextView 
+        android:id="@+id/tv_namelocal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="@string/app_engname_example"
+        android:textColor="#990000"
+        android:typeface="sans" 
+        android:textSize="17dip"
+        android:gravity="center|left"
+        android:paddingRight="20dp"
+        android:padding="7dp"
+        android:textStyle="bold" />
+   
+</RelativeLayout>

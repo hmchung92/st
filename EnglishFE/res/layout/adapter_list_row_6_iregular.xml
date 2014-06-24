@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/line"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#fff"
+    android:padding="5dip" >
+
+    <TextView
+        android:id="@+id/tv_entitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name..."
+        android:textColor="#990000"
+        android:typeface="sans" 
+        android:textSize="17dip"
+        android:paddingRight="20dp"
+        android:textStyle="bold"/>
+
+	<LinearLayout 
+        android:id="@+id/line2" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:layout_below="@+id/tv_entitle"
+		android:layout_marginTop="5dp"
+		android:layout_marginBottom="5dp" >
+        
+	     <TextView
+	        android:id="@+id/tv_infinitive"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tv_entitle"
+	        android:textColor="#225486"
+	        android:textSize="15dip"
+	        android:text="The word" />
+	     
+	     <TextView
+	        android:id="@+id/tv_past_simple"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tv_entitle"
+	        android:textColor="#4D3E6A"
+	        android:textSize="15dip"
+	        android:layout_marginLeft="5dp"
+	        android:text="The word" />
+	     
+	     <TextView
+	        android:id="@+id/tv_past_participle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/tv_entitle"
+	        android:textColor="#228624"
+	        android:textSize="15dip"
+	        android:layout_marginLeft="5dp"
+	        android:text="The word" />
+	</LinearLayout> 
+	
+	<TextView
+	        android:id="@+id/tv_vicontent"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/line2"
+	        android:textColor="#1a1a1a"
+	        android:textSize="15dip"
+	        android:layout_marginTop="1dip"
+	        android:text="vicontent..." />
+
+
+
+        <ImageView 
+	        android:id="@+id/iv_next" 
+	        android:background="@drawable/btn_more"
+	        android:layout_width="wrap_content" 
+	        android:layout_height="wrap_content" 
+	        android:layout_margin="10.0dip" 
+	        android:layout_alignParentRight="true" 
+	        android:layout_centerVertical="true" />
+
+</RelativeLayout>

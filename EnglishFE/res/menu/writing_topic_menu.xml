@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/writing_new_topic"
+          android:icon="@android:drawable/ic_menu_add"
+          android:title="@string/writing_new_topic"
+          android:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/writing_info_topic"
+          android:icon="@android:drawable/ic_menu_more"
+          android:title="@string/writing_info_topic"
+          android:showAsAction="ifRoom" />   
+
+</menu>

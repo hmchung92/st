@@ -1,0 +1,127 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ListTopicsWritingMainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="NỘI DUNG"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            />
+
+        <TextView
+            android:id="@+id/kq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#990000" 
+            android:text="KẾT QỦA"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="15"
+        android:src="@drawable/clothes_coat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_nghe"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left|center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_volume_normal"
+            android:gravity="left|center"
+            android:textColor="#ffffff" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="20"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Nhập từ tiếng anh" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btn_noi"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="right|center"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_btn_speak_now_normal"
+            android:gravity="right|center"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/abs__cab_background_top_holo_dark"
+        android:gravity="bottom|center" >
+
+        <Button
+            android:id="@+id/btn_xacnhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:radius="3dp"
+            android:text="XÁC NHẬN"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_kq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:radius="3dp"
+            android:text="KẾT QUẢ"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:radius="3dp"
+            android:text="BỎ QUA"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

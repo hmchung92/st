@@ -1,0 +1,15 @@
+<root local_title="Kinh nghiệm học anh văn" en_title="">
+    <lesson id="1" local_text="10 mẹo học từ vựng !" data_text="1.html" />
+    <lesson id="2" local_text="Bí quyết đọc tiếng anh" data_text="2.html" />
+	<lesson id="3" local_text="Bí quyết tăng cường “dung lượng” bộ nhớ khi học từ vựng" data_text="3.html" />
+	<lesson id="4" local_text="Cách viết một bức thư giao dịch bằng tiếng Anh" data_text="4.html" />
+	<lesson id="5" local_text="Cải thiện phát âm tiếng Anh" data_text="5.html" />
+	<lesson id="6" local_text="Chìa khóa vạn năng” cho kỹ năng speaking" data_text="6.html" />
+	<lesson id="7" local_text="Chiến lược để phát triển kỹ năng nói" data_text="7.html" />
+	<lesson id="8" local_text="Để học tốt tiếng Anh" data_text="8.html" />	  
+	<lesson id="9" local_text="Học tiếng Anh thật dễ dàng!" data_text="9.html" />
+    <lesson id="10" local_text="Kinh nghiệm học Tiếng Anh" data_text="10.html" />
+    <lesson id="11" local_text="Kinh nghiệm thi TOEIC đạt điểm tuyệt đối" data_text="11.html" /> 
+    <lesson id="12" local_text="Kỹ năng viết bài tự luận xin học bổng" data_text="12.html" />
+	<lesson id="13" local_text="Những lời khuyên khi ghi chép bài" data_text="13.html" />
+</root>

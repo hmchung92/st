@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <lesson id="1" en_topic="Topic 1" en_hint="ride / horse">
+    </lesson>
+    <lesson id="2" en_topic="Topic 2" en_hint="boy / football">
+    </lesson>
+    <lesson id="3" en_topic="Topic 3" en_hint="teacher / children">
+    </lesson>
+    <lesson id="4" en_topic="Topic 4" en_hint="cat / table">
+    </lesson>
+    <lesson id="5" en_topic="Topic 5" en_hint="tired / because">
+    </lesson>
+    <lesson id="6" en_topic="Topic 6" en_hint="If / buy">
+    </lesson>
+    <lesson id="7" en_topic="Topic 7" en_hint="too / wear">
+    </lesson>
+    <lesson id="8" en_topic="Topic 8" en_hint="although / school">
+    </lesson>
+    <lesson id="9" en_topic="Topic 9" en_hint="woman / than">
+    </lesson>
+    <lesson id="10" en_topic="Topic 10" en_hint="repair / so that">
+    </lesson>
+  
+</root>

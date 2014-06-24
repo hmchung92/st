@@ -1,0 +1,981 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hominhchung"
+    android:versionCode="1"
+    android:versionName="1.0" >
+<!-- ActionBar được hỗ trợ bởi Android lever 11 trở đi (Android 3.0 trở đi)-->
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="15" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+ 	
+ 	<meta-data android:name="ADMOB_ALLOW_LOCATION_FOR_ADS" android:value="true">
+	</meta-data>
+	
+    <application
+        android:name="ParseApplication"
+        android:icon="@drawable/ic_eng"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+          >
+        <!--=====================Home - MainActivity=====================_-->
+        <activity android:name="com.hominhchung.home.AndroidDashboardDesignActivity" 
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.SEARCH" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" 
+                />
+        </activity>
+
+      
+         
+        <activity android:name="com.hominhchung.testing.ListTestingMainActivity"  
+		            android:label="@string/testing"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>	
+         <!-- 100 chủ đề luyện nói tiếng Anh -->
+		        <activity android:name="com.hominhchung.testing.WelcomeTesting"  
+		            android:label="@string/testing"
+		            android:parentActivityName="com.hominhchung.testing.ListTestingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+       
+        <!--=====================Search - Search Activity=====================_-->
+        
+        <!-- Webview -->
+		        <activity android:name="com.hominhchung.adapter.Webview"  
+		            android:label="@string/webview"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>	
+        
+        <!-- 100 chủ đề luyện nói tiếng Anh -->
+		        <activity android:name="com.hominhchung.speaking.topic100.ListSpeakTopicMainActivity"  
+		            android:label="@string/topics_speak_100"
+		            android:parentActivityName="com.hominhchung.speaking.ListSpeakingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>	
+		                   
+		        	<!-- Lesson -->
+			        <activity android:name="com.hominhchung.speaking.topic100.LessonSpeakTopic"  
+			            android:label="@string/speaking_topics"
+			            android:parentActivityName="com.hominhchung.speaking.topic100.ListSpeakTopicMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>	
+         
+         <!-- Search results activity -->
+        <activity android:name="com.hominhchung.home.SearchResultsActivity"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <!-- Location found activity -->
+        <activity
+            android:name="com.hominhchung.home.LocationFound"
+            android:label="@string/activity_location_found"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" />
+        </activity>
+        
+        
+        <!--=====================TỪ VỰNG - Vocabulary Activity=====================_-->
+        <activity android:name="com.hominhchung.vocabulary.ListVocabularyMainActivity"  
+            android:label="@string/vocabulary"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+        
+		        <!-- Vocabulary Activity -->
+		        <activity android:name="com.hominhchung.vocabulary.LessonVocabulary"  
+		            android:label="@string/vocabulary"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        
+		        <!-- Vocabulary Activity -->
+		        <activity android:name="com.hominhchung.vocabulary.lookupwords.LookUpWordsMainActivity"  
+		            android:label="@string/look_up_words"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- 3500 từ vựng(3500 words Activity) -->
+		        <activity android:name="com.hominhchung.vocabulary.vocabulary3500.TabVocabularyActivity"  
+		            android:label="@string/words3500"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        		<!-- (3500 words) -->
+				        <activity android:name="com.hominhchung.vocabulary.vocabulary3500.Vocabulary3500MainActivity"  
+				            android:label="@string/words3500"
+				            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+				        
+				        <!-- Test (3500 words) -->
+				        <activity android:name="com.hominhchung.vocabulary.vocabulary3500.TestListenMainActivity"  
+				            android:label="@string/words3500"
+				            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+		            
+		        <!-- Động từ bất quy tắc (Irregular Verbs) -->
+		        <activity android:name="com.hominhchung.vocabulary.irregular_verbs.ListIrregularLessonMainActivity"  
+		            android:label="@string/irregular_verbs"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        		<!-- Lesson -->
+			        	<activity android:name="com.hominhchung.vocabulary.irregular_verbs.IrregularLesson"  
+			            android:label="@string/irregular_verbs"
+			            android:parentActivityName="com.hominhchung.vocabulary.irregular_verbs.ListIrregularLessonMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!--Danh ngôn (Qoutations Activity) -->
+		        <activity android:name="com.hominhchung.vocabulary.qoutations.QoutationMainActivity"  
+		            android:label="@string/qoutations"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		         
+		        <!--1000 cụm từ thông dụng (1000 Common Phrases Activity) -->
+	        	<activity android:name="com.hominhchung.vocabulary.phrases1000.ListLessonPhrasesMainActivity"  
+		            android:label="@string/phrases100"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+	        	
+	        	
+	        	<!--Học từ vựng theo chủ đề (Vocabulary Topic Activity) -->
+	        	<activity android:name="com.hominhchung.vocabulary.topic.ListTopicVocabularyMainActivity"  
+		            android:label="@string/learning_vocabulary_by_topic"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+	        	
+		        		<!-- Lesson Activity -->
+			        	<activity android:name="com.hominhchung.vocabulary.topic.LessonTopicVocabulary"  
+				            android:label="@string/learning_vocabulary_by_topic"
+				            android:parentActivityName="com.hominhchung.vocabulary.topic.ListTopicVocabularyMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+	        
+	        	<!-- Từ vựng tiếng Anh qua video (Vocabulary Video Activity) -->
+	        	<activity android:name="com.hominhchung.vocabulary.video.ListVideoVocabularyMainActivity"  
+		            android:label="@string/learning_vocabulary_by_video"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+	        	
+	        	<!-- Từ vựng tiếng Anh qua hình ảnh -->
+	        	<activity android:name="com.hominhchung.vocabulary.image_topic.ListLessonVocabularyImageMainActivity"  
+		            android:label="@string/learning_vocabulary_by_pictures"
+		            android:parentActivityName="com.hominhchung.vocabulary.ListVocabularyMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+			        	
+	        			<!-- Lesson Activity -->
+			        	<activity android:name="com.hominhchung.vocabulary.image_topic.LessonVocabularyImageTopic"  
+				            android:label="@string/learning_vocabulary_by_pictures"
+				            android:parentActivityName="com.hominhchung.vocabulary.image_topic.ListLessonVocabularyImageMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+	        	
+	        	
+	    <!--=====================VIẾT (WRITING Activity)=====================_-->
+        <activity android:name="com.hominhchung.writing.ListWritingMainActivity"
+			android:label="@string/writing"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" />
+        </activity>
+        
+	        	<!-- Lesson Activity -->
+		        <activity android:name="com.hominhchung.writing.LessonWriting"
+					android:label="@string/writing"
+		            android:parentActivityName="com.hominhchung.writing.ListWritingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+		        
+		        <!--Miêu tả tranh  -->
+		        <activity android:name="com.hominhchung.writing.description_pictures.ListPictureTopicMainActivity"
+					android:label="@string/description_paintings"
+		            android:parentActivityName="com.hominhchung.writing.ListWritingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+		        
+		        		<!-- Viet theo chu de -->
+				        <activity android:name="com.hominhchung.writing.description_pictures.TabReadingDescriptionPicturesTopicActivity"
+							android:label="@string/description_paintings"
+				            android:parentActivityName="com.hominhchung.writing.description_pictures.ListPictureTopicMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				        <!-- Viet theo chu de -->
+				        <activity android:name="com.hominhchung.writing.description_pictures.FullImageDescriptionPicturesActivity"></activity>
+				        
+		        		<!-- Viet theo chu de -->
+				        <activity android:name="com.hominhchung.writing.description_pictures.data.ListWritingSessonPictureTopicMainActivity"
+							android:label="@string/topics"
+				            android:parentActivityName="com.hominhchung.writing.description_pictures.ListPictureTopicMainActivity"
+							android:uiOptions="splitActionBarWhenNarrow">
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        <!-- Viet theo chu de -->
+				        <activity android:name="com.hominhchung.writing.description_pictures.data.ViewNoteWriting"
+							android:label="@string/view_topics"
+				            android:uiOptions="splitActionBarWhenNarrow" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				        <!-- Viet theo chu de -->
+				        <activity android:name="com.hominhchung.writing.description_pictures.data.AddEditNotesWriting"
+							android:label="@string/add_topics"
+				            android:uiOptions="splitActionBarWhenNarrow" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+		       
+				<!-- CV List Activity -->
+		        <activity android:name="com.hominhchung.writing.cv.ListCvWritingMainActivity"
+					android:label="@string/cv_lesson_list"
+		            android:parentActivityName="com.hominhchung.writing.ListWritingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+        
+			        	<!-- Lesson CV Activity -->
+				        <activity android:name="com.hominhchung.writing.cv.LessonCvWriting"
+							android:label="@string/cv_lesson"
+				            android:parentActivityName="com.hominhchung.writing.cv.ListCvWritingMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				<!-- Email List Activity -->
+		        <activity android:name="com.hominhchung.writing.email.ListEmailWritingMainActivity"
+					android:label="@string/email_lesson_list"
+		            android:parentActivityName="com.hominhchung.writing.ListWritingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+        
+			        	<!-- Email Lesson Activity -->
+				        <activity android:name="com.hominhchung.writing.email.LessonEmailWriting"
+							android:label="@string/email_lesson"
+				            android:parentActivityName="com.hominhchung.writing.email.ListEmailWritingMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>        
+		        
+	        	<!-- Letter List Activity -->
+		        <activity android:name="com.hominhchung.writing.letter.ListLetterWritingMainActivity"
+					android:label="@string/letter_lesson_list"
+		            android:parentActivityName="com.hominhchung.writing.ListWritingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+        
+			        	<!-- Lesson Letter Activity -->
+				        <activity android:name="com.hominhchung.writing.letter.LessonLetterWriting"
+							android:label="@string/letter_lesson"
+				            android:parentActivityName="com.hominhchung.writing.letter.ListLetterWritingMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				 <!-- Essay List Activity -->
+		        <activity android:name="com.hominhchung.writing.essay.ListLessonEassaysMainActivity"
+					android:label="@string/essay_list"
+		            android:parentActivityName="com.hominhchung.writing.ListWritingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+        
+			        	<!-- Lesson Essay Activity -->
+				        <activity android:name="com.hominhchung.writing.essay.LessonEssay"
+							android:label="@string/essay"
+				            android:parentActivityName="com.hominhchung.writing.essay.ListLessonEassaysMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+	        
+	   
+	    <!--=====================ĐỌC (Reading Activity)=====================_-->
+        <activity android:name="com.hominhchung.reading.ListReadingMainActivity"  
+            android:label="@string/reading"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        	
+	        	<!-- Lesson Activity -->
+		        <activity android:name="com.hominhchung.reading.LessonReading"  
+		            android:label="@string/reading"
+		            android:parentActivityName="com.hominhchung.reading.ListReadingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- Essays List Activity -->
+		        <activity android:name="com.hominhchung.reading.essay.ListReadingMainActivity"  
+		            android:label="@string/essay_lesson_list"
+		            android:parentActivityName="com.hominhchung.reading.ListReadingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+			        	<!-- Essays Lesson Activity -->
+				        <activity android:name="com.hominhchung.reading.essay.LessionReading"  
+				            android:label="@string/essay_lesson"
+				            android:parentActivityName="com.hominhchung.reading.essay.ListReadingMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+            
+	        	<!-- Story ListActivity -->
+		        <activity android:name="com.hominhchung.reading.story.ListStoryMainActivity"  
+		            android:label="@string/story_list"
+		            android:parentActivityName="com.hominhchung.reading.ListReadingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        	
+			        	<!-- Story Lesson Activity -->
+			        	<activity android:name="com.hominhchung.reading.story.content.LessionStory"  
+			            android:label="@string/story_lesson"
+			            android:parentActivityName="com.hominhchung.reading.story.ListStoryMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>
+		        	
+		        <!-- Comic ListActivity -->
+		        <activity android:name="com.hominhchung.reading.comic.ListComicMainActivity"  
+		            android:label="@string/comic_list"
+		            android:parentActivityName="com.hominhchung.reading.ListReadingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        	
+			        	<!-- Comic Lesson Activity -->
+			        	<activity android:name="com.hominhchung.reading.comic.content.LessionComic"  
+			            android:label="@string/comic_lesson"
+			            android:parentActivityName="com.hominhchung.reading.comic.ListComicMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>
+	        
+				
+		<!--=====================NÓI (Speaking Activity))=====================_-->
+        <activity android:name="com.hominhchung.speaking.ListSpeakingMainActivity"  
+            android:label="@string/speaking"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        	
+	        	<!-- Speech Lesson Activity -->
+		        <activity android:name="com.hominhchung.speaking.LessonSpeaking"  
+		            android:label="@string/speaking"
+		            android:parentActivityName="com.hominhchung.speaking.ListSpeakingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- Miêu tả tranh () -->
+		        <activity android:name="com.hominhchung.speaking.description_pictures.ListSpeakingPictureTopicMainActivity"  
+		            android:label="@string/description_paintings"
+		            android:parentActivityName="com.hominhchung.speaking.ListSpeakingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>	
+		                   
+		        	<!-- Miêu tả tranh () -->
+			        <activity android:name="com.hominhchung.speaking.description_pictures.TabSpeakingTopicActivity"  
+			            android:label="@string/description_paintings"
+			            android:uiOptions="splitActionBarWhenNarrow" 
+			            android:parentActivityName="com.hominhchung.speaking.description_pictures.ListSpeakingPictureTopicMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>	
+		        
+			        <!-- Miêu tả tranh () -->
+			        <activity android:name="com.hominhchung.speaking.description_pictures.FullImageActivity" 
+			             
+			            ></activity>
+			        
+		        	<!-- Danh sách chủ đề -->
+				        <activity android:name="com.hominhchung.speaking.description_pictures.data.ListSpeakingSessonPictureTopicMainActivity"
+							>
+				        </activity>
+				        
+				        <!-- Thêm chủ đề mới -->
+				        <activity android:name="com.hominhchung.speaking.description_pictures.data.AddEditNotesSpeaking"
+							android:label="@string/add_topics" 
+				            android:uiOptions="splitActionBarWhenNarrow">
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				        <!-- Xem chủ đề -->
+				        <activity android:name="com.hominhchung.speaking.description_pictures.data.ViewNoteSpeaking"
+							android:label="@string/view_topics"
+				            android:uiOptions="splitActionBarWhenNarrow">
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+		        
+			
+				        	        
+				<!-- Tranh luận() -->
+		        <activity android:name="com.hominhchung.speaking.general_debates.ListSpeakingPictureTopicDebatesMainActivity"  
+		            android:label="@string/debate_lesson"
+		            android:parentActivityName="com.hominhchung.speaking.ListSpeakingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>	
+		                   
+		        	<!-- Miêu tả tranh () -->
+			        <activity android:name="com.hominhchung.speaking.general_debates.TabSpeakingGeneralDebatesTopicActivity"  
+			            android:label="@string/debate_lesson"
+			            android:uiOptions="splitActionBarWhenNarrow"
+			            android:parentActivityName="com.hominhchung.speaking.general_debates.ListSpeakingPictureTopicDebatesMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>	
+		        
+			        <!-- Miêu tả tranh () -->
+			        <activity android:name="com.hominhchung.speaking.general_debates.FullImageGeneralDebatesActivity"  ></activity>
+			        
+		        	<!-- Danh sách chủ đề -->
+				        <activity android:name="com.hominhchung.speaking.general_debates.data.ListSpeakingSessonPictureTopicDebatesMainActivity">
+						</activity>
+				        
+				        <!-- Thêm chủ đề mới -->
+				        <activity android:name="com.hominhchung.speaking.general_debates.data.AddEditNotesDebates"
+							android:label="@string/add_topics"
+				            android:uiOptions="splitActionBarWhenNarrow">
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				        <!-- Xem chủ đề -->
+				        <activity android:name="com.hominhchung.speaking.general_debates.data.ViewNoteDebates"
+							android:label="@string/view_topics"
+				            android:uiOptions="splitActionBarWhenNarrow">
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+				        
+				        
+		        
+		        <!-- Speech To Text Activity -->
+		        <activity 
+		            android:name="com.hominhchung.speaking.speechtotext.SpeechToTextMainActivity"  
+		            android:label="@string/speech_to_text"
+		            android:parentActivityName="com.hominhchung.speaking.ListSpeakingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow"
+		                    />
+		           
+		       
+		        </activity>		        
+				        
+		        
+		
+		<!--=====================NGHE (Listening Activity))=====================_-->
+        <activity android:name="com.hominhchung.listening.ListListeningMainActivity"  
+            android:label="@string/listening"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        	
+        		<!--học 3000 từ vựng -->
+		        <activity android:name="com.hominhchung.listening.topic100.List100ListeningTopicMainActivity"  
+		            android:label="@string/listening"
+		            android:parentActivityName="com.hominhchung.listening.ListListeningMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+		        		<!--từ vựng -->
+				        <activity android:name="com.hominhchung.listening.topic100.Lesson100ListeningTopicActivity2"  
+				            android:label="@string/listening_lessons"
+				            android:parentActivityName="com.hominhchung.listening.topic100.List100ListeningTopicMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+	        	<!-- Listening Lesson Activity -->
+		        <activity android:name="com.hominhchung.listening.LessonListening"  
+		            android:label="@string/listening"
+		            android:parentActivityName="com.hominhchung.listening.ListListeningMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- Text To Speed Activity -->
+		        <activity android:name="com.hominhchung.listening.texttospeech.TexttospeechMainActivity" 
+					android:label="@string/text_to_speech"
+		            android:parentActivityName="com.hominhchung.listening.ListListeningMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+		        </activity>
+		        
+		        
+		        <!-- Học qua các bài hát -->
+		        <activity android:name="com.hominhchung.listening.music.ListLessonMusic"  
+		            android:label="@string/learning_through_songs"
+		            android:parentActivityName="com.hominhchung.listening.ListListeningMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        		<!--Lesson Activity -->
+				        <activity android:name="com.hominhchung.listening.music.LessonMusic"  
+				            android:label="@string/song_lesson"
+				            android:parentActivityName="com.hominhchung.listening.music.ListLessonMusic" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				        
+				    
+		        
+				        
+        
+		<!--=====================PHÁT ÂM (Pronunciation Activity))=====================_-->
+        <activity android:name="com.hominhchung.pronunciation.ListPronunciationMainActivity"  
+            android:label="@string/pronunciation"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        	
+	        	<!-- Pronunciation Lesson Activity -->
+		        <activity android:name="com.hominhchung.pronunciation.LessonPronunciation"  
+		            android:label="@string/pronunciation"
+		            android:parentActivityName="com.hominhchung.pronunciation.ListPronunciationMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- 200 động từ bất quy tắc -->
+		        <activity android:name="com.hominhchung.pronunciation.video.irregular_verbs.ListVideoPronunciationMainActivity"  
+		            android:label="@string/irregular_verbs_200"
+		            android:parentActivityName="com.hominhchung.pronunciation.ListPronunciationMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- 10 bài video học cách phát âm -->
+		        <activity android:name="com.hominhchung.pronunciation.video.guide_pronunciation.ListVideoGuidePronunciationMainActivity"  
+		            android:label="@string/learn_to_pronounce"
+		            android:parentActivityName="com.hominhchung.pronunciation.ListPronunciationMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- Quy tắc phát âm -->
+		        <activity android:name="com.hominhchung.pronunciation.video.rules.ListTopicRulesMainActivity"  
+		            android:label="@string/pronunciation_rules_list"
+		            android:parentActivityName="com.hominhchung.pronunciation.ListPronunciationMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        		
+		        	<!-- Quy tắc phát âm (Document)-->
+		        	<activity android:name="com.hominhchung.pronunciation.video.rules.LessonTopicRulesPronunciation"  
+			            android:label="@string/pronunciation_rules"
+			            android:parentActivityName="com.hominhchung.pronunciation.video.rules.ListTopicRulesMainActivity" >
+			            <!-- To support split actionbar below API Level 14 -->
+			            <meta-data android:name="android.support.UI_OPTIONS"
+			                   android:value="splitActionBarWhenNarrow" /></activity>
+		
+		        	
+		<!--=====================KINH NGHIỆM (Experience  Activity))=====================_-->
+        <activity android:name="com.hominhchung.experience.ListExperienceMainActivity"  
+            android:label="@string/experiences"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        	
+	        	<!-- Pronunciation Lesson Activity -->
+		        <activity android:name="com.hominhchung.experience.LessonExperience"  
+		            android:label="@string/experiences"
+		            android:parentActivityName="com.hominhchung.experience.ListExperienceMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- Danh sách kinh nghiệm học tiếng Anh -->
+		        <activity android:name="com.hominhchung.experience.document.ListLessonExperienceMainActivity" 
+		            android:label="@string/experience_list"
+		            android:parentActivityName="com.hominhchung.experience.ListExperienceMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+						        <activity android:name="com.hominhchung.experience.document.ExperienceActivity"  
+						            android:label="@string/experience_lesson"
+						            android:parentActivityName="com.hominhchung.experience.document.ListLessonExperienceMainActivity" >
+						            <!-- To support split actionbar below API Level 14 -->
+						            <meta-data android:name="android.support.UI_OPTIONS"
+						                   android:value="splitActionBarWhenNarrow" /></activity>
+        		
+        		<!-- Kinh nghiệm học anh văn qua Video -->
+		        <activity android:name="com.hominhchung.experience.video.ListVideoExperienceMainActivity" 
+		            android:label="@string/experience_through_video"
+		            android:parentActivityName="com.hominhchung.experience.ListExperienceMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" />
+				        </activity>
+						        
+						        
+         
+		        
+		        
+		        
+		        
+		        
+		        
+		        
+        
+        <!-- LessionVideo Activity -->
+        <activity android:name="com.hominhchung.listening.video.LessonVideoMainActivity"  
+            android:label="Video"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        <activity android:name="com.hominhchung.listening.video.ExpandableListAdapter"  
+            android:label="ExpandableList"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+        <!-- Author Activity -->
+        <activity android:name="com.hominhchung.author.AuthorMainActivity"  
+            android:label="Author"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+        
+        
+        <!--=====================NGỮ PHÁP (Grammar Activity)=====================_-->
+        <activity android:name="com.hominhchung.grammar.ListGrammarMainActivity"  
+            android:label="@string/grammar"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        	
+	        	<!-- Grammar Lesson Activity -->
+		        <activity android:name="com.hominhchung.grammar.LessonGrammar"  
+		            android:label="@string/grammar"
+		            android:parentActivityName="com.hominhchung.grammar.ListGrammarMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+		        <!--Học ngữ pháp theo chủ đề -->
+		        <activity android:name="com.hominhchung.grammar.topic.ListGrammarTopcMainActivity"  
+		            android:label="@string/learning_grammar_by_topic"
+		            android:parentActivityName="com.hominhchung.grammar.ListGrammarMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+				        <activity android:name="com.hominhchung.grammar.topic.Lesson"  
+				            android:label="@string/grammar"
+				            android:parentActivityName="com.hominhchung.grammar.topic.ListGrammarTopcMainActivity" >
+				            <!-- To support split actionbar below API Level 14 -->
+				            <meta-data android:name="android.support.UI_OPTIONS"
+				                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+				<!--Học ngữ pháp qua Video -->
+		        <activity android:name="com.hominhchung.grammar.video.ListVideoGuideGrammarMainActivity"  
+		            android:label="@string/learning_grammar_through_video"
+		            android:parentActivityName="com.hominhchung.grammar.ListGrammarMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+				        
+	
+        
+        
+        <!--=====================GHI CHÚ (Notes Activity)=====================_-->
+        <activity android:name="com.hominhchung.note.NoteList"  
+            android:label="@string/notes"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+        <!-- Notes Activity -->
+        <activity android:name="com.hominhchung.note.NoteEdit"  
+            android:label="@string/edit_note"
+            android:parentActivityName="com.hominhchung.note.NoteList" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+        
+        <!--=====================KIỂM TRA (Testing Activity)=====================_-->
+       
+        
+        		
+        	
+	        	<!-- Lesson Activity -->
+		        <activity android:name="com.hominhchung.testing.LessonTesting"  
+		            android:label="@string/testing"
+		            android:parentActivityName="com.hominhchung.testing.ListTestingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        
+		        <!-- ResultTesting Activity -->
+		        <activity android:name="com.hominhchung.testing.ResultTesting"  
+		            android:label="@string/testing"
+		            android:parentActivityName="com.hominhchung.testing.ListTestingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		        <!-- Kiểm tra trình độ A Activity -->
+		        <activity android:name="com.hominhchung.testing.level.TestingLevelMainActivity"  
+		            android:label="@string/testing_level_a"
+		            android:parentActivityName="com.hominhchung.testing.ListTestingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+        		
+        		
+		        
+		        <!-- Kiểm tra trình độ nghe -->
+		        <activity android:name="com.hominhchung.testing.guess_the_word.TestListenMainActivity"  
+		            android:label="@string/guess_the_word"
+		            android:parentActivityName="com.hominhchung.testing.ListTestingMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+		<!-- Push Notifications -->
+        <activity android:name="com.hominhchung.notifications.ParseStarterProjectActivity"  
+            android:label="Push Notifications"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        		
+        		<service android:name="com.parse.PushService" />
+
+		        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+		            <intent-filter>
+		                <action android:name="android.intent.action.BOOT_COMPLETED" />
+		                <action android:name="android.intent.action.USER_PRESENT" />
+		            </intent-filter>
+		        </receiver>
+        
+		        
+        <!-- Registry Activity -->
+        <activity android:name="com.hominhchung.member.MemberMainActivity"  
+            android:label="Welcome"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+       
+        		<!-- Registry Activity -->
+		        <activity android:name="com.hominhchung.member.Login"  
+		            android:label="Welcome"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        <!-- Registry Activity -->
+		        <activity android:name="com.hominhchung.member.Signup"  
+		            android:label="Welcome"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        <!-- Registry Activity -->
+		        <activity android:name="com.hominhchung.member.Welcome"  
+		            android:label="Welcome"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		        
+	
+	<!--=====================TRẺ EM (Kids Activity)=====================_-->
+        <activity android:name="com.hominhchung.kid.KidMainActivity"  
+            android:label="@string/kids"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>	
+                   
+        <!--=====================Online - Online Activity=====================_-->
+        
+        <activity android:name="com.hominhchung.online.ListOnlineMainActivity"  
+            android:label="@string/online"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+        
+        <activity android:name="com.hominhchung.online.topic.OnlineMainActivity"  
+            android:label="@string/online"
+            android:parentActivityName="com.hominhchung.home.MainActivity" >
+            <!-- To support split actionbar below API Level 14 -->
+            <meta-data android:name="android.support.UI_OPTIONS"
+                   android:value="splitActionBarWhenNarrow" /></activity>
+        
+		         <activity android:name="com.hominhchung.online.topic.SingleItemView"  
+		            android:label="@string/online"
+		            android:parentActivityName="com.hominhchung.online.topic.OnlineMainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		         
+		         
+		     <activity android:name="com.hominhchung.online.login.RegistryMainActivity"  
+		            android:label="@string/online"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>  
+		                   
+		      <activity android:name="com.hominhchung.online.login.LoginActivity"  
+		            android:label="@string/online"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>                   
+       
+		      <activity android:name="com.hominhchung.online.login.Signup"  
+		            android:label="@string/online"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		      
+		      <activity android:name="com.hominhchung.online.login.Welcome"  
+		            android:label="@string/online"
+		            android:parentActivityName="com.hominhchung.home.MainActivity" >
+		            <!-- To support split actionbar below API Level 14 -->
+		            <meta-data android:name="android.support.UI_OPTIONS"
+		                   android:value="splitActionBarWhenNarrow" /></activity>
+		      
+		      
+		      
+		       <!-- AdActivity -->
+         <activity android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        
+       <activity android:name="com.google.ads.AdActivity"
+          android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+		      
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#f8f9fe">
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#990000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:text="Trong bài này, bạn sẽ được xem một bức tranh. Hãy miêu tả bức tranh bạn được xem." />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#990000"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:text="Xem xong!" />
+
+
+</RelativeLayout>

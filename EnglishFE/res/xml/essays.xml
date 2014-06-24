@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <lesson id="1" en_title="Life in the city" local_title="Cuộc sống ở thành thị">
+    </lesson>
+    <lesson id="2" en_title="Living in a multiracial community" local_title="Sống trong một cộng đồng đa chủng tộc">
+    </lesson>
+    <lesson id="3" en_title="A visit to a famous city" local_title="Một chuyến viếng thăm một thành phố nổi tiếng">
+    </lesson>
+    <lesson id="4" en_title="An unusual opportunity I had" local_title="Một cơ hội bất thường tôi đã có">
+    </lesson>
+    <lesson id="5" en_title="The value of libraries" local_title="Giá trị của thư viện">
+    </lesson>
+    <lesson id="6" en_title="A horrible sight" local_title="Một cảnh tượng khủng khiếp">
+    </lesson>
+    <lesson id="7" en_title="Discuss the part that money plays in our lives" local_title="Thảo luận về các phần số tiền đó đóng trong cuộc sống của chúng ta">
+    </lesson>
+    <lesson id="8" en_title="Science and its effects" local_title="Khoa học và ảnh hưởng của nó">
+    </lesson>
+    <lesson id="9" en_title="The rights and duties of a citizen" local_title="Quyền và nghĩa vụ của công dân">
+    </lesson>
+    <lesson id="10" en_title="The most important day in my life" local_title="Ngày quan trọng nhất trong cuộc sống của tôi">
+    </lesson>
+     <lesson id="11" en_title="The subject I consider most important" local_title="Các lĩnh vực mà tôi cho là quan trọng nhất">
+    </lesson>
+    <lesson id="12" en_title="An incident I shall never forget" local_title="Một sự cố, tôi sẽ không bao giờ quên">
+    </lesson>
+    <lesson id="13" en_title="The value of music in the happiness of man" local_title="Giá trị của âm nhạc trong hạnh phúc của người đàn ông">
+    </lesson>
+    <lesson id="14" en_title="The advantages and disadvantages of the cinema." local_title="Những ưu điểm và nhược điểm của các rạp chiếu phim">
+    </lesson>
+    <lesson id="15" en_title="Describe some of the interesting places in your country" local_title="Mô tả một số trong những nơi thú vị ở nước bạn">
+    </lesson>
+    <lesson id="16" en_title="What career would you like to choose after leaving school" local_title="Nghề nghiệp gì bạn muốn chọn sau khi ra trường">
+    </lesson>
+    <lesson id="17" en_title="Why is agriculture important in the world of today?" local_title="Tại sao nông nghiệp quan trọng trong thế giới của ngày hôm nay?">
+    </lesson>
+    <!-- Phần 2 -->
+    <lesson id="18" en_title="A heroic deed" local_title="Một hành động anh hùng">
+    </lesson>
+    <lesson id="19" en_title="Crimes in society" local_title="Tội phạm trong xã hội">
+    </lesson>
+    <lesson id="20" en_title="A strange happening" local_title="Một việc xảy ra kỳ lạ">
+    </lesson>
+    <lesson id="21" en_title="A journey by train" local_title="Một cuộc hành trình bằng xe lửa">
+    </lesson>
+    <lesson id="22" en_title="Discuss 'news travel fast'" local_title="Thảo luận về 'tin tức du lịch nhanh chóng'">
+    </lesson>
+    <lesson id="23" en_title="World trade" local_title="Thương mại thế giới">
+    </lesson>
+    <lesson id="24" en_title="A narrow escape" local_title="Một lối thoát hẹp">
+    </lesson>
+    <lesson id="25" en_title="Travel as a means of education" local_title="Đi du lịch như một phương tiện giáo dục">
+    </lesson>
+   <lesson id="26" en_title="The country I would like to visit" local_title="Đất nước tôi muốn đến thăm">
+    </lesson>
+    <lesson id="27" en_title="Good manners" local_title="Người tốt">
+    </lesson>
+    <lesson id="28" en_title="Choosing a career" local_title="Lựa chọn một sự nghiệp">
+    </lesson>
+    <lesson id="29" en_title="A visit to a zoo" local_title="Một chuyến viếng thăm một vườn thú">
+    </lesson>
+    <lesson id="30" en_title="The importance of the newspaper" local_title="Tầm quan trọng của báo">
+    </lesson>
+    <!--<lesson id="31" en_title="The things that I like most" local_title="Những điều mà tôi thích nhất">
+    </lesson>
+    <lesson id="32" en_title="The advantages and disadvantages of the cinema" local_title="Những ưu điểm và nhược điểm của các rạp chiếu phim">
+    </lesson>
+    <lesson id="33" en_title="My hobby" local_title="Sở thích của tôi">
+    </lesson>
+    <lesson id="34" en_title="The importance of examinations" local_title="Tầm quan trọng của kỳ thi">
+    </lesson>
+    <lesson id="35" en_title="A week in hospital" local_title="Một tuần trong bệnh viện">
+    </lesson>
+    <lesson id="36" en_title="A frightening experience" local_title="Một trải nghiệm khủng khiếp">
+    </lesson>
+    <lesson id="37" en_title="Discuss 'fire is a good servant but a bad master'" local_title="Thảo luận về 'lửa là một đầy tớ tốt nhưng là một chủ xấu'">
+    </lesson>
+    <lesson id="38" en_title="An accident I have witnessed" local_title="Một tai nạn tôi đã chứng kiến">
+    </lesson>
+    <lesson id="39" en_title="The importance of good roads in a country" local_title="Tầm quan trọng của con đường tốt trong một quốc gia">
+    </lesson>
+    <lesson id="40" en_title="Life in the village" local_title="Cuộc sống trong làng">
+    </lesson>
+    <lesson id="41" en_title="My favourite author" local_title="Tác giả yêu thích của tôi">
+    </lesson>
+    <lesson id="42" en_title="The value of higher education" local_title="Giá trị của giáo dục đại học.">
+    </lesson>
+    <lesson id="43" en_title="The rainy season" local_title="Mùa mưa">
+    </lesson>
+    <lesson id="44" en_title="The importance of water" local_title="Tầm quan trọng của nước">
+    </lesson>
+    <lesson id="45" en_title="How I spend my time after school" local_title="Tôi dành nhiều thời gian của tôi sau giờ học như thế nào">
+    </lesson>
+    <lesson id="46" en_title="The things I dislike the most" local_title="Những điều tôi không thích nhất">
+    </lesson>
+    <lesson id="47" en_title="Describe the things you enjoy doing" local_title="Mô tả những điều bạn thích làm">
+    </lesson>
+    Phần 3
+    <lesson id="48" en_title="Express your opinion on the importance of studying geography" local_title="Thể hiện ý kiến ​​của bạn về tầm quan trọng của việc nghiên cứu địa lý">
+    </lesson>
+    <lesson id="49" en_title="The importance of rivers" local_title="Tầm quan trọng của dòng sông">
+    </lesson>
+    <lesson id="50" en_title="The value of books" local_title="Giá trị của sách">
+    </lesson>
+    <lesson id="51" en_title="Do you think that physical education is important?" local_title="Bạn có nghĩ rằng giáo dục thể chất là quan trọng?">
+    </lesson>
+    <lesson id="52" en_title="The importance of reading newspapers" local_title="Tầm quan trọng của việc đọc báo chí">
+    </lesson>
+    <lesson id="53" en_title="Discuss the part played by science in the promotion of public health during the last hundreds years" local_title="Thảo luận về các phần do khoa học trong việc thúc đẩy y tế công cộng trong hàng trăm năm qua">
+    </lesson>
+    <lesson id="54" en_title="Water is important for all living things. Do you agree or disagree? Give your reasons." local_title="
+		Nước là rất quan trọng cho tất cả các sinh vật sống. Bạn có đồng ý hay không đồng ý? Đưa ra lý do của bạn.">
+    </lesson>
+    <lesson id="55" en_title="The value of education" local_title="Giá trị của giáo dục">
+    </lesson>
+    <lesson id="56" en_title="An interesting story I have heard" local_title="Một câu chuyện thú vị tôi đã nghe nói">
+    </lesson>
+    <lesson id="57" en_title="My most favorite subject" local_title="Môn học yêu thích nhất của tôi">
+    </lesson>
+    <lesson id="58" en_title="Describe an unpleasant dream you have had." local_title="Mô tả một giấc mơ khó chịu bạn đã có">
+    </lesson>
+    <lesson id="59" en_title="Describe your last holiday" local_title="Mô tả kỳ nghỉ cuối cùng của bạn">
+    </lesson>
+    <lesson id="60" en_title="Journalism as a career" local_title="Báo chí như một nghề nghiệp.">
+    </lesson>
+    <lesson id="61" en_title="Beauty in nature" local_title="Vẻ đẹp trong tự nhiên">
+    </lesson>
+    <lesson id="62" en_title="Do you agree that the study of Mathematics is essential to the progress of the human race?" local_title="
+		Bạn có đồng ý rằng nghiên cứu Toán học là điều cần thiết cho sự tiến bộ của nhân loại?">
+    </lesson>
+    <lesson id="63" en_title="What contributions can writers make to the promtion of goodwill among the people of a country?" local_title="
+        Những gì có thể làm cho nhà văn đóng góp vào việc thúc đẩy thiện chí trong nhân dân của một quốc gia?">
+    </lesson>
+    <lesson id="64" en_title="Which language do you think has made the greatest contribution to the promotion of better understanding among the peoples of the world?" local_title="
+		Ngôn ngữ bạn có nghĩ rằng đã có những đóng góp lớn nhất vào việc thúc đẩy sự hiểu biết tốt hơn giữa các dân tộc trên thế giới?">
+    </lesson>
+    <lesson id="65" en_title="Liberty" local_title="Tự do">
+    </lesson>
+    <lesson id="66" en_title="Discuss the role of the police force in society" local_title="Thảo luận về vai trò của lực lượng cảnh sát trong xã hội">
+    </lesson>
+    <lesson id="67" en_title="Discuss the view that tolerance is essential for peace and harmony in any community or country" local_title="
+        Thảo luận về quan điểm cho rằng sự khoan dung là điều cần thiết cho hòa bình và hòa hợp trong bất kỳ cộng đồng hay quốc gia">
+    </lesson>
+    <lesson id="68" en_title="Discuss the advantages and disadvantages of having too many university graduates in your country" local_title="
+        Thảo luận về những lợi thế và bất lợi của việc có quá nhiều sinh viên tốt nghiệp đại học ở nước bạn">
+    </lesson>
+    <lesson id="69" en_title="War and peace" local_title="Chiến tranh và hòa bình">
+    </lesson>
+    <lesson id="70" en_title="Courage" local_title="Can đảm">
+    </lesson>
+    <lesson id="71" en_title="Do you think that literary education is preferable to scientific education today?" local_title="
+        Bạn có nghĩ rằng giáo dục văn học là thích hợp hơn để giáo dục khoa học ngày hôm nay?">
+    </lesson>
+ -->
+  
+</root>

@@ -1,0 +1,259 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/jquery.mobile-1.2.0.min.css" />
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/jquery.mobile-1.2.0.min.js"></script>
+<title>English Conversation</title>
+<script type="text/javascript" charset="utf-8"
+	src="./js/cordova-2.2.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/revmob.js"></script>
+<script type="text/javascript" src="./js/jquery.puzzle.js"></script>
+<script type="text/javascript">
+	var revmob = null;
+	function onDeviceReady() {
+		revmob = new RevMob('51459fcd45b4560e00000032');
+		revmob.setTestingMode(false, null, null);
+		revmob.showFullscreen(null, null);
+	}
+	function onBodyLoad() {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	function defaultSuccessCallback(params) {
+	}
+	function defaultErrorCallback(params) {
+	}
+	jQuery(document)
+			.ready(
+					function() { /* if(puzzleApp){ */
+						$("#level")
+								.bind(
+										"change",
+										function(event, ui) {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index'));
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+											$("div.puzzle, p").puzzle(size);
+										});
+						$(function() {
+							$("#puzzleContainer").attr('index', '1');
+							$("div.puzzle, p").puzzle(100);
+						});
+						$('#next')
+								.live(
+										"click",
+										function() {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index')); /* console.log('./'+imgnum+'.jpg'); */
+											var image = $('<img src="./'
+													+ (imgnum + 1) + '.jpg" />'); /* console.log(image[0]['width']); */
+											if (image[0]['width'] > 0) {
+												imgnum = imgnum + 1;
+											} else {
+												imgnum = 1;
+											} /* if (ImageExist('./'+(imgnum+1)+'.jpg')){imgnum = 1;}else{imgnum = imgnum + 1;} */
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+										}); /* // }else{ // $("puzzle-button").remove() // } */
+						$("#nointernet").bind({
+							popupafterclose : function(event, ui) {
+								youTubeAjaxCall();
+							}
+						});
+						$('.video')
+								.live(
+										"click",
+										function(event) {
+											event.preventDefault();
+											vidID = $(this).attr('vidID');
+											var cat = $(this)
+													.attr('categoryID');
+											jQuery('#player' + cat)
+													.html(
+															'<iframe src="http://www.youtube.com/embed/'
+																	+ vidID
+																	+ '?autoplay=1" width="160" height="90" ></iframe><br><br>');
+											iframeAutoSize();
+											$("html, body").animate({
+												scrollTop : 0
+											}, "slow");
+										});
+						$(document).on("pagebeforecreate",
+								function(event, data) { /* // Let the framework know we're going to handle the load. // event.preventDefault(); */
+									iframeAutoSize(); /* // themeRefresh(theme); */
+								});
+						$(document).on("pagechange", function(event, data) { /* // Let the framework know we're going to handle the load. // revmob.showPopup(null, null); */
+							jQuery('.player').html('');
+						});
+						function iframeAutoSize() { /* // Find all YouTube videos */
+							var $allVideos = jQuery("iframe"), /* // The element that is fluid width */$fluidEl = jQuery("[data-role='page']"); /* // Figure out and save aspect ratio for each video */
+							$allVideos
+									.each(function() {
+										jQuery(this)
+												.data(
+														'aspectRatio',
+														this.height
+																/ this.width)
+												/* // and remove the hard coded width/height */.removeAttr(
+														'height').removeAttr(
+														'width');
+									}); /* // When the window is resized */
+							jQuery(window).resize(
+									function() {
+										var newWidth = $fluidEl.width(); /* // Resize all videos according to their own aspect ratio */
+										$allVideos.each(function() {
+											var $el = jQuery(this);
+											$el.height(newWidth
+													* $el.data('aspectRatio'));
+											$el.width(newWidth);
+										}); /* // Kick off one resize to fix all videos on page load */
+									}).resize();
+						}
+					});
+</script>
+</head>
+<body onLoad="onBodyLoad()">
+	
+	<!-- /page -->
+	<div data-role="page" id="Basic English Lesson">
+		<div class="player" id="player0"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="0"
+					vidID="_8ca_lV9t40"> <img
+						src="http://i.ytimg.com/vi/_8ca_lV9t40/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Ông lão đánh cá và con cá vàng</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="MtNzZ5f5EUw"> <img
+						src="http://i.ytimg.com/vi/MtNzZ5f5EUw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Chú vịt xấu xí </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="IlSvPKc5Mgw"> <img
+						src="http://i.ytimg.com/vi/IlSvPKc5Mgw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Quả trứng vàng </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="BgqhBDEAy3M"> <img
+						src="http://i.ytimg.com/vi/BgqhBDEAy3M/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Chuột nhà quê và chuột thành thị </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="GdG50GsN30A"> <img
+						src="http://i.ytimg.com/vi/GdG50GsN30A/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Thỏ và rùa </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="zaqqfAA3X_4"> <img
+						src="http://i.ytimg.com/vi/zaqqfAA3X_4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Aladdin và cây đèn thần </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="pJyMmrgxDuQ"> <img
+						src="http://i.ytimg.com/vi/pJyMmrgxDuQ/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Chiếc rìu vàng</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="3rJFLw1Xh-Q"> <img
+						src="http://i.ytimg.com/vi/3rJFLw1Xh-Q/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Giáo viên và học sinh</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="O9D-dRltUq8"> <img
+						src="http://i.ytimg.com/vi/O9D-dRltUq8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Cậu bé nói dối </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="oSPMOdZ8YBs"> <img
+						src="http://i.ytimg.com/vi/oSPMOdZ8YBs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Làm thế nào để kiếm được tiền </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="HSP1LZMl8wU"> <img
+						src="http://i.ytimg.com/vi/HSP1LZMl8wU/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Đeo lục lạc cho mèo </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="O-zFGfewCbM"> <img
+						src="http://i.ytimg.com/vi/O-zFGfewCbM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Các bộ phận trên cơ thể </h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+				
+			</ul>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+
+	<!-- /footer -->
+	<!-- /page -->
+	<!-- /page -->
+</body>
+</html>

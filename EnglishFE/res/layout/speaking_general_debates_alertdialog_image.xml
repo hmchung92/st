@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f8f9fe" >
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:textColor="#990000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="18dp"
+        android:text="Hãy suy nghĩ về chủ đề được đưa ra và nêu ra quan điểm của mình về vấn đề này." />
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/dialogButtonOK"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Gợi ý: football / boy"
+        android:textColor="#555555"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+    
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/textView2"
+        android:gravity="center"
+        android:layout_below="@+id/textView1"
+        android:background="@drawable/image_bg"
+        android:padding="3dip" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/dialogButtonOK"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#990000"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp"
+        android:text="Xem xong!" />
+
+</RelativeLayout>

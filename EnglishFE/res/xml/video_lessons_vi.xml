@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <fileinfor>
+        <number_of_online_categories number="3" />
+        <onlinelearning_category1 categoryname = "englishbasic"/>
+        <onlinelearning_category2 categoryname = "englishwithduncan"/>
+        <onlinelearning_category3 categoryname = "englishwithsteveford"/>
+    </fileinfor>
+    <vocabulary en_title="English Vocabulary through video" loc_title="Từ vựng tiếng Anh qua video">
+        <item0 item_en_name="300 Động từ thông dụng – 01" item_loc_name="300 common English verbs – 01" item_url="http://www.youtube.com/watch?v=epstSegLvwA&amp;feature=relmfu"  video_file_url="rtsp://v4.cache6.c.youtube.com/CjYLENy73wIaLQnBcic-rs3g5hMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="300 Động từ thông dụng – 02" item_loc_name="300 common English verbs – 02" item_url="http://www.youtube.com/watch?v=n1ixli2eWxA&amp;feature=relmfu"  video_file_url="rtsp://v4.cache2.c.youtube.com/CjYLENy73wIaLQncOGmXAD0d7RMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="300 Động từ thông dụng – 03" item_loc_name="300 common English verbs – 03" item_url="http://www.youtube.com/watch?v=MNW6Is24YxA&amp;feature=relmfu"  video_file_url="rtsp://v5.cache8.c.youtube.com/CjYLENy73wIaLQlHWGH68FmErBMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 01" item_loc_name="500 common nouns – 01" item_url="http://www.youtube.com/watch?v=HvHoqqV28Y0"  video_file_url="rtsp://v3.cache5.c.youtube.com/CjYLENy73wIaLQkElXYYYl3TlxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 02" item_loc_name="500 common nouns – 02" item_url="http://www.youtube.com/watch?v=03Wg22XeoZ8"  video_file_url="rtsp://v3.cache3.c.youtube.com/CjYLENy73wIaLQnBkjksPbRgjhMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 03" item_loc_name="500 common nouns – 03" item_url="http://www.youtube.com/watch?v=FkDYb5QWZ0g"  video_file_url="rtsp://v7.cache6.c.youtube.com/CjYLENy73wIaLQmlriIWFel1zxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 04" item_loc_name="500 common nouns – 04" item_url="http://www.youtube.com/watch?v=m7ageRo_vmQ"  video_file_url="rtsp://v5.cache4.c.youtube.com/CjYLENy73wIaLQnDFQJsa6x1jxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 05" item_loc_name="500 common nouns – 05" item_url="http://www.youtube.com/watch?v=aGRnWepkciY"  video_file_url="rtsp://v3.cache2.c.youtube.com/CjYLENy73wIaLQnALMbaWPm6WRMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 06" item_loc_name="500 common nouns – 06" item_url="http://www.youtube.com/watch?v=BVJUh4t4j88"  video_file_url="rtsp://v8.cache1.c.youtube.com/CjYLENy73wIaLQn4K8l4xJH9TxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 07" item_loc_name="500 common nouns – 07" item_url="http://www.youtube.com/watch?v=7MaGlBRL31Y"  video_file_url="rtsp://v7.cache2.c.youtube.com/CjYLENy73wIaLQmUbc3ax02HKhMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 08" item_loc_name="500 common nouns – 08" item_url="http://www.youtube.com/watch?v=NKcvguO8_y8"  video_file_url="rtsp://v8.cache3.c.youtube.com/CjYLENy73wIaLQmagaLV423v0hMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 09" item_loc_name="500 common nouns – 09" item_url="http://www.youtube.com/watch?v=zOdb27WD1aA"  video_file_url="rtsp://v5.cache4.c.youtube.com/CjYLENy73wIaLQnxn4mxO0RnmxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="500 Danh từ thông dụng – 10" item_loc_name="500 common nouns – 10" item_url="http://www.youtube.com/watch?v=LsBFEj5YQTs"  video_file_url="rtsp://v5.cache4.c.youtube.com/CjYLENy73wIaLQnxn4mxO0RnmxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+    	<item0 item_en_name="200 Tính từ thông dụng – 01" item_loc_name="200 common adjectives – 01" item_url="http://www.youtube.com/watch?v=o34xM9ZKa58"  video_file_url="rtsp://v3.cache5.c.youtube.com/CjYLENy73wIaLQkElXYYYl3TlxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="200 Tính từ thông dụng – 02" item_loc_name="200 common adjectives – 02" item_url="http://www.youtube.com/watch?v=pftvM6DvqYo"  video_file_url="rtsp://v3.cache3.c.youtube.com/CjYLENy73wIaLQnBkjksPbRgjhMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="200 Tính từ thông dụng – 03" item_loc_name="200 common adjectives – 03" item_url="http://www.youtube.com/watch?v=4b2ud0a_VOE"  video_file_url="rtsp://v7.cache6.c.youtube.com/CjYLENy73wIaLQmlriIWFel1zxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+        <item0 item_en_name="200 Tính từ thông dụng – 04" item_loc_name="200 common adjectives – 04" item_url="http://www.youtube.com/watch?v=c5vcYAEnNek"  video_file_url="rtsp://v5.cache4.c.youtube.com/CjYLENy73wIaLQnDFQJsa6x1jxMYDSANFEIJbXYtZ29vZ2xlSARSBXdhdGNoYK_Y76WWh6zlUAw=/0/0/0/video.3gp "  />
+    </vocabulary>
+   
+		    
+    
+    <experience en_title="Kinh nghiệm học anh văn qua Video" loc_title="English learning experience through Video">
+        <item02 item_en_name="7 Bí Quyết Giúp Bạn nói trôi chảy " item_loc_name="7 Bí Quyết Giúp Bạn nói trôi chảy" item_url="http://www.youtube.com/watch?v=6pT8ucjSdps"  video_file_url=""  />
+        <item02 item_en_name="Phương pháp luyện thi Toeic" item_loc_name="Phương pháp luyện thi Toeic" item_url="http://www.youtube.com/watch?v=5MCu5aHU7uA"  video_file_url=""  />
+        <item02 item_en_name="Phương pháp làm bài tập đọc hiểu" item_loc_name="Phương pháp làm bài tập đọc hiểu" item_url="http://www.youtube.com/watch?v=1xcBYXntCUY"  video_file_url=""  />
+    </experience>
+   
+    <grammar en_title="Học ngữ pháp qua Video" loc_title="Learn English Video">
+        <item03 item_en_name="Indefinite and Definite Articles in English" item_loc_name="Mạo từ trong tiếng Anh" item_url="http://www.youtube.com/watch?v=YeSmPmI6FuE"  video_file_url=""  />
+        <item03 item_en_name="Present simple tense" item_loc_name="Thì hiện tại đơn" item_url="http://www.youtube.com/watch?v=2McNvst-g4o"  video_file_url=""  />
+        <item03 item_en_name="Present perfect - part 1" item_loc_name="Thì hiện tại hoàn thành - phần 1" item_url="http://www.youtube.com/watch?v=3IMTNomhg-E"  video_file_url=""  />
+        <item03 item_en_name="Present perfect - part 2" item_loc_name="Thì hiện tại hoàn thành - phần 2" item_url="http://www.youtube.com/watch?v=doh7BbpC5V4"  video_file_url=""  />
+        <item03 item_en_name="Present perfect - part 3" item_loc_name="Thì hiện tại hoàn thành - phần 3" item_url="http://www.youtube.com/watch?v=9eA1wmKfEAQ"  video_file_url=""  />
+        <item03 item_en_name="Present perfect - part 4" item_loc_name="Thì hiện tại hoàn thành - phần 4" item_url="http://www.youtube.com/watch?v=asq05S5Ijbw"  video_file_url=""  />
+        <item03 item_en_name="Present perfect - part 5" item_loc_name="Thì hiện tại hoàn thành - phần 5" item_url="http://www.youtube.com/watch?v=gVh67rScKjA"  video_file_url=""  />
+        <item03 item_en_name="Phrasal verbs" item_loc_name="Mệnh đề động từ" item_url="http://www.youtube.com/watch?v=TLeNXRHBnpA"  video_file_url=""  />
+        <item03 item_en_name="The structure of phrasal verbs" item_loc_name="Cấu trúc của mệnh đề động từ" item_url="http://www.youtube.com/watch?v=hcOivE5XH3g"  video_file_url=""  />
+        <item03 item_en_name="The present continuous tense" item_loc_name="Thì hiện tại tiếp diễn" item_url="http://www.youtube.com/watch?v=b7Gw6MFRfLI"  video_file_url=""  />
+        <item03 item_en_name="Countable and uncountable nouns" item_loc_name="Danh từ đếm được và không đếm được" item_url="http://www.youtube.com/watch?v=T-CTP0JpnWc"  video_file_url=""  />
+        <item03 item_en_name="How to use 'Use to'" item_loc_name="Cách sử dụng Use to" item_url="http://www.youtube.com/watch?v=zHxoGWGXijw"  video_file_url=""  />
+        <item03 item_en_name="Conditionals - part 1" item_loc_name="Câu điều kiện - phần 1" item_url="http://www.youtube.com/watch?v=ow8FIHbwekU"  video_file_url=""  />
+        <item03 item_en_name="Conditionals - part 2" item_loc_name="Câu điều kiện - phần 2" item_url="http://www.youtube.com/watch?v=CdHbkjCviC0"  video_file_url=""  />
+        <item03 item_en_name="Conditionals - part 3" item_loc_name="Câu điều kiện - phần 3" item_url="http://www.youtube.com/watch?v=TcWwk-2TLo4"  video_file_url=""  />
+        <item03 item_en_name="Conditionals - part 4" item_loc_name="Câu điều kiện - phần 4" item_url="http://www.youtube.com/watch?v=t7O-2nQKc-g"  video_file_url=""  />
+        <item03 item_en_name="Conditionals - part 5" item_loc_name="Câu điều kiện - phần 5" item_url="http://www.youtube.com/watch?v=KxjoTZOdyfU"  video_file_url=""  />
+        <item03 item_en_name="Conditionals - part 6" item_loc_name="Câu điều kiện - phần 6" item_url="http://www.youtube.com/watch?v=dhC77_aBT5U"  video_file_url=""  />
+        <item03 item_en_name="Stative verbs" item_loc_name="Động từ tình thái" item_url="http://www.youtube.com/watch?v=p9M7FhSYcH4"  video_file_url=""  />
+        <item03 item_en_name="How to use So and Neither" item_loc_name="Cách sử dụng 'so' và 'neither'" item_url="http://www.youtube.com/watch?v=yMZVaLcVAiQ"  video_file_url=""  />
+        <item03 item_en_name="How to use Because and because of" item_loc_name="Cách sử dụng Because and because of" item_url="http://www.youtube.com/watch?v=UWMLqjkz-do"  video_file_url=""  />
+        <item03 item_en_name="How to use Do and Make" item_loc_name="Cách sử dụng Do và Make" item_url="http://www.youtube.com/watch?v=EhxXxxich1E" video_file_url=""  />
+        <item03 item_en_name="How to use Speak, say, tell" item_loc_name="Cách sử dụng Speak, say, tell" item_url="http://www.youtube.com/watch?v=_wPXCw96O6g" video_file_url=""  />
+        <item03 item_en_name="List of conjunctions" item_loc_name="Liên từ" item_url="http://www.youtube.com/watch?v=MOs_IVOeSPk" video_file_url=""  />
+        <item03 item_en_name="Tag Questions" item_loc_name="Câu hỏi đuôi" item_url="http://www.youtube.com/watch?v=5KTogTFmCZ0" video_file_url=""  />
+        <item03 item_en_name="Reflexive Pronouns" item_loc_name="Đại từ phản thân" item_url="http://www.youtube.com/watch?v=PFSkcEbVkyk" video_file_url=""  />
+    </grammar>
+    
+    
+    
+</root>

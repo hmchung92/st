@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="menu_nav">
+        <item>Home</item>
+        <item>Help</item>
+        <item>Author</item>
+        <item>Guide</item>
+        <item>Email</item>
+        <item>Exit</item>
+    </string-array>
+ 
+    <string-array name="catalog">
+        <item>Tất cả</item>
+        <item>Những thành ngữ thông dụng</item>
+        <item>Chào hỏi</item>
+        <item>Du lịch, phương hướng</item>
+        <item>Con số và tiền bạc</item>
+        <item>Địa điểm</item>
+        <item>Điện thoại/internet/thư</item>
+        <item>Thời gian và ngày tháng</item>
+        <item>Chỗ ăn ở</item>
+        <item>Ăn</item>
+        <item>Kết bạn</item>
+        <item>Giải Trí</item>
+        <item>Mua sắm</item>
+        <item>Khó khăn giao tiếp</item>
+        <item>Trường hợp khẩn cấp và sức khỏe</item>
+        <item>Từ vựng và thành ngữ văn hóa</item>
+        <item>Những câu hỏi thông thường</item>
+        <item>Việc làm</item>
+        <item>Thời tiết</item>
+    </string-array>
+    <string-array name="category_apophthegm">
+        <item>Cuộc sống</item>
+        <item>Tình yêu</item>
+        <item>Tình bạn</item>
+        <item>Sự tử tế</item>
+        <item>Sự lo lắng</item>
+        <item>Hài hước</item>
+        <item>Thành công</item>
+        <item>Công việc</item>
+        <item>Thời gian</item>
+        <item>Sự thật</item>
+        <item>Khoan dung</item>
+        <item>Thuế</item>
+        <item>Ngân hàng</item>
+        <item>Luật sư</item>
+        <item>Hạnh phúc</item>
+        <item>uớc mơ</item>
+        <item>Gia đình</item>
+        <item>Quyến rũ</item>
+        <item>Khả năng</item>
+        <item>Sự thay đổi</item>
+        <item>Giáo dục</item>
+        <item>Tiền bạc</item>
+        <item>Thông minh</item>
+        <item>Cảm xúc</item>
+        <item>Sức khỏe</item>
+    </string-array>
+</resources>

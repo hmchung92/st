@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <!-- Xem thông tin chủ đề -->
+    <item android:id="@+id/writing_info_topic"
+          android:icon="@android:drawable/ic_menu_more"
+          android:title="@string/writing_info_topic"
+          android:showAsAction="always" /> 
+          
+    <!-- Nói -->
+    <item android:id="@+id/writing_speak_topic"
+          android:icon="@drawable/ic_btn_speak_now"
+          android:title="@string/writing_speak_topic"
+          android:showAsAction="ifRoom" />
+          
+    <!-- Lưu chủ đề -->
+    <item android:id="@+id/writing_save_topic"
+          android:icon="@android:drawable/ic_menu_save"
+          android:title="@string/writing_save_topic"
+          android:showAsAction="ifRoom" />
+
+</menu>

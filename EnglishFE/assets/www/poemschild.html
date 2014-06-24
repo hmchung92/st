@@ -1,0 +1,541 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/jquery.mobile-1.2.0.min.css" />
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/jquery.mobile-1.2.0.min.js"></script>
+<title>200 động từ bất quy tắc</title>
+<script type="text/javascript" charset="utf-8"
+	src="./js/cordova-2.2.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/revmob.js"></script>
+<script type="text/javascript" src="./js/jquery.puzzle.js"></script>
+<script type="text/javascript">
+	var revmob = null;
+	function onDeviceReady() {
+		revmob = new RevMob('51459fcd45b4560e00000032');
+		revmob.setTestingMode(false, null, null);
+		revmob.showFullscreen(null, null);
+	}
+	function onBodyLoad() {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	function defaultSuccessCallback(params) {
+	}
+	function defaultErrorCallback(params) {
+	}
+	jQuery(document)
+			.ready(
+					function() { /* if(puzzleApp){ */
+						$("#level")
+								.bind(
+										"change",
+										function(event, ui) {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index'));
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+											$("div.puzzle, p").puzzle(size);
+										});
+						$(function() {
+							$("#puzzleContainer").attr('index', '1');
+							$("div.puzzle, p").puzzle(100);
+						});
+						$('#next')
+								.live(
+										"click",
+										function() {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index')); /* console.log('./'+imgnum+'.jpg'); */
+											var image = $('<img src="./'
+													+ (imgnum + 1) + '.jpg" />'); /* console.log(image[0]['width']); */
+											if (image[0]['width'] > 0) {
+												imgnum = imgnum + 1;
+											} else {
+												imgnum = 1;
+											} /* if (ImageExist('./'+(imgnum+1)+'.jpg')){imgnum = 1;}else{imgnum = imgnum + 1;} */
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+										}); /* // }else{ // $("puzzle-button").remove() // } */
+						$("#nointernet").bind({
+							popupafterclose : function(event, ui) {
+								youTubeAjaxCall();
+							}
+						});
+						$('.video')
+								.live(
+										"click",
+										function(event) {
+											event.preventDefault();
+											vidID = $(this).attr('vidID');
+											var cat = $(this)
+													.attr('categoryID');
+											jQuery('#player' + cat)
+													.html(
+															'<iframe src="http://www.youtube.com/embed/'
+																	+ vidID
+																	+ '?autoplay=1" width="160" height="90" ></iframe><br><br>');
+											iframeAutoSize();
+											$("html, body").animate({
+												scrollTop : 0
+											}, "slow");
+										});
+						$(document).on("pagebeforecreate",
+								function(event, data) { /* // Let the framework know we're going to handle the load. // event.preventDefault(); */
+									iframeAutoSize(); /* // themeRefresh(theme); */
+								});
+						$(document).on("pagechange", function(event, data) { /* // Let the framework know we're going to handle the load. // revmob.showPopup(null, null); */
+							jQuery('.player').html('');
+						});
+						function iframeAutoSize() { /* // Find all YouTube videos */
+							var $allVideos = jQuery("iframe"), /* // The element that is fluid width */$fluidEl = jQuery("[data-role='page']"); /* // Figure out and save aspect ratio for each video */
+							$allVideos
+									.each(function() {
+										jQuery(this)
+												.data(
+														'aspectRatio',
+														this.height
+																/ this.width)
+												/* // and remove the hard coded width/height */.removeAttr(
+														'height').removeAttr(
+														'width');
+									}); /* // When the window is resized */
+							jQuery(window).resize(
+									function() {
+										var newWidth = $fluidEl.width(); /* // Resize all videos according to their own aspect ratio */
+										$allVideos.each(function() {
+											var $el = jQuery(this);
+											$el.height(newWidth
+													* $el.data('aspectRatio'));
+											$el.width(newWidth);
+										}); /* // Kick off one resize to fix all videos on page load */
+									}).resize();
+						}
+					});
+</script>
+</head>
+<body onLoad="onBodyLoad()">
+	
+	<!-- /page -->
+	<div data-role="page" id="Basic English Lesson">
+		
+		<div class="player" id="player0"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="0"
+					vidID="16cAUkIaVIs"> <img
+						src="http://i.ytimg.com/vi/16cAUkIaVIs/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Kids English Poems Collection - 1 Hour - Back to Back Mix
+							- HD</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="aaUYfexdTBw"> <img
+						src="http://i.ytimg.com/vi/aaUYfexdTBw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Learn Alphabet Train Song - 3D Animation Alphabet ABC
+							Train song for children</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="_2b0EehD5uY"> <img
+						src="http://i.ytimg.com/vi/_2b0EehD5uY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Machli jal ki rani hai - Fish 3D Animation Hindi Nursery
+							rhymes for children ( Hindi Poem )</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="1Uhp2w--bVM"> <img
+						src="http://i.ytimg.com/vi/1Uhp2w--bVM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Meri Billi | Pakistan Kids Poems</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="CcHTqD92SRY"> <img
+						src="http://i.ytimg.com/vi/CcHTqD92SRY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Aalo Mian - Mr. Potato - Urdu Funny Poem for Children .
+							Paki</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="2gCmejgNeFI"> <img
+						src="http://i.ytimg.com/vi/2gCmejgNeFI/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Learn Hindi Alphabet Vowels - 3D Animation Hindi poems
+							for children</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="h1fiPIhGXYA"> <img
+						src="http://i.ytimg.com/vi/h1fiPIhGXYA/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Humpty Dumpty - 3D Animation English Nursery Rhyme songs
+							For Children with Lyrics</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="hxvYjqPnROU"> <img
+						src="http://i.ytimg.com/vi/hxvYjqPnROU/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Alphabet songs | Phonics Songs | ABC Song for children -
+							3D Animation Nursery Rhymes</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="4sPvNDf4508"> <img
+						src="http://i.ytimg.com/vi/4sPvNDf4508/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Fairy Tales in Hindi - Cinderella</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="aouPD7z4Ypo"> <img
+						src="http://i.ytimg.com/vi/aouPD7z4Ypo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>THESE POEMS FOR CHILDREN LEARNING ENGLISH 2</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="qIZzC6Gjqmc"> <img
+						src="http://i.ytimg.com/vi/qIZzC6Gjqmc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>piddly poems for children learning English "Two little
+							swans" Poetry, rhyme book for children</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="xxde9f2R-UI"> <img
+						src="http://i.ytimg.com/vi/xxde9f2R-UI/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>nursery poems for children....</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="lc1ydf9Oolw"> <img
+						src="http://i.ytimg.com/vi/lc1ydf9Oolw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Part 2 - Kids Rhymes collection - 20 poems to keep your
+							kids busy. Continuous Play popular rhymes</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="a4l_EQCwzJc"> <img
+						src="http://i.ytimg.com/vi/a4l_EQCwzJc/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>A Reading by J. Patrick Lewis from "Animal Poetry"</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="4c3xsiOvLJ4"> <img
+						src="http://i.ytimg.com/vi/4c3xsiOvLJ4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Aloo kachaloo Hindi poem - 3D Animation Hindi Nursery
+							rhymes for children (Aalu kachalu beta )</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="CkoOSfNjc40"> <img
+						src="http://i.ytimg.com/vi/CkoOSfNjc40/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>My Pet Germs - A Funny Kid's Poem by Children's Author
+							Kenn Nesbitt</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="t77QbEh0NEM"> <img
+						src="http://i.ytimg.com/vi/t77QbEh0NEM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Creative & Funny Poetry for Kids by Gloson (Book trailer)
+						</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="8vnNE-FB8vM"> <img
+						src="http://i.ytimg.com/vi/8vnNE-FB8vM/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Nursery Rhymes (Poems) - "Piggy On The Railway" -
+							3D Animated Song for Children with Lyrics</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="88pnN2Kx8a0"> <img
+						src="http://i.ytimg.com/vi/88pnN2Kx8a0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Hindi Poems - Pani Barsa Cham Cham Cham</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="nX9Vg7LYAL4"> <img
+						src="http://i.ytimg.com/vi/nX9Vg7LYAL4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Hindi Poems - Billi Ko Jhukam</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="z3IeHbpLH4Y"> <img
+						src="http://i.ytimg.com/vi/z3IeHbpLH4Y/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Learn writing Hindi Alphabet Consonants - 3D Animation
+							Hindi poems for children</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="7X0Q4F--g0s"> <img
+						src="http://i.ytimg.com/vi/7X0Q4F--g0s/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Teddy Bear Teddy Bear turn around - 3D Animation English
+							Nursery rhyme song for children</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="gYyVI9V81t4"> <img
+						src="http://i.ytimg.com/vi/gYyVI9V81t4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Talent Time 2011- Poetry Recitation English Cat 1</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="tPZ3upSpu7A"> <img
+						src="http://i.ytimg.com/vi/tPZ3upSpu7A/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Poems kids Poems for children english Pakistani
+							Poems english</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="EFxFZU6fX_0"> <img
+						src="http://i.ytimg.com/vi/EFxFZU6fX_0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>More rhymes for children learning English</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="7dGl_3psKuo"> <img
+						src="http://i.ytimg.com/vi/7dGl_3psKuo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>There's a Mouse in the House! Children's poems and
+							stories book trailer (ages 2-6)</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="zVmpvzhyMm8"> <img
+						src="http://i.ytimg.com/vi/zVmpvzhyMm8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Hindi Poems - Titli Rani</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="gtSJCbSEZrA"> <img
+						src="http://i.ytimg.com/vi/gtSJCbSEZrA/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>LITTLE POEMS FOR CHILDREN</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="m5VY9scCtaA"> <img
+						src="http://i.ytimg.com/vi/m5VY9scCtaA/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Children's poems ..... "My bank manager" ..... Kid's
+							learning English with poetry and rhyme</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="n_r4SE3Aezo"> <img
+						src="http://i.ytimg.com/vi/n_r4SE3Aezo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>"The kitten from ketton" children's poem book, Kid's
+							learning English with poetry and rhyme.</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="0QzNWp4T0as"> <img
+						src="http://i.ytimg.com/vi/0QzNWp4T0as/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Learn writing Hindi Alphabet Consonants - 3D Animation
+							Hindi poems for children -</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="zpRmHBqNv0w"> <img
+						src="http://i.ytimg.com/vi/zpRmHBqNv0w/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Funeral Poems For Children-Part Of You Has Faded</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="P1H6iODKUsY"> <img
+						src="http://i.ytimg.com/vi/P1H6iODKUsY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Nursery Rhymes Vol1 - Collection of Twenty Rhymes</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="UlNH1F8WnzY"> <img
+						src="http://i.ytimg.com/vi/UlNH1F8WnzY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Poems kids rhymes Fly Fly Fly Butterfly.Mp4</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="smuQXBHCnLk"> <img
+						src="http://i.ytimg.com/vi/smuQXBHCnLk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Hindi Poems - Chuhiya Ji</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="TR_gaGoZUg0"> <img
+						src="http://i.ytimg.com/vi/TR_gaGoZUg0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Urdu Poem Children poems in urdu for children poems for
+							children in urdu English</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="nd6fXA2kaHI"> <img
+						src="http://i.ytimg.com/vi/nd6fXA2kaHI/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>100 Tang Dynasty Chinese Poems for iPad</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="nhYPXYlod3w"> <img
+						src="http://i.ytimg.com/vi/nhYPXYlod3w/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Leah - Poems for Children - February 2010</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="smJUx8U1bQw"> <img
+						src="http://i.ytimg.com/vi/smJUx8U1bQw/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Children saying easter poems. 4/4/10</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="NElF_TxCvM4"> <img
+						src="http://i.ytimg.com/vi/NElF_TxCvM4/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>English Poems kids rhymes Green</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="1mhEoAUDy7Y"> <img
+						src="http://i.ytimg.com/vi/1mhEoAUDy7Y/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>In loving memory poems for children - Why Not Me Instead
+							Of You</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="vs-2vbGqgOQ"> <img
+						src="http://i.ytimg.com/vi/vs-2vbGqgOQ/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Short and sweet poems for kids</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="JggD5nra_Yk"> <img
+						src="http://i.ytimg.com/vi/JggD5nra_Yk/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>"The unique walking club" poems for children .. Kid's
+							poem book from the UK Kid's learn English</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="357MGBoLMto"> <img
+						src="http://i.ytimg.com/vi/357MGBoLMto/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Easter Poems</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="ccSL6A0Zk6c"> <img
+						src="http://i.ytimg.com/vi/ccSL6A0Zk6c/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Learn Hindi Alphabet Vowels - 3D Animation Hindi poems
+							for children</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="ovgWd17vy2w"> <img
+						src="http://i.ytimg.com/vi/ovgWd17vy2w/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Holiday Poems for Children by Barbara Bryan</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="m8wN4Vdz6T0"> <img
+						src="http://i.ytimg.com/vi/m8wN4Vdz6T0/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>baby train - Chuk Chuk Karti Gari - Kids Animation
+							Nursery Rhymes - Urdu Chuck Chuck Train.flv</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="YyM87QHfO70"> <img
+						src="http://i.ytimg.com/vi/YyM87QHfO70/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Children's Poetry Video: Jane Yolen Reads Three Poems
+							from The Poetry Friday Anthology</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="jym6HsE4YzU"> <img
+						src="http://i.ytimg.com/vi/jym6HsE4YzU/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>Lizard Lunch and Other Funny Animal Poems for Kids Book</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+			</ul>
+			
+		</div>
+		<!-- /content -->
+		
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+
+	<!-- /footer -->
+	<!-- /page -->
+	<!-- /page -->
+</body>
+</html>

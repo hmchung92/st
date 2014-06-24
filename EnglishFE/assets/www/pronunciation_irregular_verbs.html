@@ -1,0 +1,207 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./css/jquery.mobile-1.2.0.min.css" />
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="./js/jquery.mobile-1.2.0.min.js"></script>
+<title>200 động từ bất quy tắc</title>
+<script type="text/javascript" charset="utf-8"
+	src="./js/cordova-2.2.0.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/revmob.js"></script>
+<script type="text/javascript" src="./js/jquery.puzzle.js"></script>
+<script type="text/javascript">
+	var revmob = null;
+	function onDeviceReady() {
+		revmob = new RevMob('51459fcd45b4560e00000032');
+		revmob.setTestingMode(false, null, null);
+		revmob.showFullscreen(null, null);
+	}
+	function onBodyLoad() {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	function defaultSuccessCallback(params) {
+	}
+	function defaultErrorCallback(params) {
+	}
+	jQuery(document)
+			.ready(
+					function() { /* if(puzzleApp){ */
+						$("#level")
+								.bind(
+										"change",
+										function(event, ui) {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index'));
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+											$("div.puzzle, p").puzzle(size);
+										});
+						$(function() {
+							$("#puzzleContainer").attr('index', '1');
+							$("div.puzzle, p").puzzle(100);
+						});
+						$('#next')
+								.live(
+										"click",
+										function() {
+											var level = $("#level").val(); /* console.log(level); */
+											var top = 5;
+											if (level == "hard") {
+												size = 75;
+											} else {
+												size = 100;
+												var top = 35;
+											}
+											var imgnum = parseInt($(
+													"#puzzleContainer").attr(
+													'index')); /* console.log('./'+imgnum+'.jpg'); */
+											var image = $('<img src="./'
+													+ (imgnum + 1) + '.jpg" />'); /* console.log(image[0]['width']); */
+											if (image[0]['width'] > 0) {
+												imgnum = imgnum + 1;
+											} else {
+												imgnum = 1;
+											} /* if (ImageExist('./'+(imgnum+1)+'.jpg')){imgnum = 1;}else{imgnum = imgnum + 1;} */
+											$('#puzzleContainer').empty();
+											$('#puzzleContainer')
+													.html(
+															'<div class="puzzle" style="margin-right: auto ;margin-left:auto;margin-top:'+top+'px;" data-position="fixed"><img id="puzzleImage" src="" width="320" height="390" alt="Puzzle Girl One" /></div>');
+											$("#puzzleImage").attr("src",
+													"./" + imgnum + ".jpg");
+											$("#puzzleContainer").attr("index",
+													imgnum);
+											$("div.puzzle, p").puzzle(size);
+										}); /* // }else{ // $("puzzle-button").remove() // } */
+						$("#nointernet").bind({
+							popupafterclose : function(event, ui) {
+								youTubeAjaxCall();
+							}
+						});
+						$('.video')
+								.live(
+										"click",
+										function(event) {
+											event.preventDefault();
+											vidID = $(this).attr('vidID');
+											var cat = $(this)
+													.attr('categoryID');
+											jQuery('#player' + cat)
+													.html(
+															'<iframe src="http://www.youtube.com/embed/'
+																	+ vidID
+																	+ '?autoplay=1" width="160" height="90" ></iframe><br><br>');
+											iframeAutoSize();
+											$("html, body").animate({
+												scrollTop : 0
+											}, "slow");
+										});
+						$(document).on("pagebeforecreate",
+								function(event, data) { /* // Let the framework know we're going to handle the load. // event.preventDefault(); */
+									iframeAutoSize(); /* // themeRefresh(theme); */
+								});
+						$(document).on("pagechange", function(event, data) { /* // Let the framework know we're going to handle the load. // revmob.showPopup(null, null); */
+							jQuery('.player').html('');
+						});
+						function iframeAutoSize() { /* // Find all YouTube videos */
+							var $allVideos = jQuery("iframe"), /* // The element that is fluid width */$fluidEl = jQuery("[data-role='page']"); /* // Figure out and save aspect ratio for each video */
+							$allVideos
+									.each(function() {
+										jQuery(this)
+												.data(
+														'aspectRatio',
+														this.height
+																/ this.width)
+												/* // and remove the hard coded width/height */.removeAttr(
+														'height').removeAttr(
+														'width');
+									}); /* // When the window is resized */
+							jQuery(window).resize(
+									function() {
+										var newWidth = $fluidEl.width(); /* // Resize all videos according to their own aspect ratio */
+										$allVideos.each(function() {
+											var $el = jQuery(this);
+											$el.height(newWidth
+													* $el.data('aspectRatio'));
+											$el.width(newWidth);
+										}); /* // Kick off one resize to fix all videos on page load */
+									}).resize();
+						}
+					});
+</script>
+</head>
+<body onLoad="onBodyLoad()">
+	
+	<!-- /page -->
+	<div data-role="page" id="Basic English Lesson">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1 id="title">200 động từ bất quy tắc</h1>
+		</div>
+		<div class="player" id="player0"></div>
+		<div data-role="content" class="content">
+			<ul id="listview" data-role="listview" data-filter="true"
+				data-inset="true">
+				<li><a class="video" href="#" categoryID="0"
+					vidID="NLQL1SpJmTY"> <img
+						src="http://i.ytimg.com/vi/NLQL1SpJmTY/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>1 - VIDEO ĐỘNG TỪ BẤT QUY TẮC</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="JQjdAWouwh8"> <img
+						src="http://i.ytimg.com/vi/JQjdAWouwh8/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>2 - VIDEO ĐỘNG TỪ BẤT QUY TẮC</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="gUiQye0V_2A"> <img
+						src="http://i.ytimg.com/vi/gUiQye0V_2A/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>3 - VIDEO ĐỘNG TỪ BẤT QUY TẮC</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				<li><a class="video" href="#" categoryID="0"
+					vidID="eUn3_U_gspo"> <img
+						src="http://i.ytimg.com/vi/eUn3_U_gspo/default.jpg" alt=""
+						style="margin-top: 10px;">
+						<h2>4 - VIDEO ĐỘNG TỪ BẤT QUY TẮC</h2>
+						<p></p> <!-- <span class="ui-li-count"> </span> -->
+				</a></li>
+				
+				
+				
+			</ul>
+			<div data-role="popup" id="loadingpop">
+				<p>Loading</p>
+			</div>
+		</div>
+		<!-- /content -->
+		
+		<!-- /footer -->
+	</div>
+	<!-- /page -->
+
+	<!-- /footer -->
+	<!-- /page -->
+	<!-- /page -->
+</body>
+</html>

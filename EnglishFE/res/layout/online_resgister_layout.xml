@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f4f4"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="0dp" >
+
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:layout_gravity="center"
+	    android:padding="10dp"
+	    android:textColor="#f2672e"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginTop="-35dp"
+	    android:layout_marginRight="10dp"  >
+	    
+        <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="ĐĂNG KÝ"
+	        android:padding="5dp"
+	        android:gravity="center"
+	        android:textStyle="bold"
+	        android:textColor="#993333"
+	        android:textSize="12pt" 
+	        android:layout_marginLeft="10dp"
+		    android:layout_marginRight="10dp"/>
+        
+        <EditText
+                android:id="@+id/edit_username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="TÀI KHOẢN"
+                android:layout_marginTop="5dp"
+                android:background="#e5e5e5"
+                android:padding="10dp"
+	        	android:textColor="#993333"
+	        	android:textStyle="bold"
+                 >
+                <requestFocus />
+            </EditText>
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="MẬT KHẨU"
+                android:inputType="textPassword"
+                android:layout_marginTop="5dp"
+                android:background="#e5e5e5"
+                android:textStyle="bold"
+	        	android:textColor="#993333"
+                android:padding="10dp" />
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="HỌ VÀ TÊN"
+                android:layout_marginTop="5dp"
+                android:background="#e5e5e5"
+	        	android:textColor="#993333"
+	        	android:textStyle="bold"
+                android:padding="10dp"/>
+            <EditText
+                android:id="@+id/edit_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="ĐỊA CHỈ MAIL"
+                android:background="#e5e5e5"
+                android:layout_marginTop="5dp"
+	        	android:textColor="#993333"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:inputType="textEmailAddress"/>
+            <!-- <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:gravity="center" >
+		        <RadioButton
+		            android:id="@+id/rdNam"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:text="NAM" />
+		
+		        <RadioButton
+		            android:id="@+id/rdoNu"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_weight="1"
+		            android:text="NỮ" />
+	    </LinearLayout> -->
+	    <!-- <EditText
+            android:id="@+id/txtNs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="NĂM SINH" /> -->
+	   <Button
+                android:id="@+id/signup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="ĐĂNG KÝ" 
+                android:textColor="#eee"
+                android:textStyle="bold"
+                android:background="@drawable/btn_registry"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"/>
+    </LinearLayout>
+
+            
+
+
+
+</LinearLayout>
