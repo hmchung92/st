@@ -1,8 +1,7 @@
 'use strict';
 angular.module('adminApp')
   .controller('MainCtrl', function ($scope) {
-    var logo = 'sentir-logo-primary.png',
-      notifications = [
+    var notifications = [
         {
           'id': 0,
           'name': 'Thomas White',
@@ -1259,7 +1258,7 @@ angular.module('adminApp')
         'design': 'Design by <a href>ids</a>. Purchase this item at <a href>Themeforest</a>'
       }
       ;
-    $scope.logo = logo; // sao khong gan truc tiep vao day ma phai thong qua mot bien trung gian chi cho ton bo nho
+    $scope.logo = 'sentir-logo-primary.png';
     $scope.users = users;
     $scope.accountSetting = accountSetting;
     $scope.notifications = notifications;

@@ -72,6 +72,30 @@
         }
       };
     })
+    .directive('mainColorSchemes', function(){
+      return{
+        restrict: 'E',
+        templateUrl: 'views/main-color-schemes.html',
+        link: function(scope, element, attr){
+          var show = true,
+            boxColor = element.find('.box-demo');
+          var toggle = {
+            right: '-200px'
+          };
+          element.find('#demo-panel').on('mousedown', function(){
+           if(show){
+             boxColor.css(toggle);
+             show=!show;
+           }else{
+             boxColor.css({
+               right: '0'
+             });
+             show=!show;
+           }
+          })
+        }
+      };
+    })
     .directive('pageContent', function () {
       return{
         restrict: 'E',
@@ -657,12 +681,13 @@
         link: function(scope, element, attr){
           element.find('#owl-popular').owlCarousel({
             navigation: false, // Show next and pre buttons
-            sideSpeed: 500,
-            paginationSpeed: 800,
+            sideSpeed: 300,
+            paginationSpeed: 500,
             singleItem: false,
             pagination: false,
             responsive: true,
-            item: 4
+            item: 4,
+            autoPlay: true
           });
 
         }
@@ -680,11 +705,12 @@
           //       Owl Carousel
           $element.find('#owl-feature').owlCarousel({
             navigation: false, // Show next and pre buttons
-            sideSpeed: 500,
-            paginationSpeed: 800,
+            sideSpeed: 300,
+            paginationSpeed: 500,
             singleItem: true,
             pagination: false,
-            responsive: true
+            responsive: true,
+            autoPlay: true
           });
         },
         templateUrl: 'views/featured-product.html'
