@@ -1,0 +1,31 @@
+<div class="the-box full no-border item-lg">
+    <div id="store-item-carousel-2" class="owl-carousel owl-theme" style="display: block;">
+        <div class="owl-wrapper-outer">
+            <div id="owl-feature" class="owl-carousel owl-theme">
+                <div class="item"><img src="images/large/img-9.jpg" alt="Image"></div>
+                <div class="item"><img src="images/large/img-8.jpg" alt="Image"></div>
+                <div class="item"><img src="images/large/img-7.jpg" alt="Image"></div>
+            </div>
+        </div>
+        <!--</div>-->
+        <div class="item-des">
+            <div class="the-box transparent no-margin">
+                <h4 class="small-heading more-margin-bottom">{{title}}</h4>
+
+                <h1><a href="#fakelink">{{data.name}}</a></h1>
+                <h4 class="bolded">{{data.price | currency}}</h4>
+
+                <p class="text-muted item-des-text">
+                    {{data.content}}
+                </p>
+
+                <p>
+                    <widget-rating st-max="5" st-star="{{data.star}}"></widget-rating>
+                </p>
+                <button class="btn btn-success btn-block btn-add">Add to cart</button>
+            </div>
+            <!-- /.the-box .transparent .no-margin -->
+        </div>
+        <!-- /.item-des -->
+    </div>
+</div>
