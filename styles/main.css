@@ -1184,6 +1184,40 @@ top-sidebar-right-heading {
     margin-right: 250px;
 }
 
+/**-------------------------------------------COLOR SHCEMES-------------------------------------------**/
+.box-demo {
+    position: fixed;
+    top: 70px;
+    right: -200px;
+    background: #242A34;
+    z-index: 999;
+    width: 200px;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+
+.inner-panel .cog-panel {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #242A34;
+    left: -39px;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px 0;
+    font-size: 18px;
+}
+.box-demo .inner-panel {
+    /* position: relative; */
+    padding: 10px;
+}
+.xs-tiles {
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 3px;
+    overflow: hidden;
+}
 /**-------------------------------------------LAST WEEK POPULAR-------------------------------------------**/
 .shop-carousel .item {
     color: #434A54;
