@@ -753,5 +753,31 @@
         }
       };
     })
+    .directive('widgetBacktop', function(){
+      return{
+        restrict: 'EA',
+        templateUrl: 'views/widget-backtop.html',
+        link: function(scope, element, attr){
+          /** BEGIN BACK TO TOP **/
+          element.find("#back-top").hide();
+
+          $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+              element.find('#back-top').fadeIn();
+            } else {
+              element.find('#back-top').fadeOut();
+            }
+          });
+          element.find('#back-top a').click(function () {
+            angular.element('body,html').animate({
+              scrollTop: 0
+            }, 800);
+            return false;
+          });
+
+          /** END BACK TO TOP **/
+        }
+      }
+    })
   ;
 })();

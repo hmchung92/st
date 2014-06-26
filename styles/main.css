@@ -1315,6 +1315,23 @@ b, strong {
     text-decoration: none;
 }
 
+/**-------------------------------------------BACK TO TOP-------------------------------------------**/
+#back-top {
+    color: #fff;
+    background: #434A54;
+    font-size: 18px;
+    line-height: 100%;
+    display: inline-block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+}
+#back-top a, #back-top a:hover, #back-top a:focus {
+    color: #fff;
+    padding: 10px;
+    display: block;
+}
 /**-------------------------------------------FOOTER-------------------------------------------**/
 footer {
     background: none repeat scroll 0% 0% #FFF;

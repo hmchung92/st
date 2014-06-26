@@ -73,21 +73,24 @@ angular.module('adminApp')
           'name': 'Thomas White',
           'avatar': 'avatar-2.jpg',
           'content': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit',
-          'status': 'online'
+          'status': 'online',
+          'divice': 'mobile-phone'
         },
         {
           'id': 1,
           'name': 'Doina Slaivici',
           'avatar': 'avatar-3.jpg',
           'content': 'Duis autem vel eum iriure dolor in hendrerit in',
-          'status': 'online'
+          'status': 'online',
+          'divice': ''
         },
         {
           'id': 2,
           'name': 'Harry Nichols',
           'avatar': 'avatar-4.jpg',
           'content': 'I think so',
-          'status': 'online'
+          'status': 'online',
+          'divice': 'apple'
         },
         {
           'id': 3,
@@ -95,7 +98,8 @@ angular.module('adminApp')
           'avatar': 'avatar-5.jpg',
           'content': 'Yes, I\'ll be waiting',
           'status': 'idle',
-          'time': 'Last seen yesterday'
+          'time': 'Last seen yesterday',
+          'divice': 'android'
         },
         {
           'id': 4,
@@ -103,7 +107,8 @@ angular.module('adminApp')
           'avatar': 'avatar-6.jpg',
           'content': 'Yes, I\'ll be waiting',
           'status': 'idle',
-          'time': 'Last seen 2 hours ago'
+          'time': 'Last seen 2 hours ago',
+          'divice': 'windows'
         },
         {
           'id': 5,
@@ -111,7 +116,8 @@ angular.module('adminApp')
           'avatar': 'avatar-6.jpg',
           'content': 'Yes, I\'ll be waiting',
           'status': 'idle',
-          'time': '12 minutes'
+          'time': '12 minutes',
+          'divice': ''
         },
         {
           'id': 6,
@@ -119,7 +125,8 @@ angular.module('adminApp')
           'avatar': 'avatar-7.jpg',
           'content': 'Yes, I\'ll be waiting',
           'status': 'offline',
-          'time': 'Last seen Feb 20.2014 05.45.50'
+          'time': 'Last seen Feb 20.2014 05.45.50',
+          'divice': 'windows'
         },
         {
           'id': 7,
@@ -127,7 +134,8 @@ angular.module('adminApp')
           'avatar': 'avatar-8.jpg',
           'content': 'Yes, I\'ll be waiting',
           'status': 'offline',
-          'time': 'Last seen Jan 20.2014 03.45.50'
+          'time': 'Last seen Jan 20.2014 03.45.50',
+          'divice': ''
         },
         {
           'id': 8,
@@ -135,7 +143,8 @@ angular.module('adminApp')
           'avatar': 'avatar-9.jpg',
           'content': 'Yes, I\'ll be waiting',
           'status': 'offline',
-          'time': '2 minutes'
+          'time': '2 minutes',
+          'divice': 'windows'
         }
       ],
       accountSetting = [
