@@ -2,12 +2,12 @@
 
     <ul class="sidebar-menu">
 
-        <li><a href="index.html" class="sidebar-left-content"><i class="fa fa-dashboard icon-sidebar" ></i>Dashboard</a></li>
+        <li><a href class="sidebar-left-content"><i class="fa fa-dashboard icon-sidebar" ></i>Dashboard</a></li>
 
         <li ng-repeat="menu in menus"  ng-click="chung($index)">
 
             <span ng-if="menu.label == 'heading'" class="static sidebar-left-content">{{menu.title | uppercase}}</span>
-            <a href="#fakelink" ng-if="menu.label != 'heading'" class="sidebar-left-content">
+            <a href ng-if="menu.label != 'heading'" class="sidebar-left-content">
                 <span class="icon-sidebar fa fa-{{menu.icon}} sidebar-left-content"></span>
                 <span class="fa fa-chevron-right chevron-icon-sidebar sidebar-left-content" ng-if="sub != $index"></span>
                 <span class="fa fa-chevron-right chevron-icon-sidebar icon-rotate sidebar-left-content" ng-if="sub == $index"></span>
