@@ -420,14 +420,51 @@ ul.sidebar-menu li a .span-sidebar {
 }
 
 ul.sidebar-menu li ul.submenu {
-    display: none;
+
     list-style: none;
     margin: 0;
     padding: 0 0 0 50px;
     background: #2C3439;
 }
-
-
+ul.sidebar-menu li ul.submenu li a {
+    display: block;
+    color: #79818B;
+    height: 35px;
+    padding: 10px 15px 10px 0;
+    border-bottom: none;
+    text-decoration: none;
+    line-height: 120%;
+    position: relative;
+    font-size: 13px;
+    border-left: 1px solid #656D78;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+ul.sidebar-menu li ul.submenu li {
+    display: block;
+}
+ul.sidebar-menu li ul.submenu li a:before {
+    content: "\2014\00a0";
+    margin-left: -1px;
+    color: #79818B;
+}
+ul.sidebar-menu li a .chevron-icon-sidebar {
+    position: absolute;
+    right: 15px;
+    top: 14px;
+    color: #656D78;
+    -webkit-transition: All 0.3s ease;
+    -moz-transition: All 0.3s ease;
+    -o-transition: All 0.3s ease;
+}
+.icon-rotate{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 .static {
     display: block;
     color: #797E89;
@@ -480,14 +517,38 @@ ul.sidebar-menu li ul.submenu {
     cursor: pointer;
 }
 
-#sidr {
-    display: block;
+/*.onoffswitch-inner:before, .onoffswitch-inner:after {*/
+    /*float: left;*/
+    /*width: 50%;*/
+    /*height: 20px;*/
+    /*padding: 0;*/
+    /*line-height: 20px;*/
+    /*font-size: 13px;*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+/*}*/
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
 }
-
-.sidr {
-    -moz-box-shadow: inset 0 0 5px 5px #ebebeb;
-    box-shadow: none;
+.onoffswitch.blank .onoffswitch-switch {
+    right: 20px;
 }
+/*.onoffswitch-switch {*/
+    /*width: 20px;*/
+    /*height: 20px;*/
+    /*background: #FFFFFF;*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*bottom: 0;*/
+    /*right: 38px;*/
+    /*-moz-transition: all 0.2s ease-in 0s;*/
+    /*-webkit-transition: all 0.2s ease-in 0s;*/
+    /*-o-transition: all 0.2s ease-in 0s;*/
+    /*transition: all 0.2s ease-in 0s;*/
+/*}*/
 
 ul.sidebar-menu li a .span-sidebar {
     position: absolute;
@@ -616,7 +677,9 @@ h1.page-heading {
 .bg-success .progress-bar-primary {
     background-color: #27A283;
 }
-
+.bg-info {
+    background-color: #3BAFDA;
+}
 .bg-success .progress-bar-danger {
     background-color: #D1462C;
 }
@@ -1184,7 +1247,7 @@ top-sidebar-right-heading {
     margin-right: 250px;
 }
 
-/**-------------------------------------------COLOR SHCEMES-------------------------------------------**/
+/**-------------------------------------------COLOR SCHEMES-------------------------------------------**/
 .box-demo {
     position: fixed;
     top: 70px;
@@ -1217,6 +1280,24 @@ top-sidebar-right-heading {
     margin: 10px 0;
     border-radius: 3px;
     overflow: hidden;
+}
+.xs-tiles {
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.xs-tiles .half-tiles {
+    height: 12px;
+}
+.xs-tiles .quarter-tiles {
+    height: 6px;
+}
+.xs-tiles .tigaperempat-tiles {
+    height: 18px;
+}
+.bg-white {
+    background: #F6F8F9;
 }
 /**-------------------------------------------LAST WEEK POPULAR-------------------------------------------**/
 .shop-carousel .item {

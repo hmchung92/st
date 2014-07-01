@@ -2,18 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>SENTIR</title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
     <!-- BOOTSTRAP CSS (REQUIRED ALL PAGE)-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/plugins/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="mc_components/plugins/font-awesome/css/font-awesome.min.css" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- PLUGINS CSS -->
-    <link rel="stylesheet" href="bower_components/owl-carousel/owl.carousel.css"/>
-    <link rel="stylesheet" href="bower_components/owl-carousel/owl.theme.css"/>
+    <link rel="stylesheet" href="mc_components/plugins/owl-carousel/owl.carousel.css"/>
+    <link rel="stylesheet" href="mc_components/plugins/owl-carousel/owl.theme.css"/>
     <link rel="stylesheet" href="bower_components/plugins/morris-chart/morris.min.css"/>
 
     <!-- MAIN CSS (REQUIRED ALL PAGE)-->
@@ -33,7 +33,7 @@
     <!--ENG TOP NAV-->
 
     <!--BEGIN COLOR SCHEMES-->
-    <main-color-schemes></main-color-schemes>
+    <main-color-schemes st-data="colorSchemes"></main-color-schemes>
     <!--END COLOR SCHEMES-->
 
     <!--BEGIN SIDEBAR LEFT-->
@@ -50,30 +50,30 @@
 
     <!--BEGIN PAGE RIGHT-->
     <div class="page-content">
+
         <div ng-view="" style="padding: 5px 15px 0 15px"></div>
         <page-footer st-author="{{footer.author}}" st-design="{{footer.design}}"></page-footer>
 
     </div>
     <!--END PAGE RIGHT-->
 </div>
-
-<widget-backtop></widget-backtop>
+<mc-back-to-top></mc-back-to-top>
 
 
 <!-- MAIN JAVASRCIPT (REQUIRED ALL PAGE)-->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<!--<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>-->
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/angular-cookies/angular-cookies.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 
 <!--NICE SCROLL JS-->
-<script src="bower_components/plugins/nicescroll/jquery.nicescroll.js"></script>
+<script src="mc_components/plugins/nicescroll/jquery.nicescroll.js"></script>
 
 <!-- OWL CAROUSEL JS-->
-<script src="bower_components/owl-carousel/owl.carousel.js"></script>
+<script src="mc_components/plugins/owl-carousel/owl.carousel.js"></script>
 
 <!-- WEATHER SKYCON JS-->
 <script src="bower_components/skycons/skycons.js"></script>
@@ -82,17 +82,12 @@
 <script src="bower_components/easy-pie-chart/angular.easypiechart.min.js"></script>
 
 <!-- MORRIS JS -->
-<script src="bower_components/plugins/morris-chart/raphael.min.js"></script>
-<script src="bower_components/plugins/morris-chart/morris.min.js"></script>
+<script src="mc_components/plugins/morris-chart/raphael.min.js"></script>
+<script src="mc_components/plugins/morris-chart/morris.min.js"></script>
 
-<!-- FLOT CHART JS -->
-<script src="bower_components/plugins/flot-chart/jquery.flot.js"></script>
-<script src="bower_components/plugins/flot-chart/jquery.flot.tooltip.js"></script>
-<script src="bower_components/plugins/flot-chart/jquery.flot.resize.js"></script>
-<script src="bower_components/plugins/flot-chart/jquery.flot.selection.js"></script>
-<script src="bower_components/plugins/flot-chart/jquery.flot.stack.js"></script>
-<script src="bower_components/plugins/flot-chart/jquery.flot.time.js"></script>
-
+<!--MC COMPONENTS-->
+<script src="mc_components/mc-app.js"></script>
+<script src="mc_components/directives/mcDirective.js"></script>
 
 <!-- MAIN APPS JS -->
 <script src="scripts/app.js"></script>

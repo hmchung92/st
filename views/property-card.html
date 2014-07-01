@@ -3,7 +3,8 @@
         <h3 class="panel-title">{{title | uppercase}}</h3>
     </div>
     <div class="the-box full no-border property-card">
-        <owl-carousel-item st-data="list.image"></owl-carousel-item>
+
+        <mc-carousel mc-data="list.image" mc-items="1"></mc-carousel>
 
         <div class="the-box no-margin no-border bg-warning">
             <div class="row">
@@ -30,7 +31,7 @@
             </p>
 
             <p class="has-margin text-center">
-                <widget-rating st-max="5" st-star="{{list.star}}"></widget-rating>
+                <mc-rating st-max="5" st-star="{{list.star}}"></mc-rating>
             </p>
 
             <div class="row">

@@ -8,7 +8,8 @@ angular
     'ngRoute',
     'ui.bootstrap',
     'mainDirective',
-    'mainFilter'
+    'mainFilter',
+    'mc.sentik'
   ])
   .config(function ($routeProvider) {
     $routeProvider

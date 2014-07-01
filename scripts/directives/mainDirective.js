@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 (function () {
   angular.module('mainDirective', ['easypiechart'])
     .directive('topNavbar', function () {
@@ -26,39 +26,6 @@
         templateUrl: 'views/top-navbar-notify.html'
       };
     })
-    .directive('topNavbarNotifyItem', function () {
-      return{
-        restrict: 'EA',
-        scope: {
-          title: '@stTitle',
-          data: '=stData',
-          icon: '@stIcon',
-          badge: '@stBadge'
-        },
-        templateUrl: 'views/top-navbar-notify-item.html',
-        link: function (scope, element, attr) {
-        }
-      };
-    })
-    .directive('topNavbarNotifyContent', function () {
-      return{
-        restrict: 'A',
-        templateUrl: 'views/top-navbar-notify-content.html',
-        scope: {
-          data: '=stData',
-          title: '@stTitle'
-        },
-        link: function (scope, element, attrs) {
-
-          scope.userStatus = false;
-          var status = scope.title;
-          if (angular.equals(status, 'Friend requests')) {
-            scope.userStatus = true;
-          }
-
-        }
-      };
-    })
     .directive('topNavbarUser', function () {
       return{
         restrict: 'E',
@@ -75,6 +42,9 @@
     .directive('mainColorSchemes', function(){
       return{
         restrict: 'E',
+        scope: {
+          data: '=stData'
+        },
         templateUrl: 'views/main-color-schemes.html',
         link: function(scope, element, attr){
           var show = true,
@@ -83,16 +53,94 @@
             right: '-200px'
           };
           element.find('#demo-panel').on('mousedown', function(){
-           if(show){
-             boxColor.css(toggle);
-             show=!show;
-           }else{
-             boxColor.css({
-               right: '0'
-             });
-             show=!show;
-           }
+            if(show){
+              boxColor.css(toggle);
+              show=!show;
+            }else{
+              boxColor.css({
+                right: '0'
+              });
+              show=!show;
+            }
           })
+        }
+      };
+    })
+    .directive('colorSchemes', function(){
+      return{
+        restrict: 'E',
+        scope: {
+          data: '=stData'
+        },
+        templateUrl: 'views/color-schemes.html',
+        link: function(scope, element, attr){
+          var demo = element.find('#color');
+          var sidebar = angular.element('.sidebar-menu');
+          var subsidebar = angular.element('.sidebar-menu li a');
+          var logo = angular.element('.logo-brand');
+          var navContent = angular.element('.top-nav-content');
+          var fa = angular.element('.top-navbar');
+          var nav = angular.element('.dropdown-toggle');
+          var bullhorn = angular.element('.btn-collapse-sidebar-right');
+
+          var sidebartext = angular.element('.sidebar-left-content');
+
+          demo.on('mousedown', function(){
+
+            logo.css('background', scope.data.logo);
+            sidebar.css('background', scope.data.sidebar);
+            subsidebar.css('border-bottom-color', scope.data.subsidebar);
+            navContent.css('background', scope.data.navcontent);
+
+            sidebartext.css('color','#AAB2BD');
+
+            if(scope.data.topcolor == 'bg-white' && scope.data.top == 'half-tiles'){
+              sidebartext.css('color',scope.data.colorsidebar);
+            }
+
+            if(scope.data.navcontent != '#ffffff' && scope.data.top == 'half-tiles'){
+              fa.css('color', 'white');
+              nav.css('color', 'white');
+              bullhorn.css('color', 'white');
+            }
+            else{
+              fa.css('color', '#656D78');
+              nav.css('color', '#656D78');
+              bullhorn.css('color', '#656D78');
+            }
+
+          });
+
+        }
+      };
+    })
+    .directive('notification', function () {
+      return{
+        restrict: 'EA',
+        scope: {
+          title: '@stTitle',
+          data: '=stData',
+          icon: '@stIcon',
+          badge: '@stBadge'
+        },
+        templateUrl: 'views/notification.html',
+        link: function (scope, element, attr) {
+        }
+      };
+    })
+    .directive('notificationContent', function () {
+      return{
+        restrict: 'A',
+        templateUrl: 'views/notification-content.html',
+        scope: {
+          data: '=stData',
+          title: '@stTitle'
+        },
+        link: function (scope, element, attrs) {
+
+          var status = scope.title;
+          scope.userStatus = angular.equals(status, 'Friend requests') ? true : false;
+
         }
       };
     })
@@ -196,11 +244,22 @@
         templateUrl: 'views/sidebar-left.html',
         link: function(scope, element, attr){
           /** SIDEBAR FUNCTION **/
+          scope.chung = function(index){
+            if(scope.sub == index){
+//              alert('true');
+              scope.sub = -1;
+            }
+            else{
+//              alert('false');
+              scope.sub = index;
+            }
+          }
 
           /** END SIDEBAR FUNCTION **/
         }
       };
     })
+
     .directive('sidebarLeftSettings', function () {
       return{
         restrict: 'AE',
@@ -259,15 +318,7 @@
         templateUrl: 'views/page-footer.html'
       };
     })
-    .directive('mainAlert', function () {
-      return{
-        restrict: 'E',
-        scope: {
-          alertList: '=stData'
-        },
-        templateUrl: 'views/main-alert.html'
-      };
-    })
+
     .directive('mainWidget', function () {
       return{
         restrict: 'E',
@@ -282,43 +333,6 @@
         },
         templateUrl: 'views/main-chart-widget.html',
         link: function(scope, element, attr){
-          /** BEGIN WIDGET MORRIS JS FUNCTION **/
-          if (element.find('#morris-widget-1').length > 0){
-            Morris.Line({
-              element: 'morris-widget-1',
-              data: scope.data.lastyear.data,
-              xkey: scope.data.lastyear.xkey,
-              ykeys: [scope.data.lastyear.ykeys],
-              labels: [scope.data.lastyear.labels],
-              resize: scope.data.lastyear.resize,
-              lineColors: [scope.data.lastyear.lineColors],
-              pointFillColors :[scope.data.lastyear.pointFillColors],
-              pointStrokeColors : [scope.data.lastyear.pointStrokeColors],
-              gridTextColor: [scope.data.lastyear.gridTextColor],
-              pointSize: scope.data.lastyear.pointSize,
-              grid: false
-            });
-          }
-
-          if (element.find('#morris-widget-2').length > 0){
-            //MORRIS
-            Morris.Bar({
-              element: 'morris-widget-2',
-              data: scope.data.earnings.data,
-              xkey: scope.data.earnings.xkey,
-              ykeys: [scope.data.earnings.ykeys],
-              labels: [scope.data.earnings.labels],
-              resize: scope.data.earnings.resize,
-              barColors: [scope.data.earnings.barColors],
-              gridTextColor: [scope.data.earnings.gridTextColor],
-              gridTextSize: scope.data.earnings.gridTextSize,
-              grid :scope.data.earnings.grid,
-              axes: scope.data.earnings.axes
-            });
-          }
-          /** END WIDGET MORRIS JS FUNCTION **/
-
-
         }
       };
     })
@@ -336,28 +350,7 @@
         }
       };
     })
-    .directive('owlCarouselItem', function () {
-      return{
-        restrict: 'AE',
-        scope: {
-          list: '=stData'
-        },
-        templateUrl: 'views/owl-carousel-item.html',
-        link: function (scope, element, attrs) {
 
-
-          element.find('#property-slide-8').owlCarousel({
-            navigation: false, // Show next and pre buttons
-            sideSpeed: 300,
-            paginationSpeed: 400,
-            singleItem: true,
-            pagination: false,
-            responsive: true
-          });
-
-        }
-      };
-    })
     .directive('taskList', function () {
       return{
         restrict: 'E',
@@ -375,7 +368,6 @@
           today: '=stToday',
           tomorow: '=stTomorow'
         },
-        controller: '',
         templateUrl: 'views/weather-widget.html'
       };
     })
@@ -396,30 +388,7 @@
         }
       }
     })
-    .directive('mainSocicalTitles', function () {
-      return{
-        restrict: 'E',
-        scope: {
-          data: '=stData'
-        },
-        templateUrl: 'views/main-socical-titles.html',
-        link: function (scope, element, attrs) {
-        }
-      };
-    })
-    .directive('socicalItem', function () {
-      return{
-        restrict: 'E',
-        scope: {
-          data: '=stData',
-          style: '@stStyle'
-        },
-        templateUrl: 'views/socical-item.html',
-        link: function (scope, element, attrs) {
-          //alert(attrs.socicalFollowers);
-        }
-      };
-    })
+
     .directive('friendRequests', function () {
       return{
         restrict: 'E',
@@ -436,7 +405,24 @@
         scope: {
           data: '=stData'
         },
-        controller: 'SkyconsCtrl',
+        controller: function(){
+          if (typeof Skycons !== 'undefined') {
+            var icons = new Skycons(
+                {"color": "#fff"},
+                {"resizeClear": true}
+              ),
+              list = [
+                "clear-day", "rain",
+                "partly-cloudy-night", "clear-night", "sleet", "snow", "wind",
+                "fog"
+              ],
+              i;
+
+            for (i = list.length; i--;)
+              icons.set(list[i], list[i]);
+            icons.play();
+          }
+        },
         templateUrl: 'views/friend-requests-item.html',
         link: function (scope, element, attrs) {
           //Css for first row
@@ -464,76 +450,14 @@
           systemStatus: '=stSystemstatus',
           chart: '=stChart'
         },
-        templateUrl: 'views/server-status-widget.html',
-        link: function(scope, element, attr){
-          /** BEGIN WIDGET PIE FUNCTION **/
-          if ($('#realtime-chart-widget').length > 0){
-            var data1 = [];
-            var totalPoints = 250;
-            function GetData() {
-              "use strict";
-              data1.shift();
-              while (data1.length < totalPoints) {
-                var prev = data1.length > 0 ? data1[data1.length - 1] : 50;
-                var y = prev + Math.random() * 10 - 5;
-                y = y < 0 ? 0 : (y > 100 ? 100 : y);
-                data1.push(y);
-              }
-              var result = [];
-              for (var i = 0; i < data1.length; ++i) {
-                result.push([i, data1[i]])
-              }
-              return result;
-            }
-            var updateInterval = 500;
-            var plot = $.plot($("#realtime-chart-widget #realtime-chart-container-widget"), [
-              GetData()], {
-              series: {
-                lines: {
-                  show: true,
-                  fill: false
-                },
-                shadowSize: 0
-              },
-              yaxis: {
-                min: 0,
-                max: 100,
-                ticks: 10,
-                show: false
-              },
-              xaxis: {
-                show: false
-              },
-              grid: {
-                hoverable: true,
-                clickable: true,
-                tickColor: "#f9f9f9",
-                borderWidth: 0,
-                borderColor: "#eeeeee"
-              },
-              colors: ["#699B29"],
-              tooltip: false,
-              tooltipOpts: {
-                defaultTheme: false
-              }
-            });
-            function update() {
-              "use strict";
-              plot.setData([GetData()]);
-              plot.draw();
-              setTimeout(update, updateInterval);
-            }
-            update();
-          }
-          /** END WIDGET PIE FUNCTION **/
-        }
+        templateUrl: 'views/server-status-widget.html'
       };
     })
     .directive('chartWidget', function(){
       return{
         restrict: 'E',
+        templateUrl: 'views/chart-widget.html',
         controller: function($scope, $element){
-//          $scope.percent = 65;
           $scope.anotherPercent = $scope.data.percent;
           $scope.anotherOptions = {
             easing: 'easeOutBounce',
@@ -550,8 +474,7 @@
         },
         scope: {
           data: '=stData'
-        },
-        templateUrl: 'views/chart-widget.html'
+        }
       };
     })
     .directive('widgetSystemStatus', function(){
@@ -639,7 +562,7 @@
         scope: {
           item: '=stItem'
         },
-        controller: 'SkyconsCtrl',
+        controller: '',
         templateUrl: 'views/main-weather-widget-content.html',
         link: function (scope, element, attrs) {
           var status = scope.item.status,
@@ -669,7 +592,7 @@
         templateUrl: 'views/main-item-showcase.html'
       };
     })
-    .directive('lastWeekPopularItem', function () {
+    .directive('lastWeekPopularItem',['$timeout', function ($timeout) {
       return{
         restrict: 'AE',
         controller: function ($scope, $element) {
@@ -679,20 +602,21 @@
         },
         templateUrl: 'views/last-week-popular-item.html',
         link: function(scope, element, attr){
-          element.find('#owl-popular').owlCarousel({
-            navigation: false, // Show next and pre buttons
-            sideSpeed: 300,
-            paginationSpeed: 500,
-            singleItem: false,
-            pagination: false,
-            responsive: true,
-            item: 4,
-            autoPlay: true
+          $timeout(function(){
+            element.find('#owl-popular').owlCarousel({
+              navigation: false, // Show next and pre buttons
+              sideSpeed: 300,
+              paginationSpeed: 500,
+              singleItem: false,
+              pagination: false,
+              responsive: true,
+              item: 4,
+              autoPlay: true
+            });
           });
-
         }
       };
-    })
+    }])
     .directive('featuredProduct', function () {
       return{
         require: 'propertyCard',
@@ -700,18 +624,6 @@
         scope: {
           title: '@stTitle ',
           data: '=stData'
-        },
-        controller: function ($scope, $element) {
-          //       Owl Carousel
-          $element.find('#owl-feature').owlCarousel({
-            navigation: false, // Show next and pre buttons
-            sideSpeed: 300,
-            paginationSpeed: 500,
-            singleItem: true,
-            pagination: false,
-            responsive: true,
-            autoPlay: true
-          });
         },
         templateUrl: 'views/featured-product.html'
       };
@@ -738,72 +650,8 @@
         templateUrl: 'views/reminder-widget.html'
       };
     })
-    .directive('simplifiedNumber', function(){
-      return{
-        restrict: 'EA',
-        scope: {
-          data: '@stData'
-        },
-        templateUrl: 'views/simplified-number.html',
-        link: function(scope, element, attr){
 
-          var number = '';
-          scope.nbig = false;
-          if (scope.data.length > 6) {
-            scope.nbig = true;
-            number = scope.data.slice(0, scope.data.length - 3);
-            scope.point = number;
-          }
-          else{
-            scope.point = scope.data;
-          }
-        }
-      };
-    })
-    .directive('widgetRating', function(){
-      return{
-        restrict: 'EA',
-        scope: {
-          max: '@stMax',
-          star: '@stStar'
-        },
-        link: function(scope, element, attr){
 
-          for(var i=0 ; i<scope.max; i++){
-            if(i < scope.star){
-              element.append('<i class="fa fa-star text-warning"></i>');
-            }else{
-              element.append('<i class="fa fa-star"></i>');
-            }
-          }
-        }
-      };
-    })
-    .directive('widgetBacktop', function(){
-      return{
-        restrict: 'EA',
-        templateUrl: 'views/widget-backtop.html',
-        link: function(scope, element, attr){
-          /** BEGIN BACK TO TOP **/
-          element.find("#back-top").hide();
 
-          $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-              element.find('#back-top').fadeIn();
-            } else {
-              element.find('#back-top').fadeOut();
-            }
-          });
-          element.find('#back-top a').click(function () {
-            angular.element('body,html').animate({
-              scrollTop: 0
-            }, 800);
-            return false;
-          });
-
-          /** END BACK TO TOP **/
-        }
-      }
-    })
   ;
 })();
