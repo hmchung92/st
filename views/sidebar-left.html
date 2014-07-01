@@ -2,7 +2,7 @@
 
     <ul class="sidebar-menu">
 
-        <li><a href class="sidebar-left-content"><i class="fa fa-dashboard icon-sidebar" ></i>Dashboard</a></li>
+        <li ng-click="chung(-1)"><a href class="sidebar-left-content"><i class="fa fa-dashboard icon-sidebar" ></i>Dashboard</a></li>
 
         <li ng-repeat="menu in menus"  ng-click="chung($index)">
 
@@ -30,4 +30,5 @@
 
         <li class="static sidebar-left-content">SYSTEM SETTING</li>
         <li sidebar-left-settings st-data="settings"></li>
-   
+    </ul>
+</div>

@@ -1278,6 +1278,7 @@ angular.module('adminApp')
       {
         'id': 0,
         'title': 'Default',
+        'link': 'default',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-white',
@@ -1290,6 +1291,7 @@ angular.module('adminApp')
       {
         'id': 1,
         'title': 'Primary dark',
+        'link': 'primary-dark',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-primary',
@@ -1302,6 +1304,7 @@ angular.module('adminApp')
       {
         'id': 2,
         'title': 'Info dark',
+        'link': 'info-dark',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-info',
@@ -1314,6 +1317,7 @@ angular.module('adminApp')
       {
         'id': 3,
         'title': 'Success dark',
+        'link': 'success-dark',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-success',
@@ -1327,6 +1331,7 @@ angular.module('adminApp')
         'id': 4,
         'title': 'Danger dark',
         'top': 'quarter-tiles',
+         'link': 'danger-dark',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-danger',
         'bottomcolor': 'bg-dark',
@@ -1338,6 +1343,7 @@ angular.module('adminApp')
       {
         'id': 5,
         'title': 'Warning dark',
+          'link': 'warning-dark',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-warning',
@@ -1350,18 +1356,20 @@ angular.module('adminApp')
       {
         'id': 6,
         'title': 'Primary light',
+          'link': 'primary-light',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-primary',
-        'bottomcolor': 'bg-dark',
+        'bottomcolor': 'bg-white',
         'logo': '#34BC9B',
         'navcontent': '#ffffff',
         'sidebar': '#313940',
-        'subsidebar': '#2C3439'
+        'subsidebar': '#F6F7F9'
       },
       {
         'id': 7,
         'title': 'Info light',
+        'link': 'info-light',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-info',
@@ -1374,6 +1382,7 @@ angular.module('adminApp')
       {
         'id': 8,
         'title': 'Success light',
+          'link': 'success-light',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-success',
@@ -1386,6 +1395,7 @@ angular.module('adminApp')
       {
         'id': 9,
         'title': 'Danger light',
+          'link': 'danger-light',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-danger',
@@ -1398,6 +1408,7 @@ angular.module('adminApp')
       {
         'id': 10,
         'title': 'Warning light',
+          'link': 'warning-light',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-warning',
@@ -1410,6 +1421,7 @@ angular.module('adminApp')
       {
         'id': 11,
         'title': 'Dark light',
+          'link': 'dark-light',
         'top': 'quarter-tiles',
         'bottom': 'tigaperempat-tiles',
         'topcolor': 'bg-dark',
@@ -1422,6 +1434,7 @@ angular.module('adminApp')
       {
         'id': 12,
         'title': 'Nav primary light',
+          'link': 'nav-primary-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-primary',
@@ -1434,6 +1447,7 @@ angular.module('adminApp')
       {
         'id': 13,
         'title': 'Nav info light',
+          'link': 'nav-info-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-info',
@@ -1446,6 +1460,7 @@ angular.module('adminApp')
       {
         'id': 14,
         'title': 'Nav success light',
+          'link': 'nav-success-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-success',
@@ -1458,6 +1473,7 @@ angular.module('adminApp')
       {
         'id': 15,
         'title': 'Nav danger light',
+          'link': 'nav-danger-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-danger',
@@ -1470,6 +1486,7 @@ angular.module('adminApp')
       {
         'id': 16,
         'title': 'Nav warning light',
+          'link': 'nav-warning-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-warning',
@@ -1482,6 +1499,7 @@ angular.module('adminApp')
       {
         'id': 17,
         'title': 'Nav dark light',
+          'link': 'nav-dark-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-dark',
@@ -1494,6 +1512,7 @@ angular.module('adminApp')
       {
         'id': 18,
         'title': 'Sidebar primary light',
+          'link': 'sidebar-primary-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-white',

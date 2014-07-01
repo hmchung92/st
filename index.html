@@ -14,14 +14,15 @@
     <!-- PLUGINS CSS -->
     <link rel="stylesheet" href="mc_components/plugins/owl-carousel/owl.carousel.css"/>
     <link rel="stylesheet" href="mc_components/plugins/owl-carousel/owl.theme.css"/>
-    <link rel="stylesheet" href="bower_components/plugins/morris-chart/morris.min.css"/>
+    <link rel="stylesheet" href="mc_components/plugins/morris-chart/morris.min.css"/>
+
 
     <!-- MAIN CSS (REQUIRED ALL PAGE)-->
     <!--<link rel="stylesheet" href="style-responsive.css" />-->
     <!--<link rel="stylesheet" href="style.css" />-->
     <link rel="stylesheet" href="styles/main.css" />
     <!--<link rel="stylesheet" href="style.css" />-->
-    <link rel="stylesheet" href="style-responsive.css" />
+    <link rel="stylesheet" href="styles/style-responsive.css" />
 
 </head>
 <body ng-app="adminApp">
@@ -33,7 +34,7 @@
     <!--ENG TOP NAV-->
 
     <!--BEGIN COLOR SCHEMES-->
-    <main-color-schemes st-data="colorSchemes"></main-color-schemes>
+    <color-schemes st-data="colorSchemes"></color-schemes>
     <!--END COLOR SCHEMES-->
 
     <!--BEGIN SIDEBAR LEFT-->
@@ -95,6 +96,8 @@
 <script src="scripts/directives/mainDirective.js"></script>
 <script src="scripts/controllers/mainController.js"></script>
 <script src="scripts/filters/mainFilter.js"></script>
+
+<div class="style-color-schemes"></div>
 
 </body>
 </html>

@@ -56,9 +56,7 @@
         scope: {
           data: '=stData'
         },
-        templateUrl: 'mc_components/views/socical.html',
-        link: function (scope, element, attrs) {
-        }
+        templateUrl: 'mc_components/views/socical.html'
       };
     })
     .directive('mcSocicalItem', function () {
@@ -68,10 +66,7 @@
           data: '=stData',
           style: '@stStyle'
         },
-        templateUrl: 'mc_components/views/socical-item.html',
-        link: function (scope, element, attrs) {
-          //alert(attrs.socicalFollowers);
-        }
+        templateUrl: 'mc_components/views/socical-item.html'
       };
     })
     .directive('mcNotification', function () {
@@ -83,9 +78,7 @@
           icon: '@stIcon',
           badge: '@stBadge'
         },
-        templateUrl: 'mc_components/views/notification.html',
-        link: function (scope, element, attr) {
-        }
+        templateUrl: 'mc_components/views/notification.html'
       };
     })
     .directive('mcNotificationContent', function () {
@@ -96,12 +89,10 @@
           data: '=stData',
           title: '@stTitle'
         },
-        link: function (scope, element, attrs) {
-
-          var status = scope.title;
-          scope.userStatus = angular.equals(status, 'Friend requests') ? true : false;
-
-        }
+          controller: function($scope){
+              var status = $scope.title;
+              $scope.userStatus = angular.equals(status, 'Friend requests') ? true : false;
+          }
       };
     })
     .directive('mcMorrisChart', function () {
@@ -176,6 +167,16 @@
         }
       };
     }])
+      .directive('mcTaskList', function () {
+          return{
+              restrict:'E',
+              scope:{
+                  list:'=stList',
+                  title:'@stTitle'
+              },
+              templateUrl:'mc_components/views/task-list.html'
+          };
+      })
     .directive('mcRating', function(){
       return{
         restrict: 'EA',
@@ -195,6 +196,51 @@
         }
       };
     })
+      .directive('mcProgress', function () {
+          return{
+              restrict:'E',
+              scope:{
+                  data:'=stData'
+              },
+              templateUrl:'mc_components/views/progress.html',
+              link: function (scope, element, attrs) {
+                  var sstatus = element.find('#sstatus'),
+                      percent = scope.data.percent;
+                  sstatus.css('width', percent + '%');
+                  if (percent >= 80) {
+                      sstatus.css('background-color', '#E9573F');
+                  }
+                  else if (percent < 80 && percent >= 70) {
+                      sstatus.css('background-color', '#3BAFDA');
+                  }
+                  else if (percent < 70 && percent >= 60) {
+                      sstatus.css('background-color', '#F6BB42');
+                  }
+                  else if (percent < 60 && percent >= 50) {
+                      sstatus.css('background-color', '#F6BB42');
+                  }
+                  else {
+                      sstatus.css('background-color', '#8CC152');
+                  }
+              }
+          };
+      })
+      .directive('mcWeatherSmallIcon', function () {
+          return{
+              restrict:'E',
+              templateUrl:'mc_components/views/weather-small-icon.html',
+              link:function (scope, element, attr) {
+                  var skycon = element.find('.skycon'),
+                      index = attr.stIndex,
+                      list = [
+                          'clear-night',
+                          'snow',
+                          'fog'
+                      ];
+                  scope.skycon = list[index];
+              }
+          }
+      })
     .directive('mcCeilNumber', function(){
       return{
         restrict: 'EA',
@@ -216,17 +262,18 @@
           data: '@stData'
         },
         template: '<h1 class="bolded">{{point | number}}<span ng-show="nbig">K</span></h1>',
-        link: function(scope, elements, attr){
+
+        controller: function($scope){
 
           var number = '';
-          scope.nbig = false;
-          if (scope.data.length > 6) {
-            scope.nbig = true;
-            number = scope.data.slice(0, scope.data.length - 3);
-            scope.point = number;
+            $scope.nbig = false;
+          if ($scope.data.length > 6) {
+              $scope.nbig = true;
+            number = $scope.data.slice(0, $scope.data.length - 3);
+              $scope.point = number;
           }
           else{
-            scope.point = scope.data;
+              $scope.point = $scope.data;
           }
         }
       };

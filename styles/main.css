@@ -1104,19 +1104,7 @@ ul.sidebar-menu.online-user li a {
     white-space: nowrap;
 }
 
-ul.sidebar-menu li a {
-    display: block;
-    color: #AAB2BD;
-    height: 45px;
-    padding: 12px 20px 12px 50px;
-    border-bottom: 1px solid #2C3439;
-    text-decoration: none;
-    line-height: 120%;
-    position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+
 
 ul.sidebar-menu.sidebar-task li a .small-caps {
     font-size: 11px;
