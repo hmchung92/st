@@ -7,8 +7,13 @@
 .top-navbar{
 
 }
-.sidebar-menu{
+.sidebar-left{
     background: #ffffff;
+}
+ul.sidebar-menu li ul.submenu {
+    color: #656D78;
+    background-color: #F6F7F9;
+    border-bottom-color: #F6F7F9;
 }
 
 .btn-collapse-sidebar-right, .btn-collapse-sidebar-left, .dropdown-toggle{
@@ -19,6 +24,6 @@
     background-color: #37BC9B !important;
 }
 .sidebar-left-content{
-    color: #656D78 !important;
-    border-bottom-color: #F6F7F9 !important;
+    color: #C6FFF1 !important;
+    border-bottom-color: #28AA8B !important;
 }

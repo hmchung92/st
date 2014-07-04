@@ -7,8 +7,13 @@
 .top-navbar{
 
 }
-.sidebar-menu{
+.sidebar-left{
     background: #ffffff;
+}
+ul.sidebar-menu li ul.submenu {
+    color: #656D78;
+    background-color: #F6F7F9;
+    border-bottom-color: #F6F7F9;
 }
 
 .btn-collapse-sidebar-right, .btn-collapse-sidebar-left, .dropdown-toggle{

@@ -1,0 +1,31 @@
+.logo-brand{
+    background: #E7573E;
+}
+.top-nav-content{
+    background: #E7573E;
+}
+.top-navbar{
+
+}
+.sidebar-left{
+    background: #E7573E;
+}
+ul.sidebar-menu li ul.submenu {
+    color: #fff;
+    background-color: #D44732;
+    border-bottom-color: #D44732;
+}
+ul.sidebar-menu li ul.submenu li a{
+    color: #fff !important;
+}
+.btn-collapse-sidebar-right, .btn-collapse-sidebar-left, .dropdown-toggle{
+    color: white !important;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #37BC9B !important;
+}
+.sidebar-left-content{
+    color: #FFC6BD !important;
+    border-bottom-color: #D44732 !important;
+}

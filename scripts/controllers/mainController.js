@@ -1512,7 +1512,7 @@ angular.module('adminApp')
       {
         'id': 18,
         'title': 'Sidebar primary light',
-          'link': 'sidebar-primary-light',
+        'link': 'sidebar-primary-light',
         'top': 'half-tiles',
         'bottom': 'half-tiles',
         'topcolor': 'bg-white',
@@ -1522,6 +1522,150 @@ angular.module('adminApp')
         'sidebar': '#34BC9B',
         'subsidebar': '#28AA8B',
         'colorsidebar': '#C6FFF1'
+      },
+      {
+        'id': 19,
+        'title': 'Sidebar info light',
+        'link': 'sidebar-info-light',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-white',
+        'bottomcolor': 'bg-info'
+      },
+      {
+        'id': 20,
+        'title': 'Sidebar success light',
+        'link': 'sidebar-success-light',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-white',
+        'bottomcolor': 'bg-success'
+      },
+      {
+        'id': 21,
+        'title': 'Sidebar danger light',
+        'link': 'sidebar-danger-light',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-white',
+        'bottomcolor': 'bg-danger'
+      },
+      {
+        'id': 22,
+        'title': 'Sidebar warning light',
+        'link': 'sidebar-warning-light',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-white',
+        'bottomcolor': 'bg-warning'
+      },
+      {
+        'id': 23,
+        'title': 'Nav primary dark',
+        'link': 'nav-primary-dark',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-primary',
+        'bottomcolor': 'bg-dark'
+      },
+      {
+        'id': 24,
+        'title': 'Nav info dark',
+        'link': 'nav-info-dark',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-info',
+        'bottomcolor': 'bg-dark'
+      },
+      {
+        'id': 25,
+        'title': 'Nav success dark',
+        'link': 'nav-success-dark',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-success',
+        'bottomcolor': 'bg-dark'
+      },
+      {
+        'id': 26,
+        'title': 'Nav danger dark',
+        'link': 'nav-danger-dark',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-danger',
+        'bottomcolor': 'bg-dark'
+      },
+      {
+        'id': 27,
+        'title': 'Nav warning dark',
+        'link': 'nav-warning-dark',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-warning',
+        'bottomcolor': 'bg-dark'
+      },
+      {
+        'id': 28,
+        'title': 'Light',
+        'link': 'light',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-white',
+        'bottomcolor': 'bg-white'
+      },
+      {
+        'id': 29,
+        'title': 'Full primary',
+        'link': 'full-primary',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-primary',
+        'bottomcolor': 'bg-primary'
+      },
+      {
+        'id': 30,
+        'title': 'Full info',
+        'link': 'full-info',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-info',
+        'bottomcolor': 'bg-info'
+      },
+      {
+        'id': 31,
+        'title': 'Full success',
+        'link': 'full-success',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-success',
+        'bottomcolor': 'bg-success'
+      },
+      {
+        'id': 32,
+        'title': 'Full danger',
+        'link': 'full-danger',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-danger',
+        'bottomcolor': 'bg-danger'
+      },
+      {
+        'id': 33,
+        'title': 'Full warning',
+        'link': 'full-warning',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-warning',
+        'bottomcolor': 'bg-warning'
+      },
+      {
+        'id': 35,
+        'title': 'Full dark',
+        'link': 'full-dark',
+        'top': 'half-tiles',
+        'bottom': 'half-tiles',
+        'topcolor': 'bg-dark',
+        'bottomcolor': 'bg-dark'
       }
 
     ];

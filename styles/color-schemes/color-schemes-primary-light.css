@@ -7,16 +7,19 @@
 .top-navbar{
 
 }
-.sidebar-menu{
+.sidebar-left{
     background: #ffffff;
 }
 .dropdown-toggle{
 
 }
-.btn-collapse-sidebar-right{
-
+ul.sidebar-menu li ul.submenu {
+    color: #656D78;
+    background-color: #F6F7F9;
+    border-bottom-color: #F6F7F9;
 }
+
 .sidebar-left-content{
-    color: #656D78 !important;
+    color: #AAB2BD !important;
     border-bottom-color: #F6F7F9 !important;
 }

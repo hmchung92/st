@@ -4,11 +4,31 @@
 'use strict';
 (function(){
   angular.module('mcDirective', [])
+    .directive('mcAlert', function () {
+      return{
+        restrict: 'E',
+        scope: {
+          data: '=stData'
+        },
+        controller: function ($scope) {
+
+          $scope.delete = function (index) {
+            $scope.data.splice(index, 1);
+          }
+        },
+        templateUrl: 'mc_components/views/alert.html',
+        link: function (scope, element, attr) {
+
+          scope.max = attr.stMax != null ? attr.stMax : scope.data.length;
+
+        }
+      };
+    })
     .directive('mcBackToTop', function () {
       return{
         restrict: 'EA',
         templateUrl: 'mc_components/views/back-to-top.html',
-        link: function (scope, element, attr) {
+        link: function (scope, element) {
           /** BEGIN BACK TO TOP **/
           element.find("#back-top").hide();
 
@@ -29,26 +49,6 @@
           /** END BACK TO TOP **/
         }
       }
-    })
-    .directive('mcAlert', function () {
-      return{
-        restrict: 'E',
-        scope: {
-          data: '=stData'
-        },
-        controller: function ($scope) {
-
-          $scope.delete = function (index) {
-            $scope.data.splice(index, 1);
-          }
-        },
-        templateUrl: 'mc_components/views/alert.html',
-        link: function (scope, element, attr) {
-
-          scope.max = attr.stMax != null ? attr.stMax : scope.data.length;
-
-        }
-      };
     })
     .directive('mcSocical', function () {
       return{
@@ -103,7 +103,7 @@
           id: '@mcId',
           type: '@mcType'
         },
-        link: function (scope, element, attrs) {
+        link: function (scope, element) {
 
           element.replaceWith('<div id="' + scope.id + '" style="height:100%"></div>');
           if (scope.type == 'line') {
@@ -184,7 +184,7 @@
           max: '@stMax',
           star: '@stStar'
         },
-        link: function(scope, element, attr){
+        link: function(scope, element){
 
           for(var i=0 ; i<scope.max; i++){
             if(i < scope.star){
@@ -203,7 +203,7 @@
                   data:'=stData'
               },
               templateUrl:'mc_components/views/progress.html',
-              link: function (scope, element, attrs) {
+              link: function (scope, element) {
                   var sstatus = element.find('#sstatus'),
                       percent = scope.data.percent;
                   sstatus.css('width', percent + '%');
@@ -228,6 +228,7 @@
       .directive('mcWeatherSmallIcon', function () {
           return{
               restrict:'E',
+
               templateUrl:'mc_components/views/weather-small-icon.html',
               link:function (scope, element, attr) {
                   var skycon = element.find('.skycon'),

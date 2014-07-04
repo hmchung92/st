@@ -1,0 +1,33 @@
+.logo-brand{
+    background: #fff;
+}
+.top-nav-content{
+    background: #ffffff;
+}
+.top-navbar{
+
+}
+.sidebar-left{
+    background: #ffffff;
+}
+.dropdown-toggle{
+
+}
+ul.sidebar-menu li ul.submenu {
+    color: #656D78;
+    background-color: #F6F7F9;
+    border-bottom-color: #F6F7F9;
+}
+ul.sidebar-menu li ul.submenu {
+    color: #656D78;
+    background-color: #F6F7F9;
+    border-bottom-color: #F6F7F9;
+}
+
+.btn-collapse-sidebar-right{
+
+}
+.sidebar-left-content{
+    color: #AAB2BD !important;
+    border-bottom-color: #AAB2BD !important;
+}
